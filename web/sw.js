@@ -1,8 +1,9 @@
-const CACHE = 'il-mio-orto-v0.9.1';
+const CACHE = 'il-mio-orto-v0.9.2';
 const CORE = [
   './',
   './index.html',
   './manifest.webmanifest',
+  './copertina.webp',
   './icons/icon-192.png',
   './icons/icon-512.png'
 ];
