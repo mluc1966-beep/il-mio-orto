@@ -1,0 +1,32 @@
+{
+  "formatVersion": 4,
+  "seasonYear": 2026,
+  "crops": [
+    {
+      "id": "esempio-pomodori",
+      "zoneId": "proda_2",
+      "name": "Pomodoro",
+      "variety": "Mondesse",
+      "plantCount": 6,
+      "sowingDate": "",
+      "transplantDate": "",
+      "expectedHarvestDate": "",
+      "notes": "",
+      "catalogId": "pomodoro",
+      "iconColorHex": "#F6B1AA",
+      "iconDiameterCm": 20,
+      "plantSpacingCm": 50,
+      "rowSpacingCm": 80,
+      "plants": [
+        {"id": "pianta-1", "xFraction": 0.0833, "yFraction": 0.3667},
+        {"id": "pianta-2", "xFraction": 0.5000, "yFraction": 0.3667},
+        {"id": "pianta-3", "xFraction": 0.9167, "yFraction": 0.3667},
+        {"id": "pianta-4", "xFraction": 0.0833, "yFraction": 0.6333},
+        {"id": "pianta-5", "xFraction": 0.5000, "yFraction": 0.6333},
+        {"id": "pianta-6", "xFraction": 0.9167, "yFraction": 0.6333}
+      ]
+    }
+  ],
+  "tasks": [],
+  "harvests": []
+}
