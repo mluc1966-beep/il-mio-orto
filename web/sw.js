@@ -1,4 +1,4 @@
-const CACHE = 'il-mio-orto-v0.9.0';
+const CACHE = 'il-mio-orto-v0.9.1';
 const CORE = [
   './',
   './index.html',
