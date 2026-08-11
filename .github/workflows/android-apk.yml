@@ -1,0 +1,48 @@
+name: Genera APK Android
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "app/**"
+      - "build.gradle.kts"
+      - "settings.gradle.kts"
+      - "gradle.properties"
+      - ".github/workflows/android-apk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-debug-apk:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Scarica il progetto
+        uses: actions/checkout@v6
+
+      - name: Installa Java 17
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Installa Gradle 8.13
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: "8.13"
+
+      - name: Compila APK
+        run: gradle :app:assembleDebug --stacktrace
+
+      - name: Rinomina APK
+        run: cp app/build/outputs/apk/debug/app-debug.apk IlMioOrto-v0.8.0-debug.apk
+
+      - name: Salva APK
+        uses: actions/upload-artifact@v7
+        with:
+          name: IlMioOrto-v0.8.0-debug-apk
+          path: IlMioOrto-v0.8.0-debug.apk
+          if-no-files-found: error
+          retention-days: 30
