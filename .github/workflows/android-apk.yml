@@ -56,13 +56,18 @@ jobs:
       - name: Compila APK debug
         run: gradle :app:assembleDebug --stacktrace
 
+      - name: Verifica firma dell'APK realmente prodotto
+        run: |
+          echo "=== IMPRONTE DEL CERTIFICATO DELL'APK COMPILATO ==="
+          keytool -printcert -jarfile app/build/outputs/apk/debug/app-debug.apk | grep -E "SHA1:|SHA256:"
+
       - name: Rinomina APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk IlMioOrto-v0.9.3-debug.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk IlMioOrto-v0.9.4-debug.apk
 
       - name: Pubblica APK come artifact
         uses: actions/upload-artifact@v7
         with:
-          name: IlMioOrto-v0.9.3-debug-apk
-          path: IlMioOrto-v0.9.3-debug.apk
+          name: IlMioOrto-v0.9.4-debug-apk
+          path: IlMioOrto-v0.9.4-debug.apk
           if-no-files-found: error
           retention-days: 30
