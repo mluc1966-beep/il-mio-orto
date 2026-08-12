@@ -1270,7 +1270,7 @@ function agrGroupItems(zoneId,excludedCropIds=[]){
  const map=new Map();
  placementItems(zoneId).forEach(item=>{
    if(excluded.has(item.crop.id))return;
-   const key=item.crop.id||cropTypeKey(item.crop.name,item.crop.variety);
+   const key=cropTypeKey(item.crop.name,item.crop.variety);
    if(!map.has(key))map.set(key,{key,crop:item.crop,items:[],role:cropRole(item.crop)});
    map.get(key).items.push(item);
  });
