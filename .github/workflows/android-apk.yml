@@ -54,12 +54,12 @@ jobs:
         run: gradle :app:assembleDebug --stacktrace
 
       - name: Rinomina APK
-        run: cp app/build/outputs/apk/debug/app-debug.apk IlMioOrto-v0.9.4-debug.apk
+        run: cp app/build/outputs/apk/debug/app-debug.apk IlMioOrto-v0.9.5-debug.apk
 
       - name: Pubblica APK come artifact
         uses: actions/upload-artifact@v7
         with:
-          name: IlMioOrto-v0.9.4-debug-apk
-          path: IlMioOrto-v0.9.4-debug.apk
+          name: IlMioOrto-v0.9.5-debug-apk
+          path: IlMioOrto-v0.9.5-debug.apk
           if-no-files-found: error
           retention-days: 30
