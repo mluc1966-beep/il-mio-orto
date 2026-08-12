@@ -12,8 +12,7 @@ import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.exceptions.GetCredentialException
-import androidx.credentials.exceptions.NoCredentialException
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -124,11 +123,11 @@ class GardenCloudSync(
     suspend fun signIn(activity: Activity) {
         uiState = uiState.copy(mode = Mode.SYNCING, message = "Accesso con Google…")
         try {
-            val credential = try {
-                requestGoogleCredential(activity, authorizedOnly = true)
-            } catch (_: NoCredentialException) {
-                requestGoogleCredential(activity, authorizedOnly = false)
-            }
+            // Questo pulsante e' un'azione esplicita "Accedi con Google".
+            // Per questo flusso Android raccomanda GetSignInWithGoogleOption:
+            // mostra il selettore account anche al primo accesso, senza richiedere
+            // che l'account sia gia' stato autorizzato per questa app.
+            val credential = requestGoogleCredential(activity)
 
             if (credential !is CustomCredential ||
                 credential.type != GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
@@ -165,15 +164,14 @@ class GardenCloudSync(
         uiState = UiState()
     }
 
-    private suspend fun requestGoogleCredential(activity: Activity, authorizedOnly: Boolean) =
+    private suspend fun requestGoogleCredential(activity: Activity) =
         credentialManager.getCredential(
             context = activity,
             request = GetCredentialRequest.Builder()
                 .addCredentialOption(
-                    GetGoogleIdOption.Builder()
-                        .setServerClientId(activity.getString(R.string.default_web_client_id))
-                        .setFilterByAuthorizedAccounts(authorizedOnly)
-                        .build()
+                    GetSignInWithGoogleOption.Builder(
+                        serverClientId = activity.getString(R.string.default_web_client_id),
+                    ).build()
                 )
                 .build(),
         ).credential
