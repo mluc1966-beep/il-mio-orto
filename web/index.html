@@ -1362,10 +1362,12 @@ function agrPatternsForGroup(group,W,L){
    return patterns;
  }
 
+ const widthCols=Math.max(1,Math.floor((W-2*r)/spacing)+1);
  const maxCols=Math.min(
    n,
-   role==='compact'||role==='companion'?4:
-   role==='stake'?3:3
+   role==='compact'||role==='row'?widthCols:
+   role==='companion'?4:
+   3
  );
  for(let cols=1;cols<=maxCols;cols++){
    const p=agrPattern(group,cols,rowGap,spacing,W,false);
@@ -1391,7 +1393,10 @@ function agrCandidateScore(candidate,W,L){
  }else if(role==='compact'||role==='row'){
    score+=y*.032;                         // tendenzialmente verso la testa della proda
    score+=Math.abs(cx-W/2)*.035;
-   const preferred=Math.min(n,role==='compact'?4:3);
+   const r0=pattern.group.items[0]?.radius||0;
+   const spacing0=Math.max(r0*2+AUTO_CLEARANCE_CM,safeSpacing(pattern.group.crop.spacingCm,30));
+   const widthCols=Math.max(1,Math.floor((W-2*r0)/spacing0)+1);
+   const preferred=Math.min(n,widthCols);
    score+=Math.abs(pattern.cols-preferred)*.8;
  }else if(role==='companion'){
    score+=y*.018+Math.abs(cx-W/2)*.02;
@@ -1478,8 +1483,8 @@ function createAgronomicPlan(zoneId,excludedCropIds=[],maxAttempts=1){
 
  // Prima i gruppi più difficili da collocare: meno alternative = prima.
  prepared.sort((a,b)=>
-   a.candidates.length-b.candidates.length ||
    (rolePriority[a.group.role]??9)-(rolePriority[b.group.role]??9) ||
+   a.candidates.length-b.candidates.length ||
    b.group.items.length-a.group.items.length
  );
 
