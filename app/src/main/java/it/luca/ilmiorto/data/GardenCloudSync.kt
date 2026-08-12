@@ -1,29 +1,19 @@
 package it.luca.ilmiorto.data
 
-import android.app.Activity
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.credentials.ClearCredentialStateRequest
-import androidx.credentials.CredentialManager
-import androidx.credentials.CustomCredential
-import androidx.credentials.GetCredentialRequest
-import androidx.credentials.exceptions.GetCredentialException
-import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
-import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.MetadataChanges
 import com.google.firebase.firestore.Source
-import it.luca.ilmiorto.R
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
@@ -57,7 +47,6 @@ class GardenCloudSync(
     private val appContext = context.applicationContext
     private val auth = FirebaseAuth.getInstance()
     private val db = FirebaseFirestore.getInstance()
-    private val credentialManager = CredentialManager.create(appContext)
     private val gardenRef = db.collection("gardens").document("main")
     private val collectionNames = listOf("crops", "tasks", "harvests", "history")
     private val registrations = mutableListOf<ListenerRegistration>()
@@ -120,67 +109,83 @@ class GardenCloudSync(
         pushState(localState())
     }
 
-    suspend fun signIn(activity: Activity) {
-        uiState = uiState.copy(mode = Mode.SYNCING, message = "Accesso con Google…")
-        try {
-            // Questo pulsante è un accesso Google esplicito.
-            // Android indica di usare GetSignInWithGoogleOption per questo caso:
-            // apre il flusso Google anche quando non esistono account già autorizzati
-            // o quando l'account deve essere riautenticato.
-            val credential = requestGoogleCredentialFromButton(activity)
-
-            if (credential !is CustomCredential ||
-                credential.type != GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
-            ) {
-                error("Credenziale Google non riconosciuta")
-            }
-
-            val googleCredential = GoogleIdTokenCredential.createFrom(credential.data)
-            val firebaseCredential = GoogleAuthProvider.getCredential(googleCredential.idToken, null)
-            auth.signInWithCredential(firebaseCredential)
-                .addOnSuccessListener { userCredential ->
-                    userCredential.user?.let {
-                        updateUser(it, Mode.SYNCING, "Collegamento all'orto condiviso…")
-                    }
-                }
-                .addOnFailureListener { error ->
-                    uiState = uiState.copy(
-                        mode = Mode.ERROR,
-                        message = "Accesso Firebase non riuscito: ${error.localizedMessage ?: "errore sconosciuto"}",
-                    )
-                }
-        } catch (error: GetCredentialException) {
+    fun signIn(email: String, password: String) {
+        val cleanEmail = email.trim()
+        if (cleanEmail.isBlank() || password.isBlank()) {
             uiState = uiState.copy(
                 mode = Mode.ERROR,
-                message = "Accesso Google non completato [${error.type}]: ${error.localizedMessage ?: error.javaClass.simpleName}",
+                message = "Inserisci email e password",
             )
-        } catch (error: Exception) {
-            uiState = uiState.copy(
-                mode = Mode.ERROR,
-                message = "Accesso Google non riuscito (${error.javaClass.simpleName}): ${error.localizedMessage ?: "errore sconosciuto"}",
-            )
+            return
         }
+
+        uiState = uiState.copy(mode = Mode.SYNCING, message = "Accesso all'orto condiviso…")
+        auth.signInWithEmailAndPassword(cleanEmail, password)
+            .addOnSuccessListener { result ->
+                result.user?.let {
+                    updateUser(it, Mode.SYNCING, "Collegamento all'orto condiviso…")
+                }
+            }
+            .addOnFailureListener { error ->
+                uiState = uiState.copy(
+                    mode = Mode.ERROR,
+                    message = "Accesso non riuscito: ${friendlyAuthError(error)}",
+                )
+            }
+    }
+
+    fun createAccount(email: String, password: String) {
+        val cleanEmail = email.trim()
+        if (cleanEmail.isBlank() || password.isBlank()) {
+            uiState = uiState.copy(
+                mode = Mode.ERROR,
+                message = "Inserisci email e password",
+            )
+            return
+        }
+        if (password.length < 6) {
+            uiState = uiState.copy(
+                mode = Mode.ERROR,
+                message = "La password deve avere almeno 6 caratteri",
+            )
+            return
+        }
+
+        uiState = uiState.copy(mode = Mode.SYNCING, message = "Creo l'utenza…")
+        auth.createUserWithEmailAndPassword(cleanEmail, password)
+            .addOnSuccessListener { result ->
+                result.user?.let {
+                    updateUser(it, Mode.SYNCING, "Collegamento all'orto condiviso…")
+                }
+            }
+            .addOnFailureListener { error ->
+                uiState = uiState.copy(
+                    mode = Mode.ERROR,
+                    message = "Creazione utenza non riuscita: ${friendlyAuthError(error)}",
+                )
+            }
     }
 
     suspend fun signOut() {
         clearListeners()
         auth.signOut()
-        runCatching { credentialManager.clearCredentialState(ClearCredentialStateRequest()) }
         uiState = UiState()
     }
 
-    private suspend fun requestGoogleCredentialFromButton(
-        activity: Activity,
-    ) = credentialManager.getCredential(
-        context = activity,
-        request = GetCredentialRequest.Builder()
-            .addCredentialOption(
-                GetSignInWithGoogleOption.Builder(
-                    serverClientId = activity.getString(R.string.default_web_client_id)
-                ).build()
-            )
-            .build(),
-    ).credential
+    private fun friendlyAuthError(error: Exception): String {
+        val raw = error.localizedMessage ?: error.javaClass.simpleName
+        return when {
+            raw.contains("password", ignoreCase = true) && raw.contains("invalid", ignoreCase = true) ->
+                "email o password non corretti"
+            raw.contains("malformed", ignoreCase = true) || raw.contains("badly formatted", ignoreCase = true) ->
+                "indirizzo email non valido"
+            raw.contains("already in use", ignoreCase = true) || raw.contains("already exists", ignoreCase = true) ->
+                "questa utenza esiste già: usa Accedi"
+            raw.contains("network", ignoreCase = true) ->
+                "problema di connessione"
+            else -> raw
+        }
+    }
 
     private fun ensureGardenThenListen() {
         preserveLocalIfRemoteEmpty = false
