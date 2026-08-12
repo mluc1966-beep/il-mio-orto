@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Il mio Orto — ANTEPRIMA p0.2.6.1</title>
+<title>Il mio Orto — ANTEPRIMA p0.2.6.2</title>
 <style>
 :root{--p:#2f6b3b;--pc:#b4f1b4;--bg:#f7fbf2;--card:#fff;--muted:#687268;--line:#dce4d8;--danger:#9b2c2c}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#152016}.app{max-width:520px;margin:auto;min-height:100vh;padding:72px 14px 92px}.top{position:fixed;z-index:10;top:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:18px 18px 12px;background:rgba(247,251,242,.96);backdrop-filter:blur(12px);font-weight:750;font-size:20px;border-bottom:1px solid var(--line)}.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}.tab{border:0;background:transparent;padding:5px 1px;font-size:9px;color:#566057}.tab b{display:block;font-size:19px}.tab.active{color:var(--p);font-weight:700}.fab{position:fixed;right:max(calc((100vw - 520px)/2 + 18px),18px);bottom:83px;width:56px;height:56px;border-radius:18px;border:0;background:var(--p);color:#fff;font-size:30px;box-shadow:0 8px 22px #1d3e2440}.title{font-size:24px;font-weight:750;margin:4px 0}.sub{color:var(--muted);margin:0 0 16px;line-height:1.4}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #1b3b1d0a}.map{background:#eef4e9;padding:11px;border-radius:20px}.maptop{display:grid;grid-template-columns:3fr 1.2fr;gap:9px}.beds{display:grid;gap:9px}.zone{border:1px solid #b9c7b5;background:#fff;border-radius:15px;padding:12px;text-align:left;min-height:66px}.zone.active{border:2px solid var(--p);background:var(--pc)}.zone small{display:block;color:#566057;margin-top:3px}.strip{min-height:292px}.lwrap{margin-top:10px}.lcaption{font-size:13px;font-weight:750;color:#566057;margin:2px 0 7px}.lshape{height:245px;position:relative}.lshape svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.lshape .lbase{z-index:1}.lshape .lborder{z-index:3}.lhot{position:absolute;border:0;background:transparent;text-align:left;padding:12px;color:#152016;z-index:2}.lhot b{display:block}.lhot small{display:block;color:#566057;margin-top:4px}.lhot.active{background:var(--pc)}.lhot-v{left:1px;top:1px;width:31.58%;height:calc(100% - 2px);display:flex;flex-direction:column;justify-content:center}.lhot-h{left:31.58%;right:1px;top:1px;height:28.57%;display:flex;flex-direction:column;justify-content:center}.lshape-note{font-size:12px;color:#687268;margin-top:7px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#d8f0d2;border-radius:15px;padding:12px}.stat strong{font-size:19px;display:block}.row{display:flex;gap:10px;align-items:flex-start}.grow{flex:1}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:13px;background:var(--p);color:#fff;padding:12px 15px;font-weight:700}.btn.out{background:#fff;color:var(--p);border:1px solid var(--p)}.btn.danger{color:var(--danger);border-color:#d9a8a8}.full{width:100%}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.done{text-decoration:line-through;color:#718071}.empty{text-align:center;color:var(--muted);padding:28px 12px}.modal{position:fixed;z-index:30;inset:0;background:#10201480;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(520px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px 24px 0 0;padding:20px}.sheet h2{margin-top:0}label{display:block;font-size:13px;font-weight:650;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #bbc6b7;border-radius:12px;font:inherit;background:#fff}textarea{min-height:76px}.actions{display:flex;gap:9px;margin-top:18px}.actions>*{flex:1}.hide{display:none!important}
 
@@ -54,7 +54,7 @@
 .preview-tools b{display:block;margin-bottom:4px}
 
 
-/* ===== ANTEPRIMA p0.2.6.1 ===== */
+/* ===== ANTEPRIMA p0.2.6.2 ===== */
 .suggestion-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
 .suggestion-actions .btn{margin:0;padding:8px 7px;font-size:11px}
 .task-icon,.harvest-icon{font-size:20px;line-height:1;flex:0 0 auto}
@@ -191,10 +191,10 @@
 <div class="cover-screen" id="coverScreen" onclick="dismissCover()" role="button" tabindex="0" aria-label="Entra nell'app Il mio Orto">
   <div class="cover-frame">
     <button class="cover-enter" type="button" onclick="event.stopPropagation();dismissCover()">Entra nell’orto</button>
-    <span class="cover-version">ANTEPRIMA p0.2.6.1</span>
+    <span class="cover-version">ANTEPRIMA p0.2.6.2</span>
   </div>
 </div>
-<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="preview-badge">ANTEPRIMA p0.2.6.1</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
+<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="preview-badge">ANTEPRIMA p0.2.6.2</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
 <main class="app" id="content"><div class="card" id="bootCard"><b>Caricamento della mappa…</b><p class="muted">Sto recuperando i dati salvati.</p></div></main>
 <button class="fab" id="fab" aria-label="Aggiungi">+</button>
 <nav class="bottom" id="nav"></nav>
@@ -314,9 +314,11 @@ let state=emptyState();let tab='map',selected='proda_1',selectedPlantId='',mapSc
 const cloudUi={ready:false,user:null,status:'local',message:'Dati salvati solo su questo dispositivo',lastSync:'',cloudUpdatedAtMs:0,fromCache:false,pending:false,error:''};
 const DRIVE_ENDPOINT_KEY='ortoDriveBackupEndpointPreview';
 const DRIVE_LAST_OK_KEY='ortoDriveBackupLastOkPreview';
+const DRIVE_LAST_CHECK_KEY='ortoDriveBackupLastCheckPreview';
 const DRIVE_CHANNEL='preview';
 const driveUi={
   status:'idle',message:'',lastOk:'',
+  lastCheck:(()=>{try{return localStorage.getItem(DRIVE_LAST_CHECK_KEY)||''}catch(_){return ''}})(),
   endpoint:(()=>{try{return localStorage.getItem(DRIVE_ENDPOINT_KEY)||''}catch(_){return ''}})(),
   dirty:false,newer:false,remoteMeta:null,error:''
 };
@@ -370,14 +372,22 @@ function driveStatusClass(){
   if(driveUi.status==='error')return 'error';
   return '';
 }
-function driveLastOkText(){
-  const raw=driveUi.lastOk||(()=>{try{return localStorage.getItem(DRIVE_LAST_OK_KEY)||''}catch(_){return ''}})();
+function driveDateText(raw){
   if(!raw)return 'mai';
   try{return new Date(raw).toLocaleString('it-IT',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'})}catch(_){return raw}
+}
+function driveLastOkText(){
+  const raw=driveUi.lastOk||(()=>{try{return localStorage.getItem(DRIVE_LAST_OK_KEY)||''}catch(_){return ''}})();
+  return driveDateText(raw);
+}
+function driveLastCheckText(){
+  const raw=driveUi.lastCheck||(()=>{try{return localStorage.getItem(DRIVE_LAST_CHECK_KEY)||''}catch(_){return ''}})();
+  return driveDateText(raw);
 }
 function driveSetStatus(patch){
   Object.assign(driveUi,patch||{});
   if(driveUi.lastOk){try{localStorage.setItem(DRIVE_LAST_OK_KEY,driveUi.lastOk)}catch(_){}}
+  if(driveUi.lastCheck){try{localStorage.setItem(DRIVE_LAST_CHECK_KEY,driveUi.lastCheck)}catch(_){}}
   if(tab==='archive')render();
 }
 function saveDriveEndpoint(){
@@ -431,7 +441,7 @@ function driveEnvelope(){
   const safe=cloudSafeState(state);
   return {
     format:'il-mio-orto-drive-backup',
-    version:'p0.2.6.1',
+    version:'p0.2.6.2',
     channel:DRIVE_CHANNEL,
     exportedAt:new Date().toISOString(),
     firestoreUpdatedAtMs:Number(cloudUi.cloudUpdatedAtMs)||0,
@@ -498,9 +508,19 @@ async function driveBackupNow(reason='manual',keepalive=false){
       return false;
     }
     const now=new Date().toISOString();
+    const remoteMeta=result.current||payload;
+    const backupTime=remoteMeta.exportedAt||now;
     driveAutoRetryCount=0;
     driveUi.dirty=false;
-    driveSetStatus({status:'ok',newer:false,remoteMeta:result.current||payload,lastOk:now,message:result.status==='unchanged'?'Backup già allineato.':'Backup automatico completato.',error:''});
+    driveSetStatus({
+      status:'ok',
+      newer:false,
+      remoteMeta,
+      lastOk:backupTime,
+      lastCheck:now,
+      message:result.status==='unchanged'?'Allineato, nessuna modifica da salvare.':'Backup automatico completato.',
+      error:''
+    });
     return true;
   }catch(error){
     if(isTransientDriveError(error) && reason!=='manual' && scheduleDriveAutoRetry('backup')){
@@ -530,17 +550,34 @@ async function driveCheckAlignment(force=false){
     const current=driveEnvelope(),remote=result.current||{};
     driveUi.remoteMeta=remote;
     if(remote.digest===current.digest){
+      const now=new Date().toISOString();
       driveAutoRetryCount=0;
       driveUi.dirty=false;
-      driveSetStatus({status:'ok',newer:false,message:'Firestore e Google Drive sono allineati.',lastOk:remote.exportedAt||driveUi.lastOk});
+      driveSetStatus({
+        status:'ok',
+        newer:false,
+        message:'Allineato, nessuna modifica da salvare.',
+        lastOk:remote.exportedAt||driveUi.lastOk,
+        lastCheck:now
+      });
       return;
     }
     const remoteMs=Number(remote.firestoreUpdatedAtMs)||0,currentMs=Number(current.firestoreUpdatedAtMs)||0;
     if(remoteMs>currentMs+1500){
-      driveSetStatus({status:'newer',newer:true,message:'Il backup su Drive risulta più recente di Firestore. Non lo sovrascrivo automaticamente.'});
+      driveSetStatus({
+        status:'newer',
+        newer:true,
+        lastCheck:new Date().toISOString(),
+        message:'Il backup su Drive risulta più recente di Firestore. Non lo sovrascrivo automaticamente.'
+      });
       return;
     }
-    driveSetStatus({status:'idle',newer:false,message:'Backup Drive da aggiornare.'});
+    driveSetStatus({
+      status:'idle',
+      newer:false,
+      lastCheck:new Date().toISOString(),
+      message:'Backup Drive da aggiornare.'
+    });
     await driveBackupNow('allineamento-apertura');
   }catch(error){
     if(isTransientDriveError(error) && scheduleDriveAutoRetry('controllo')){
@@ -1088,7 +1125,11 @@ function archiveView(){
     </div>
     ${driveConfigured
       ? `<div class="drive-endpoint">${esc(driveUi.endpoint)}</div>
-         <div class="backup-meta">Ultimo backup riuscito: ${esc(driveLastOkText())}<br>${esc(driveUi.error||driveUi.message||'')}</div>
+         <div class="backup-meta">
+           Ultimo backup su Drive: ${esc(driveLastOkText())}<br>
+           Ultimo controllo: ${esc(driveLastCheckText())}<br>
+           ${esc(driveUi.error||driveUi.message||'')}
+         </div>
          ${driveUi.status==='newer'?`<div class="warning-box" style="margin-top:9px">Il backup su Drive risulta più recente di Firestore e non è stato sovrascritto automaticamente.</div>`:''}
          <div class="backup-actions" style="margin-top:10px">
            <button class="btn full full-row" onclick="driveBackupNow('manuale')">Backup ora</button>
