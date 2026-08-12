@@ -243,7 +243,7 @@ const cropCatalog=[
 ];
 function catalogItem(id){return cropCatalog.find(x=>x.id===id)||null}
 function inferCatalog(name){let n=String(name||'').trim().toLowerCase();return cropCatalog.find(x=>n===x.name.toLowerCase()||x.aliases.some(a=>n.includes(a)))||null}
-function catalogOptions(selectedId){return `<option value="custom">Personalizzata</option>`+cropCatalog.map(x=>`<option value="${x.id}" ${x.id===selectedId?'selected':''}>${x.emoji} ${x.name}</option>`).join('')}
+function catalogOptions(selectedId){return `<option value="custom">Personalizzata</option>`+cropCatalog.slice().sort((a,b)=>a.name.localeCompare(b.name,'it')).map(x=>`<option value="${x.id}" ${x.id===selectedId?'selected':''}>${x.emoji} ${x.name}</option>`).join('')}
 function cropColor(crop){let cat=catalogItem(crop.catalogId)||inferCatalog(crop.name);return crop.iconColor||(cat?cat.color:'#c9e2bd')}
 function safeSpacing(value,fallback){let n=Number(value);return Number.isFinite(n)?Math.max(5,Math.min(300,n)):fallback}
 function sameCropIdentity(a,b){return cropTypeKey(a.name,a.variety)===cropTypeKey(b.name,b.variety)}
