@@ -17,20 +17,21 @@ permissions:
 jobs:
   build-debug-apk:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Scarica il progetto
         uses: actions/checkout@v6
 
-      - name: Java 17
+      - name: Installa Java 17
         uses: actions/setup-java@v5
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: "17"
 
-      - name: Gradle 8.13
+      - name: Installa Gradle 8.13
         uses: gradle/actions/setup-gradle@v6
         with:
-          gradle-version: '8.13'
+          gradle-version: "8.13"
 
       - name: Ripristina chiave debug stabile
         env:
@@ -47,19 +48,10 @@ jobs:
       - name: Mostra impronte SHA della firma APK
         run: |
           echo "=== IMPRONTE DELLA CHIAVE USATA PER L'APK ==="
-          keytool -list -v \
-            -keystore "$HOME/.android/debug.keystore" \
-            -storepass android \
-            -alias androiddebugkey \
-            -keypass android | grep -E "SHA1:|SHA256:"
+          keytool -list -v             -keystore "$HOME/.android/debug.keystore"             -storepass android             -alias androiddebugkey             -keypass android | grep -E "SHA1:|SHA256:"
 
       - name: Compila APK debug
         run: gradle :app:assembleDebug --stacktrace
-
-      - name: Verifica firma dell'APK realmente prodotto
-        run: |
-          echo "=== IMPRONTE DEL CERTIFICATO DELL'APK COMPILATO ==="
-          keytool -printcert -jarfile app/build/outputs/apk/debug/app-debug.apk | grep -E "SHA1:|SHA256:"
 
       - name: Rinomina APK
         run: cp app/build/outputs/apk/debug/app-debug.apk IlMioOrto-v0.9.4-debug.apk
