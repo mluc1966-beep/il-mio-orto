@@ -51,7 +51,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
-private const val APP_VERSION = "0.9.2"
+private const val APP_VERSION = "0.9.3"
 
 private enum class AppSection(val title: String, val emoji: String) {
     MAP("Mappa", "🗺️"),
