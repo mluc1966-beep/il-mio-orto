@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Il mio Orto — v0.10.1</title>
+<title>Il mio Orto — v0.10.2</title>
 <style>
 :root{--p:#2f6b3b;--pc:#b4f1b4;--bg:#f7fbf2;--card:#fff;--muted:#687268;--line:#dce4d8;--danger:#9b2c2c}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#152016}.app{max-width:520px;margin:auto;min-height:100vh;padding:72px 14px 92px}.top{position:fixed;z-index:10;top:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:18px 18px 12px;background:rgba(247,251,242,.96);backdrop-filter:blur(12px);font-weight:750;font-size:20px;border-bottom:1px solid var(--line)}.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}.tab{border:0;background:transparent;padding:5px 1px;font-size:9px;color:#566057}.tab b{display:block;font-size:19px}.tab.active{color:var(--p);font-weight:700}.fab{position:fixed;right:max(calc((100vw - 520px)/2 + 18px),18px);bottom:83px;width:56px;height:56px;border-radius:18px;border:0;background:var(--p);color:#fff;font-size:30px;box-shadow:0 8px 22px #1d3e2440}.title{font-size:24px;font-weight:750;margin:4px 0}.sub{color:var(--muted);margin:0 0 16px;line-height:1.4}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #1b3b1d0a}.map{background:#eef4e9;padding:11px;border-radius:20px}.maptop{display:grid;grid-template-columns:3fr 1.2fr;gap:9px}.beds{display:grid;gap:9px}.zone{border:1px solid #b9c7b5;background:#fff;border-radius:15px;padding:12px;text-align:left;min-height:66px}.zone.active{border:2px solid var(--p);background:var(--pc)}.zone small{display:block;color:#566057;margin-top:3px}.strip{min-height:292px}.lwrap{margin-top:10px}.lcaption{font-size:13px;font-weight:750;color:#566057;margin:2px 0 7px}.lshape{height:245px;position:relative}.lshape svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.lshape .lbase{z-index:1}.lshape .lborder{z-index:3}.lhot{position:absolute;border:0;background:transparent;text-align:left;padding:12px;color:#152016;z-index:2}.lhot b{display:block}.lhot small{display:block;color:#566057;margin-top:4px}.lhot.active{background:var(--pc)}.lhot-v{left:1px;top:1px;width:31.58%;height:calc(100% - 2px);display:flex;flex-direction:column;justify-content:center}.lhot-h{left:31.58%;right:1px;top:1px;height:28.57%;display:flex;flex-direction:column;justify-content:center}.lshape-note{font-size:12px;color:#687268;margin-top:7px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#d8f0d2;border-radius:15px;padding:12px}.stat strong{font-size:19px;display:block}.row{display:flex;gap:10px;align-items:flex-start}.grow{flex:1}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:13px;background:var(--p);color:#fff;padding:12px 15px;font-weight:700}.btn.out{background:#fff;color:var(--p);border:1px solid var(--p)}.btn.danger{color:var(--danger);border-color:#d9a8a8}.full{width:100%}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.done{text-decoration:line-through;color:#718071}.empty{text-align:center;color:var(--muted);padding:28px 12px}.modal{position:fixed;z-index:30;inset:0;background:#10201480;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(520px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px 24px 0 0;padding:20px}.sheet h2{margin-top:0}label{display:block;font-size:13px;font-weight:650;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #bbc6b7;border-radius:12px;font:inherit;background:#fff}textarea{min-height:76px}.actions{display:flex;gap:9px;margin-top:18px}.actions>*{flex:1}.hide{display:none!important}
 
@@ -50,7 +50,7 @@
 .suggestion-meta{font-size:11px;color:var(--muted);margin-top:2px}
 .suggestion-note{font-size:12px;line-height:1.35;margin:6px 0 0;color:#3e5241}
 .suggestion-card .btn{margin-top:8px;padding:8px 10px;font-size:12px}
-/* ===== WEB APP PRINCIPALE v0.10.1 ===== */
+/* ===== WEB APP PRINCIPALE v0.10.2 ===== */
 .suggestion-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
 .suggestion-actions .btn{margin:0;padding:8px 7px;font-size:11px}
 .task-icon,.harvest-icon{font-size:20px;line-height:1;flex:0 0 auto}
@@ -187,10 +187,10 @@
 <div class="cover-screen" id="coverScreen" onclick="dismissCover()" role="button" tabindex="0" aria-label="Entra nell'app Il mio Orto">
   <div class="cover-frame">
     <button class="cover-enter" type="button" onclick="event.stopPropagation();dismissCover()">Entra nell’orto</button>
-    <span class="cover-version">v0.10.1</span>
+    <span class="cover-version">v0.10.2</span>
   </div>
 </div>
-<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="app-version-badge">v0.10.1</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
+<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="app-version-badge">v0.10.2</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
 <main class="app" id="content"><div class="card" id="bootCard"><b>Caricamento della mappa…</b><p class="muted">Sto recuperando i dati salvati.</p></div></main>
 <button class="fab" id="fab" aria-label="Aggiungi">+</button>
 <nav class="bottom" id="nav"></nav>
@@ -425,7 +425,7 @@ function driveEnvelope(){
   const safe=cloudSafeState(state);
   return {
     format:'il-mio-orto-drive-backup',
-    version:'v0.10.1',
+    version:'v0.10.2',
     channel:DRIVE_CHANNEL,
     exportedAt:new Date().toISOString(),
     firestoreUpdatedAtMs:Number(cloudUi.cloudUpdatedAtMs)||0,
@@ -1143,7 +1143,7 @@ function harvestDialog(){openSheet(`<h2>Registra raccolto</h2><p class="muted">D
 function addHarvest(){const hn=document.getElementById('hn'),hw=document.getElementById('hw');if(!hn.value.trim()||Number(hw.value)<=0)return;state.harvests.push({id:uid(),name:hn.value.trim(),date:harvestSessionDate,weight:Math.round(Number(hw.value))});closeSheet();save()}
 function removeCrop(id){state.crops=state.crops.filter(x=>x.id!==id);selectedPlantId='';save()}function toggleTask(id){let x=state.tasks.find(x=>x.id===id);if(!x)return;x.done=!x.done;if(x.done){if(!state.activityLog.some(l=>l.taskId===x.id))logActivity({date:localToday(),title:x.title,category:x.category,zone:x.zone,cropId:x.cropId||'',cropName:x.cropName||taskCropName(x),taskId:x.id,suggestionKey:x.suggestionKey||''})}else{state.activityLog=state.activityLog.filter(l=>l.taskId!==x.id)}save()}function removeTask(id){state.tasks=state.tasks.filter(x=>x.id!==id);save()}function removeHarvest(id){state.harvests=state.harvests.filter(x=>x.id!==id);save()}
 const BACKUP_META_KEY='ortoMainLastBackup';
-function backupEnvelope(){return {app:'Il mio Orto',kind:'main-backup',version:'v0.10.1',exportedAt:new Date().toISOString(),state:cloudSafeState(state)}}
+function backupEnvelope(){return {app:'Il mio Orto',kind:'main-backup',version:'v0.10.2',exportedAt:new Date().toISOString(),state:cloudSafeState(state)}}
 function exportData(){const payload=backupEnvelope(),a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.href=url;a.download=`il_mio_orto_backup_${localToday()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);try{localStorage.setItem(BACKUP_META_KEY,payload.exportedAt)}catch(_){ }render()}
 function importData(file){if(!file)return;let r=new FileReader;r.onload=()=>{try{const parsed=JSON.parse(r.result),incoming=parsed?.state&&typeof parsed.state==='object'?parsed.state:parsed;if(!incoming||typeof incoming!=='object')throw new Error('Formato non riconosciuto');if(!confirm('Importare questo backup nell’orto? I dati attuali verranno sostituiti.'))return;state=incoming;migratePlants();save();alert('Backup importato correttamente.')}catch(e){alert('File non valido: '+e.message)}};r.readAsText(file)}
 function resetData(){if(confirm('Cancellare TUTTI i dati dell’orto? Se sei collegato, la cancellazione verrà sincronizzata anche su Firestore.')){state=emptyState();save()}}
@@ -1205,12 +1205,31 @@ function strictRequiredDistance(a,b){
  const spacingA=safeSpacing(a.crop.spacingCm,30);
  const spacingB=safeSpacing(b.crop.spacingCm,30);
  if(sameCropIdentity(a.crop,b.crop))return Math.max(physical,spacingA,spacingB);
- const mixedSpacing=(spacingA+spacingB)/2;
+
+ // In una proda mista le distanze monocolturali non vanno sommate o mediate:
+ // specie diverse possono occupare in parte spazi complementari.
+ // Restano obbligatori l'ingombro fisico, la distanza della coltura più fitta
+ // e l'eventuale minimo specifico di consociazione.
+ const mixedMinimum=Math.min(spacingA,spacingB);
  const rule=pairRule(a.crop,b.crop);
  const ruleMin=rule&&rule.minCm?Number(rule.minCm):0;
- return Math.max(physical,mixedSpacing,ruleMin);
+ return Math.max(physical,mixedMinimum,ruleMin);
 }
-function preferredColumns(item,W){const r=item.radius,rowGap=safeSpacing(item.crop.rowSpacingCm,40);let cols=Math.max(1,Math.floor((W-2*r)/rowGap)+1);cols=Math.min(3,cols);if(cols===1)return[W/2];return Array.from({length:cols},(_,i)=>r+(W-2*r)*i/(cols-1))}
+function preferredColumns(item,W){
+ const r=item.radius;
+ let gap=Math.max(10,safeSpacing(item.crop.rowSpacingCm,40));
+ let cols=Math.max(1,Math.floor((W-2*r)/gap)+1);
+ cols=Math.min(3,cols);
+ if(cols===1)return[W/2];
+
+ let span=(cols-1)*gap;
+ if(span>W-2*r){
+   span=W-2*r;
+   gap=span/(cols-1);
+ }
+ const start=(W-span)/2;
+ return Array.from({length:cols},(_,i)=>start+i*gap);
+}
 function roleScore(item,x,y,placed,W,L){
  const role=cropRole(item.crop),same=placed.filter(p=>sameCropIdentity(p.item.crop,item.crop));
  const nearestSame=same.length?Math.min(...same.map(p=>Math.hypot(x-p.x,y-p.y))):0;
@@ -1231,53 +1250,310 @@ function roleScore(item,x,y,placed,W,L){
  return y*.08+x*.01+nearestSame*.06;
 }
 function candidateValues(min,max,step){const out=[];for(let v=min;v<=max+.01;v+=step)out.push(Math.min(max,v));if(!out.length||Math.abs(out[out.length-1]-max)>.5)out.push(max);return out}
-function createAgronomicPlan(zoneId,excludedCropIds=[]){
- const d=zoneDims(zoneId),W=d.w*100,L=d.l*100,excluded=new Set(excludedCropIds);
- const items=placementItems(zoneId).filter(x=>!excluded.has(x.crop.id)).sort((a,b)=>{
-   const rp=(rolePriority[cropRole(a.crop)]??9)-(rolePriority[cropRole(b.crop)]??9);if(rp)return rp;
-   const ck=cropTypeKey(a.crop.name,a.crop.variety).localeCompare(cropTypeKey(b.crop.name,b.crop.variety));if(ck)return ck;
-   return a.index-b.index;
- });
- const placed=[];
- for(const item of items){
-   const role=cropRole(item.crop);
-   const xs=role==='stake'?preferredColumns(item,W):candidateValues(item.radius,W-item.radius,5);
-   const ys=role==='stake'?candidateValues(item.radius,L-item.radius,safeSpacing(item.crop.spacingCm,30)):candidateValues(item.radius,L-item.radius,5);
-   let best=null;
-   for(const y of ys)for(const x of xs){let blocked=false;
-     for(const other of placed){if(Math.hypot(x-other.x,y-other.y)+.1<strictRequiredDistance(item,other.item)){blocked=true;break}}
-     if(blocked)continue;
-     const score=roleScore(item,x,y,placed,W,L);
-     if(!best||score<best.score)best={x,y,score};
+
+function planPrng(seed){
+ let s=(Number(seed)>>>0)||1;
+ return ()=>{
+   s=(Math.imul(1664525,s)+1013904223)>>>0;
+   return s/4294967296;
+ };
+}
+function clampPlanPoint(p,W,L){
+ const r=p.item.radius;
+ p.x=Math.max(r,Math.min(W-r,p.x));
+ p.y=Math.max(r,Math.min(L-r,p.y));
+}
+function planPairShortage(a,b){
+ const dist=Math.hypot(a.x-b.x,a.y-b.y);
+ return strictRequiredDistance(a.item,b.item)-dist;
+}
+function planStats(points){
+ let violations=0,overlaps=0,worst=0,total=0;
+ for(let i=0;i<points.length;i++)for(let j=i+1;j<points.length;j++){
+   const a=points[i],b=points[j];
+   const dist=Math.hypot(a.x-b.x,a.y-b.y);
+   const shortage=strictRequiredDistance(a.item,b.item)-dist;
+   if(shortage>.1){
+     violations++;
+     total+=shortage*shortage;
+     worst=Math.max(worst,shortage);
    }
-   if(!best)return{success:false,placed,failed:item,W,L,total:items.length};
-   placed.push({item,x:best.x,y:best.y});
+   if(physicalRequiredDistance(a.item,b.item)-dist>.05)overlaps++;
  }
- return{success:true,placed,W,L,total:items.length};
+ return{violations,overlaps,worst,total};
+}
+function seedAgronomicPoints(items,W,L,attempt){
+ const rnd=planPrng(91021+attempt*104729+items.length*97);
+ const groups=new Map();
+ items.forEach(item=>{
+   const key=cropTypeKey(item.crop.name,item.crop.variety);
+   if(!groups.has(key))groups.set(key,[]);
+   groups.get(key).push(item);
+ });
+ const groupList=[...groups.values()];
+ const edgeItems=items.filter(x=>cropRole(x.crop)==='edge');
+ const stakeItems=items.filter(x=>cropRole(x.crop)==='stake');
+ const edgeIndex=new Map(edgeItems.map((x,i)=>[x.plant.id,i]));
+ const stakeIndex=new Map(stakeItems.map((x,i)=>[x.plant.id,i]));
+
+ return items.map((item,itemIndex)=>{
+   const role=cropRole(item.crop),r=item.radius;
+   let x=W/2,y=L/2;
+
+   if(attempt===0 && Number.isFinite(item.plant.x) && Number.isFinite(item.plant.y)){
+     // Il primo tentativo parte dalla situazione attuale ma la deforma davvero.
+     x=item.plant.x*W;
+     y=item.plant.y*L;
+   }else if(role==='edge'){
+     const k=edgeIndex.get(item.plant.id)||0;
+     const side=(k+attempt)%2;
+     const rows=Math.max(1,Math.ceil(edgeItems.length/2));
+     const row=Math.floor(k/2);
+     x=side?r:W-r;
+     const usable=Math.max(1,L-2*r);
+     y=r+usable*(row+.5+(side?.28:0))/Math.max(rows,1);
+   }else if(role==='stake'){
+     const k=stakeIndex.get(item.plant.id)||0;
+     const cols=preferredColumns(item,W);
+     x=cols[(k+attempt)%cols.length];
+     const row=Math.floor(k/cols.length);
+     y=r+(row+.65)*safeSpacing(item.crop.spacingCm,30);
+   }else{
+     const group=groups.get(cropTypeKey(item.crop.name,item.crop.variety))||[item];
+     const gi=Math.max(0,groupList.indexOf(group));
+     const local=Math.max(0,group.indexOf(item));
+     const step=Math.max(10,Math.min(35,safeSpacing(item.crop.spacingCm,30)));
+     const cols=Math.max(1,Math.min(4,Math.floor((W-2*r)/step)+1));
+     const col=local%cols,row=Math.floor(local/cols);
+     const blockW=(cols-1)*step;
+     const baseX=Math.max(r,Math.min(W-r-blockW,r+((gi*31+attempt*17)%(Math.max(1,W-2*r-blockW)))));
+     const bandTop=r+((gi*73+attempt*29)%(Math.max(1,L-2*r)));
+     x=baseX+col*step;
+     y=bandTop+row*step;
+   }
+
+   if(attempt>0){
+     x+=(rnd()-.5)*Math.min(18,W*.12);
+     y+=(rnd()-.5)*Math.min(28,L*.10);
+   }
+   const p={item,x,y};
+   clampPlanPoint(p,W,L);
+   return p;
+ });
+}
+function roleMobility(item){
+ const role=cropRole(item.crop);
+ if(role==='edge')return .70;
+ if(role==='stake')return .88;
+ return 1;
+}
+function nudgePlanPreferences(points,W,L,amount=.0025){
+ const centroids=new Map(),counts=new Map();
+ points.forEach(p=>{
+   const key=cropTypeKey(p.item.crop.name,p.item.crop.variety);
+   const c=centroids.get(key)||{x:0,y:0};
+   c.x+=p.x;c.y+=p.y;centroids.set(key,c);
+   counts.set(key,(counts.get(key)||0)+1);
+ });
+ centroids.forEach((c,key)=>{const n=counts.get(key)||1;c.x/=n;c.y/=n});
+
+ points.forEach(p=>{
+   const role=cropRole(p.item.crop),r=p.item.radius;
+   if(role==='edge'){
+     const target=p.x<W/2?r:W-r;
+     p.x+=(target-p.x)*amount*2.2;
+   }else if(role==='stake'){
+     const cols=preferredColumns(p.item,W);
+     const target=cols.reduce((best,c)=>Math.abs(c-p.x)<Math.abs(best-p.x)?c:best,cols[0]);
+     p.x+=(target-p.x)*amount*1.6;
+   }else{
+     const key=cropTypeKey(p.item.crop.name,p.item.crop.variety);
+     const c=centroids.get(key);
+     if(c){
+       p.x+=(c.x-p.x)*amount*.45;
+       p.y+=(c.y-p.y)*amount*.45;
+     }
+   }
+   clampPlanPoint(p,W,L);
+ });
+}
+function relaxAgronomicAttempt(items,W,L,attempt,maxIterations=1050){
+ const rnd=planPrng(50117+attempt*65537+items.length*131);
+ const points=seedAgronomicPoints(items,W,L,attempt);
+ const pairs=[];
+ for(let i=0;i<points.length;i++)for(let j=i+1;j<points.length;j++)pairs.push([i,j]);
+
+ let bestPoints=points.map(p=>({...p}));
+ let bestStats=planStats(bestPoints);
+
+ for(let iter=0;iter<maxIterations;iter++){
+   if(iter%9===0){
+     for(let i=pairs.length-1;i>0;i--){
+       const j=Math.floor(rnd()*(i+1));
+       [pairs[i],pairs[j]]=[pairs[j],pairs[i]];
+     }
+   }
+
+   const touched=new Set();
+   for(const [i,j] of pairs){
+     const a=points[i],b=points[j];
+     let dx=a.x-b.x,dy=a.y-b.y,dist=Math.hypot(dx,dy);
+     const need=strictRequiredDistance(a.item,b.item);
+     const shortage=need-dist;
+     if(shortage<=.02)continue;
+
+     touched.add(i);touched.add(j);
+     let ux,uy;
+     if(dist<.001){
+       const angle=((i*37+j*19+attempt*23+iter)%360)*Math.PI/180;
+       ux=Math.cos(angle);uy=Math.sin(angle);
+     }else{
+       ux=dx/dist;uy=dy/dist;
+     }
+
+     const ma=roleMobility(a.item),mb=roleMobility(b.item),sum=ma+mb;
+     const move=(shortage+.04)*1.03;
+     a.x+=ux*move*(ma/sum);a.y+=uy*move*(ma/sum);
+     b.x-=ux*move*(mb/sum);b.y-=uy*move*(mb/sum);
+     clampPlanPoint(a,W,L);clampPlanPoint(b,W,L);
+   }
+
+   if(iter%3===0)nudgePlanPreferences(points,W,L,iter<300?.0012:.00045);
+
+   const stats=planStats(points);
+   if(
+     stats.violations<bestStats.violations ||
+     (stats.violations===bestStats.violations && stats.overlaps<bestStats.overlaps) ||
+     (stats.violations===bestStats.violations && stats.overlaps===bestStats.overlaps && stats.total<bestStats.total)
+   ){
+     bestStats=stats;
+     bestPoints=points.map(p=>({...p}));
+   }
+
+   if(stats.violations===0 && stats.overlaps===0){
+     return{success:true,points:points.map(p=>({...p})),stats,attempt,iterations:iter+1};
+   }
+
+   if(iter>0 && iter%170===0 && touched.size){
+     touched.forEach(i=>{
+       const p=points[i],r=p.item.radius;
+       p.x+=(rnd()-.5)*8;
+       p.y+=(rnd()-.5)*12;
+       clampPlanPoint(p,W,L);
+     });
+   }
+ }
+ return{success:false,points:bestPoints,stats:bestStats,attempt,iterations:maxIterations};
+}
+function createAgronomicPlan(zoneId,excludedCropIds=[],maxAttempts=14){
+ const d=zoneDims(zoneId),W=d.w*100,L=d.l*100,excluded=new Set(excludedCropIds);
+ const items=placementItems(zoneId).filter(x=>!excluded.has(x.crop.id));
+ if(!items.length)return{success:true,placed:[],W,L,total:0,stats:{violations:0,overlaps:0,worst:0,total:0}};
+
+ // Prima i soggetti più difficili: grande distanza, grande ingombro, poi ruolo.
+ items.sort((a,b)=>{
+   const sa=Math.max(safeSpacing(a.crop.spacingCm,30),a.radius*2);
+   const sb=Math.max(safeSpacing(b.crop.spacingCm,30),b.radius*2);
+   if(sb!==sa)return sb-sa;
+   const rp=(rolePriority[cropRole(a.crop)]??9)-(rolePriority[cropRole(b.crop)]??9);
+   if(rp)return rp;
+   return a.order-b.order;
+ });
+
+ let best=null;
+ for(let attempt=0;attempt<maxAttempts;attempt++){
+   const trial=relaxAgronomicAttempt(items,W,L,attempt,attempt<4?900:1150);
+   if(!best ||
+      trial.stats.violations<best.stats.violations ||
+      (trial.stats.violations===best.stats.violations && trial.stats.overlaps<best.stats.overlaps) ||
+      (trial.stats.violations===best.stats.violations && trial.stats.overlaps===best.stats.overlaps && trial.stats.total<best.stats.total)
+   )best=trial;
+   if(trial.success){
+     return{
+       success:true,
+       placed:trial.points.map(p=>({item:p.item,x:p.x,y:p.y})),
+       W,L,total:items.length,stats:trial.stats,attempt:trial.attempt
+     };
+   }
+ }
+ return{
+   success:false,
+   placed:(best?.points||[]).map(p=>({item:p.item,x:p.x,y:p.y})),
+   failed:(best?.points||[])[0]?.item||items[0],
+   W,L,total:items.length,
+   stats:best?.stats||{violations:items.length,overlaps:items.length,worst:Infinity,total:Infinity}
+ };
 }
 function applyAgronomicPlan(plan){plan.placed.forEach(p=>{p.item.plant.x=p.x/plan.W;p.item.plant.y=p.y/plan.L})}
+
 function cropGroups(zoneId){return state.crops.filter(c=>c.zone===zoneId&&c.count>0)}
 function findMoveSuggestions(zoneId){
  const groups=cropGroups(zoneId).slice().sort((a,b)=>a.count-b.count||safeDiameter(b.iconDiameterCm)-safeDiameter(a.iconDiameterCm));
  const suggestions=[];
- for(const crop of groups){const plan=createAgronomicPlan(zoneId,[crop.id]);if(plan.success)suggestions.push({ids:[crop.id],labels:[`${crop.count} ${crop.name}`],count:crop.count});}
- if(!suggestions.length&&groups.length<=8){for(let i=0;i<groups.length;i++)for(let j=i+1;j<groups.length;j++){const plan=createAgronomicPlan(zoneId,[groups[i].id,groups[j].id]);if(plan.success)suggestions.push({ids:[groups[i].id,groups[j].id],labels:[`${groups[i].count} ${groups[i].name}`,`${groups[j].count} ${groups[j].name}`],count:groups[i].count+groups[j].count})}}
+ for(const crop of groups){
+   const plan=createAgronomicPlan(zoneId,[crop.id],4);
+   if(plan.success)suggestions.push({ids:[crop.id],labels:[`${crop.count} ${crop.name}`],count:crop.count});
+ }
+ if(!suggestions.length&&groups.length<=8){
+   for(let i=0;i<groups.length;i++)for(let j=i+1;j<groups.length;j++){
+     const plan=createAgronomicPlan(zoneId,[groups[i].id,groups[j].id],3);
+     if(plan.success)suggestions.push({ids:[groups[i].id,groups[j].id],labels:[`${groups[i].count} ${groups[i].name}`,`${groups[j].count} ${groups[j].name}`],count:groups[i].count+groups[j].count});
+   }
+ }
  const sorted=suggestions.sort((a,b)=>a.count-b.count);if(!sorted.length)return[];const min=sorted[0].count;return sorted.filter(s=>s.count<=min+2).slice(0,3);
 }
 function arrangeZonePlants(zoneId){
- const plan=createAgronomicPlan(zoneId);
- if(!plan.success)return{success:false,remaining:plan.total-plan.placed.length,plan,suggestions:findMoveSuggestions(zoneId)};
  const previous=zonePlants(zoneId).map(x=>({plant:x.plant,x:x.plant.x,y:x.plant.y}));
- applyAgronomicPlan(plan);
+ const before=spacingWarnings(zoneId);
+ const plan=createAgronomicPlan(zoneId);
+
+ if(plan.placed?.length)applyAgronomicPlan(plan);
  const residual=spacingWarnings(zoneId);
- if(residual.length){
-   previous.forEach(p=>{p.plant.x=p.x;p.plant.y=p.y});
-   return{success:false,remaining:residual.length,plan:{...plan,failed:residual[0]?.a||plan.failed},suggestions:findMoveSuggestions(zoneId),residual};
+ const overlaps=residual.filter(x=>x.type==='overlap').length;
+
+ if(residual.length===0){
+   return{success:true,remaining:0,plan,before,residual};
  }
- return{success:true,remaining:0,plan};
+
+ const improved=residual.length<before.length && overlaps===0;
+ if(improved){
+   return{success:false,improved:true,remaining:residual.length,plan,before,residual};
+ }
+
+ previous.forEach(p=>{p.plant.x=p.x;p.plant.y=p.y});
+ return{
+   success:false,
+   improved:false,
+   remaining:residual.length||plan.stats?.violations||1,
+   plan:{...plan,failed:residual[0]?.a||plan.failed},
+   suggestions:findMoveSuggestions(zoneId),
+   residual
+ };
 }
 function plannerFailureSheet(zoneId,result){const failed=result.plan.failed,sg=result.suggestions||[];openSheet(`<h2>La combinazione non entra correttamente</h2><p>Il progettista ha fermato il calcolo prima di creare una disposizione casuale. Non riesce a collocare <b>${failed?emojiFor(failed.crop.name)+' '+esc(failed.crop.name):'tutte le piante'}</b> rispettando distanze, ingombri e preferenze di posizione.</p>${sg.length?`<div class="planner-result fail"><b>Soluzioni che rendono possibile il progetto:</b>${sg.map(s=>`<div class="planner-suggestion">Sposta in un’altra zona: <b>${s.labels.map(esc).join(' + ')}</b></div>`).join('')}</div>`:`<div class="planner-result fail">Riduci il numero di piante, le distanze impostate oppure il diametro grafico delle icone.</div>`}<div class="actions"><button class="btn" onclick="closeSheet()">Chiudi</button></div>`)}
-function autoArrangeZone(zoneId,ignoreRelations=false){const count=zonePlants(zoneId).length;if(!count)return;const conflicts=matrixPairWarnings(zoneId).filter(x=>x.relation.code==='C');if(conflicts.length&&!ignoreRelations){openSheet(`<h2>Consociazioni da verificare</h2><p>Il database segnala ${conflicts.length} combinazioni da evitare in questa zona:</p>${conflicts.map(x=>`<div class="matrix-warning C"><b>${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)} ${esc(x.b.name)}</b><br>${esc(x.relation.source)}</div>`).join('')}<p class="muted">La disposizione automatica non può risolvere un conflitto agronomico semplicemente spostando le icone. Puoi annullare o continuare consapevolmente.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn warn" onclick="closeSheet();autoArrangeZone('${zoneId}',true)">Continua comunque</button></div>`);return}const result=arrangeZonePlants(zoneId);if(result.success){selectedPlantId=zonePlants(zoneId)[0]?.plant.id||'';save();setTimeout(()=>alert('Progetto applicato: nessuna sovrapposizione o distanza insufficiente, anche fra specie diverse.'),20)}else plannerFailureSheet(zoneId,result)}
+function autoArrangeZone(zoneId,ignoreRelations=false){
+ const count=zonePlants(zoneId).length;if(!count)return;
+ const conflicts=matrixPairWarnings(zoneId).filter(x=>x.relation.code==='C');
+ if(conflicts.length&&!ignoreRelations){
+   openSheet(`<h2>Consociazioni da verificare</h2><p>Il database segnala ${conflicts.length} combinazioni da evitare in questa zona:</p>${conflicts.map(x=>`<div class="matrix-warning C"><b>${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)}</b><br>${esc(x.relation.source)}</div>`).join('')}<p class="muted">La disposizione automatica non può risolvere un conflitto agronomico semplicemente spostando le icone. Puoi annullare o continuare consapevolmente.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn warn" onclick="closeSheet();autoArrangeZone('${zoneId}',true)">Continua comunque</button></div>`);
+   return;
+ }
+ const result=arrangeZonePlants(zoneId);
+ selectedPlantId=zonePlants(zoneId)[0]?.plant.id||'';
+
+ if(result.success){
+   save();
+   setTimeout(()=>alert('Proda riprogettata: 0 sovrapposizioni e 0 distanze ridotte.'),20);
+   return;
+ }
+ if(result.improved){
+   save();
+   const before=result.before?.length||0,after=result.residual?.length||0;
+   openSheet(`<h2>Proda riprogettata</h2><div class="planner-result"><b>La disposizione è stata realmente modificata.</b><br>Problemi di distanza: <b>${before} → ${after}</b>.<br>Nessuna sovrapposizione fisica rimasta.</div><p class="muted">Restano ${after} distanze consigliate che non riescono a essere rispettate tutte insieme con questa combinazione di piante.</p><div class="actions"><button class="btn" onclick="closeSheet()">Chiudi</button></div>`);
+   return;
+ }
+ plannerFailureSheet(zoneId,result);
+}
 function companionConstraintWarnings(zoneId){
  const all=zonePlants(zoneId),d=zoneDims(zoneId),out=[];
  for(const entry of all){const role=cropRole(entry.crop),x=entry.plant.x*d.w*100,y=entry.plant.y*d.l*100,r=safeDiameter(entry.crop.iconDiameterCm)/2;
