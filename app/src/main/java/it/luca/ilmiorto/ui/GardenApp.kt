@@ -43,6 +43,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import it.luca.ilmiorto.BuildConfig
 import it.luca.ilmiorto.R
 import it.luca.ilmiorto.data.GardenCloudSync
 import it.luca.ilmiorto.data.GardenRepository
@@ -51,7 +52,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 
-private const val APP_VERSION = "0.9.3"
+private val APP_VERSION = BuildConfig.VERSION_NAME
 
 private enum class AppSection(val title: String, val emoji: String) {
     MAP("Mappa", "🗺️"),
