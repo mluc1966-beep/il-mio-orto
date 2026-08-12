@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Il mio Orto — ANTEPRIMA p0.2.2</title>
+<title>Il mio Orto — ANTEPRIMA p0.2.3</title>
 <style>
 :root{--p:#2f6b3b;--pc:#b4f1b4;--bg:#f7fbf2;--card:#fff;--muted:#687268;--line:#dce4d8;--danger:#9b2c2c}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#152016}.app{max-width:520px;margin:auto;min-height:100vh;padding:72px 14px 92px}.top{position:fixed;z-index:10;top:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:18px 18px 12px;background:rgba(247,251,242,.96);backdrop-filter:blur(12px);font-weight:750;font-size:20px;border-bottom:1px solid var(--line)}.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}.tab{border:0;background:transparent;padding:5px 1px;font-size:9px;color:#566057}.tab b{display:block;font-size:19px}.tab.active{color:var(--p);font-weight:700}.fab{position:fixed;right:max(calc((100vw - 520px)/2 + 18px),18px);bottom:83px;width:56px;height:56px;border-radius:18px;border:0;background:var(--p);color:#fff;font-size:30px;box-shadow:0 8px 22px #1d3e2440}.title{font-size:24px;font-weight:750;margin:4px 0}.sub{color:var(--muted);margin:0 0 16px;line-height:1.4}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #1b3b1d0a}.map{background:#eef4e9;padding:11px;border-radius:20px}.maptop{display:grid;grid-template-columns:3fr 1.2fr;gap:9px}.beds{display:grid;gap:9px}.zone{border:1px solid #b9c7b5;background:#fff;border-radius:15px;padding:12px;text-align:left;min-height:66px}.zone.active{border:2px solid var(--p);background:var(--pc)}.zone small{display:block;color:#566057;margin-top:3px}.strip{min-height:292px}.lwrap{margin-top:10px}.lcaption{font-size:13px;font-weight:750;color:#566057;margin:2px 0 7px}.lshape{height:245px;position:relative}.lshape svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.lshape .lbase{z-index:1}.lshape .lborder{z-index:3}.lhot{position:absolute;border:0;background:transparent;text-align:left;padding:12px;color:#152016;z-index:2}.lhot b{display:block}.lhot small{display:block;color:#566057;margin-top:4px}.lhot.active{background:var(--pc)}.lhot-v{left:1px;top:1px;width:31.58%;height:calc(100% - 2px);display:flex;flex-direction:column;justify-content:center}.lhot-h{left:31.58%;right:1px;top:1px;height:28.57%;display:flex;flex-direction:column;justify-content:center}.lshape-note{font-size:12px;color:#687268;margin-top:7px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#d8f0d2;border-radius:15px;padding:12px}.stat strong{font-size:19px;display:block}.row{display:flex;gap:10px;align-items:flex-start}.grow{flex:1}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:13px;background:var(--p);color:#fff;padding:12px 15px;font-weight:700}.btn.out{background:#fff;color:var(--p);border:1px solid var(--p)}.btn.danger{color:var(--danger);border-color:#d9a8a8}.full{width:100%}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.done{text-decoration:line-through;color:#718071}.empty{text-align:center;color:var(--muted);padding:28px 12px}.modal{position:fixed;z-index:30;inset:0;background:#10201480;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(520px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px 24px 0 0;padding:20px}.sheet h2{margin-top:0}label{display:block;font-size:13px;font-weight:650;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #bbc6b7;border-radius:12px;font:inherit;background:#fff}textarea{min-height:76px}.actions{display:flex;gap:9px;margin-top:18px}.actions>*{flex:1}.hide{display:none!important}
 
@@ -54,7 +54,7 @@
 .preview-tools b{display:block;margin-bottom:4px}
 
 
-/* ===== ANTEPRIMA p0.2.2 ===== */
+/* ===== ANTEPRIMA p0.2.3 ===== */
 .suggestion-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
 .suggestion-actions .btn{margin:0;padding:8px 7px;font-size:11px}
 .task-icon,.harvest-icon{font-size:20px;line-height:1;flex:0 0 auto}
@@ -126,6 +126,18 @@
 }
 .multi-date-add{margin-top:7px}
 
+
+/* p0.2.3 — Calendario raggruppato per attività e luogo */
+.cal-date{font-weight:850;margin-bottom:8px}
+.cal-activity{padding:9px 0;border-top:1px solid var(--line)}
+.cal-activity:first-of-type{border-top:0}
+.cal-activity-title{font-weight:850;font-size:13px;margin-bottom:5px}
+.cal-zone-row{display:flex;flex-wrap:wrap;gap:5px 7px;align-items:baseline;margin:3px 0}
+.cal-crop{font-size:13px;font-weight:750}
+.cal-place{font-size:9px;color:var(--muted);font-weight:500;margin-left:2px}
+.cal-sep{font-size:10px;color:#9aa59b}
+.cal-done{opacity:.58;text-decoration:line-through}
+
 </style>
 
 <meta name="theme-color" content="#2f6b3b">
@@ -138,10 +150,10 @@
 <div class="cover-screen" id="coverScreen" onclick="dismissCover()" role="button" tabindex="0" aria-label="Entra nell'app Il mio Orto">
   <div class="cover-frame">
     <button class="cover-enter" type="button" onclick="event.stopPropagation();dismissCover()">Entra nell’orto</button>
-    <span class="cover-version">ANTEPRIMA p0.2.2</span>
+    <span class="cover-version">ANTEPRIMA p0.2.3</span>
   </div>
 </div>
-<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="preview-badge">ANTEPRIMA p0.2.2</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
+<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="preview-badge">ANTEPRIMA p0.2.3</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
 <main class="app" id="content"><div class="card" id="bootCard"><b>Caricamento della mappa…</b><p class="muted">Sto recuperando i dati salvati.</p></div></main>
 <button class="fab" id="fab" aria-label="Aggiungi">+</button>
 <nav class="bottom" id="nav"></nav>
@@ -504,16 +516,67 @@ function saveIconSize(cropId){let c=state.crops.find(c=>c.id===cropId);if(!c)ret
 function removePlant(cropId,plantId){let c=state.crops.find(c=>c.id===cropId);if(!c)return;if(!confirm('Rimuovere questa singola pianta dalla planimetria?'))return;c.plants=c.plants.filter(p=>p.id!==plantId);c.count=c.plants.length;selectedPlantId='';save()}
 function editCropDialog(cropId){let c=state.crops.find(c=>c.id===cropId);if(!c)return;openSheet(`<h2>Modifica coltura</h2><input id="ecid" type="hidden" value="${c.id}"><label>Catalogo colture</label><select id="ecat" onchange="applyCatalogSelection('e')">${catalogOptions(c.catalogId||'custom')}</select><label>Coltura *</label><input id="en" value="${esc(c.name)}" oninput="syncKnownSettings('e')"><label>Varietà</label><input id="ev" list="evariants" value="${esc(c.variety)}" oninput="syncKnownSettings('e')"><datalist id="evariants"></datalist><label>Numero piante</label><input id="ec" type="number" min="0" max="100" value="${c.count}"><div class="catalog-row"><div><label>Diametro icona (cm)</label><input id="ed" type="number" min="5" max="100" step="1" value="${safeDiameter(c.iconDiameterCm)}"></div><div><label>Distanza tra piante (cm)</label><input id="esp" type="number" min="5" max="300" step="1" value="${safeSpacing(c.spacingCm,30)}"></div></div><label>Distanza tra file (cm)</label><input id="ers" type="number" min="5" max="300" step="1" value="${safeSpacing(c.rowSpacingCm,40)}"><p class="muted">Le impostazioni verranno mantenute per tutte le piante con lo stesso nome e la stessa varietà. Le posizioni non cambiano finché non premi “Progetta la proda”.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="updateCrop()">Salva modifiche</button></div>`);let cat=catalogItem(c.catalogId)||inferCatalog(c.name),list=document.getElementById('evariants');if(cat&&list)list.innerHTML=cat.varieties.map(v=>`<option value="${esc(v)}"></option>`).join('')}
 function updateCrop(){let id=document.getElementById('ecid').value,c=state.crops.find(c=>c.id===id),name=document.getElementById('en').value.trim(),variety=document.getElementById('ev').value.trim(),count=Math.max(0,Math.min(100,Number(document.getElementById('ec').value)||0)),diameter=safeDiameter(document.getElementById('ed').value),spacing=safeSpacing(document.getElementById('esp').value,30),rowSpacing=safeSpacing(document.getElementById('ers').value,40),cat=catalogItem(document.getElementById('ecat').value)||inferCatalog(name);if(!c||!name)return;c.name=name;c.variety=variety;c.iconDiameterCm=diameter;c.spacingCm=spacing;c.rowSpacingCm=rowSpacing;c.catalogId=cat?cat.id:'custom';c.iconColor=cat?cat.color:c.iconColor;if(count>c.plants.length)c.plants.push(...initialPlants(count-c.plants.length));if(count<c.plants.length)c.plants=c.plants.slice(0,count);c.count=count;applySharedSettings(name,variety,diameter,spacing,rowSpacing);selectedPlantId='';closeSheet();save()}
-function calendarView(){let g={};state.tasks.slice().sort((a,b)=>a.date.localeCompare(b.date)).forEach(t=>(g[t.date]??=[]).push(t));return `<h1 class="title">Calendario</h1><p class="sub">Agenda cronologica delle attività.</p><div class="stats"><div class="stat"><strong>${state.tasks.filter(t=>!t.done).length}</strong>da fare</div><div class="stat"><strong>${state.tasks.filter(t=>t.done).length}</strong>completate</div><div class="stat"><strong>${Object.keys(g).length}</strong>giorni</div></div>${Object.keys(g).length?Object.entries(g).map(([d,ts])=>`<div class="card"><b>${d}</b>${ts.map(t=>`<div class="item ${t.done?'done':''}">${t.done?'✓':'•'} ${esc(t.title)}<div class="muted">${esc(t.category)} · ${zoneName(t.zone)}</div></div>`).join('')}</div>`).join(''):'<div class="card empty">📅 Nessuna attività programmata.</div>'}`}
-function localToday(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
-function addDaysIso(iso,days){const d=new Date((iso||localToday())+'T12:00:00');d.setDate(d.getDate()+Number(days||0));return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
-function cropById(id){return state.crops.find(c=>c.id===id)||null}
-function taskCrop(t){return cropById(t?.cropId)||null}
-function taskCropName(t){return taskCrop(t)?.name||t?.cropName||''}
-const TASK_CATEGORIES=['Tutte','Semina','Trapianto','Irrigazione','Concimazione','Cura','Protezione','Raccolta','Altro'];
-let taskCategoryFilter='Tutte';
-function taskFilterBar(){
-  return `<div class="task-filter-bar">${TASK_CATEGORIES.map(x=>`<button class="task-filter ${taskCategoryFilter===x?'active':''}" onclick="setTaskCategoryFilter('${x}')">${x}</button>`).join('')}</div>`;
+function calendarView(){
+  const byDate={};
+  state.tasks.slice().sort((a,b)=>a.date.localeCompare(b.date)).forEach(t=>{
+    (byDate[t.date]??=[]).push(t);
+  });
+
+  function groupedDay(tasks){
+    const groups={};
+
+    tasks.forEach(t=>{
+      const activity=String(t.category||t.title||'Altro').trim()||'Altro';
+      const zone=t.zone||'';
+      const key=activity+'||'+zone;
+      if(!groups[key])groups[key]={activity,zone,tasks:[]};
+      groups[key].tasks.push(t);
+    });
+
+    return Object.values(groups).map(group=>{
+      const place=zoneName(group.zone)||'Orto';
+
+      // I suggerimenti/programmazioni legati a una coltura mostrano il nome
+      // dell'ortaggio; le attività manuali senza coltura mantengono il titolo.
+      const entries=[];
+      const seen=new Set();
+
+      group.tasks.forEach(t=>{
+        const crop=taskCropName(t);
+        const label=crop || t.title || group.activity;
+        const dedupeKey=(crop||label)+'||'+(t.done?'1':'0');
+        if(seen.has(dedupeKey))return;
+        seen.add(dedupeKey);
+        entries.push({
+          label,
+          emoji: crop ? emojiFor(crop) : taskIcon(t),
+          done: !!t.done
+        });
+      });
+
+      return `<div class="cal-activity">
+        <div class="cal-activity-title">${esc(group.activity)}</div>
+        <div class="cal-zone-row">
+          ${entries.map((e,i)=>`${i?'<span class="cal-sep">·</span>':''}<span class="cal-crop ${e.done?'cal-done':''}">${e.done?'✓ ':''}${e.emoji} ${esc(e.label)} <span class="cal-place">(${esc(place)})</span></span>`).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  return `<h1 class="title">Calendario</h1>
+    <p class="sub">Agenda cronologica delle attività.</p>
+    <div class="stats">
+      <div class="stat"><strong>${state.tasks.filter(t=>!t.done).length}</strong>da fare</div>
+      <div class="stat"><strong>${state.tasks.filter(t=>t.done).length}</strong>completate</div>
+      <div class="stat"><strong>${Object.keys(byDate).length}</strong>giorni</div>
+    </div>
+    ${Object.keys(byDate).length
+      ? Object.entries(byDate).map(([date,tasks])=>`
+          <div class="card">
+            <div class="cal-date">${formatDateIt(date)}</div>
+            ${groupedDay(tasks)}
+          </div>`).join('')
+      : '<div class="card empty">📅 Nessuna attività programmata.</div>'}`;
 }
 function setTaskCategoryFilter(value){taskCategoryFilter=TASK_CATEGORIES.includes(value)?value:'Tutte';render()}
 function taskMatchesFilter(category){return taskCategoryFilter==='Tutte'||String(category||'Altro')===taskCategoryFilter}
@@ -679,7 +742,7 @@ function harvestDialog(){openSheet(`<h2>Registra raccolto</h2><p class="muted">D
 function addHarvest(){const hn=document.getElementById('hn'),hw=document.getElementById('hw');if(!hn.value.trim()||Number(hw.value)<=0)return;state.harvests.push({id:uid(),name:hn.value.trim(),date:harvestSessionDate,weight:Math.round(Number(hw.value))});closeSheet();save()}
 function removeCrop(id){state.crops=state.crops.filter(x=>x.id!==id);selectedPlantId='';save()}function toggleTask(id){let x=state.tasks.find(x=>x.id===id);if(!x)return;x.done=!x.done;if(x.done){if(!state.activityLog.some(l=>l.taskId===x.id))logActivity({date:localToday(),title:x.title,category:x.category,zone:x.zone,cropId:x.cropId||'',cropName:x.cropName||taskCropName(x),taskId:x.id,suggestionKey:x.suggestionKey||''})}else{state.activityLog=state.activityLog.filter(l=>l.taskId!==x.id)}save()}function removeTask(id){state.tasks=state.tasks.filter(x=>x.id!==id);save()}function removeHarvest(id){state.harvests=state.harvests.filter(x=>x.id!==id);save()}
 const BACKUP_META_KEY='ortoPreviewLastBackup';
-function backupEnvelope(){return {app:'Il mio Orto',kind:'preview-backup',version:'p0.2.2',exportedAt:new Date().toISOString(),state:cloudSafeState(state)}}
+function backupEnvelope(){return {app:'Il mio Orto',kind:'preview-backup',version:'p0.2.3',exportedAt:new Date().toISOString(),state:cloudSafeState(state)}}
 function exportData(){const payload=backupEnvelope(),a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.href=url;a.download=`il_mio_orto_backup_${localToday()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);try{localStorage.setItem(BACKUP_META_KEY,payload.exportedAt)}catch(_){ }render()}
 function importData(file){if(!file)return;let r=new FileReader;r.onload=()=>{try{const parsed=JSON.parse(r.result),incoming=parsed?.state&&typeof parsed.state==='object'?parsed.state:parsed;if(!incoming||typeof incoming!=='object')throw new Error('Formato non riconosciuto');if(!confirm('Importare questo backup nella preview? I dati attuali verranno sostituiti.'))return;state=incoming;migratePlants();save();alert('Backup importato correttamente.')}catch(e){alert('File non valido: '+e.message)}};r.readAsText(file)}
 function restoreStableCopy(){copyStableDataToPreview()}
