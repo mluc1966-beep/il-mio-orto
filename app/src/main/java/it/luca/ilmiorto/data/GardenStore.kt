@@ -8,8 +8,19 @@ class GardenStore(private val repository: GardenRepository) {
     var state by mutableStateOf(repository.load())
         private set
 
+    /** Chiamato soltanto per modifiche originate su questo dispositivo. */
+    var onLocalChange: ((GardenState) -> Unit)? = null
+
     fun update(transform: (GardenState) -> GardenState) {
         state = transform(state)
+        repository.save(state)
+        onLocalChange?.invoke(state)
+    }
+
+    /** Applica lo stato ricevuto dal cloud senza rimandarlo immediatamente a Firestore. */
+    fun replaceFromCloud(cloudState: GardenState) {
+        if (cloudState == state) return
+        state = cloudState
         repository.save(state)
     }
 
@@ -22,15 +33,18 @@ class GardenStore(private val repository: GardenRepository) {
     fun toggleTask(taskId: String) = update { it.toggleTask(taskId) }
     fun removeCrop(cropId: String) = update { it.removeCrop(cropId) }
     fun updateCrop(crop: Crop) = update { it.updateCrop(crop) }
+
     fun autoArrangeCrop(cropId: String): Boolean {
         val planned = state.autoArrangeCrop(cropId)
         val changed = planned != state
         if (changed) {
             state = planned
             repository.save(state)
+            onLocalChange?.invoke(state)
         }
         return changed
     }
+
     fun duplicateCrop(cropId: String, targetZoneId: String) = update { it.duplicateCrop(cropId, targetZoneId) }
     fun removePlant(cropId: String, plantId: String) = update { it.removePlant(cropId, plantId) }
     fun removeTask(taskId: String) = update { it.removeTask(taskId) }
@@ -44,9 +58,11 @@ class GardenStore(private val repository: GardenRepository) {
         val imported = GardenJson.decode(json)
         state = imported
         repository.save(state)
+        onLocalChange?.invoke(state)
     }
 
     fun reset() {
         state = repository.reset()
+        onLocalChange?.invoke(state)
     }
 }

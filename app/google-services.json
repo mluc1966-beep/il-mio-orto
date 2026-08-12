@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1005001589121",
+    "project_id": "gestione-spese-a0997",
+    "storage_bucket": "gestione-spese-a0997.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005001589121:android:41f8b2010881d4a2d26880",
+        "android_client_info": {
+          "package_name": "it.luca.ilmiorto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005001589121-o1enle8s9tnb2oc9ilfr82ndjp7e0q9l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "it.luca.ilmiorto",
+            "certificate_hash": "7e1f733fe64049acaf2c9fc68984af5f4594b5aa"
+          }
+        },
+        {
+          "client_id": "1005001589121-62u9rqog577vcr0d9nmub65s4e3h5ur4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX-1hke_FPL68L1HslY4vVRrBz2E_Oerc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005001589121-62u9rqog577vcr0d9nmub65s4e3h5ur4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
