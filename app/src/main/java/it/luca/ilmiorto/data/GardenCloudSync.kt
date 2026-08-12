@@ -12,8 +12,7 @@ import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.exceptions.GetCredentialException
-import androidx.credentials.exceptions.NoCredentialException
-import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -124,22 +123,11 @@ class GardenCloudSync(
     suspend fun signIn(activity: Activity) {
         uiState = uiState.copy(mode = Mode.SYNCING, message = "Accesso con Google…")
         try {
-            // Flusso raccomandato da Firebase per Credential Manager:
-            // 1) prova prima gli account già autorizzati;
-            // 2) se non ce ne sono, mostra tutti gli account Google disponibili.
-            val credential = try {
-                requestGoogleCredential(activity, authorizedOnly = true)
-            } catch (firstError: GetCredentialException) {
-                // Alcune versioni di Google Play services segnalano gli account che
-                // richiedono riautenticazione come "Account reauth failed" invece
-                // che come semplice NoCredentialException. In entrambi i casi il
-                // secondo tentativo deve mostrare tutti gli account disponibili.
-                val shouldRetryUnfiltered = firstError is NoCredentialException ||
-                    firstError.localizedMessage.orEmpty().contains("reauth", ignoreCase = true)
-                if (!shouldRetryUnfiltered) throw firstError
-                runCatching { credentialManager.clearCredentialState(ClearCredentialStateRequest()) }
-                requestGoogleCredential(activity, authorizedOnly = false)
-            }
+            // Questo pulsante è un accesso Google esplicito.
+            // Android indica di usare GetSignInWithGoogleOption per questo caso:
+            // apre il flusso Google anche quando non esistono account già autorizzati
+            // o quando l'account deve essere riautenticato.
+            val credential = requestGoogleCredentialFromButton(activity)
 
             if (credential !is CustomCredential ||
                 credential.type != GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
@@ -181,17 +169,15 @@ class GardenCloudSync(
         uiState = UiState()
     }
 
-    private suspend fun requestGoogleCredential(
+    private suspend fun requestGoogleCredentialFromButton(
         activity: Activity,
-        authorizedOnly: Boolean,
     ) = credentialManager.getCredential(
         context = activity,
         request = GetCredentialRequest.Builder()
             .addCredentialOption(
-                GetGoogleIdOption.Builder()
-                    .setServerClientId(activity.getString(R.string.default_web_client_id))
-                    .setFilterByAuthorizedAccounts(authorizedOnly)
-                    .build()
+                GetSignInWithGoogleOption.Builder(
+                    serverClientId = activity.getString(R.string.default_web_client_id)
+                ).build()
             )
             .build(),
     ).credential
