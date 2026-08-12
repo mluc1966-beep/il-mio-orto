@@ -1,12 +1,12 @@
 package it.luca.ilmiorto.ui
 
-import android.app.Activity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -20,6 +20,7 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -42,6 +43,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import it.luca.ilmiorto.BuildConfig
 import it.luca.ilmiorto.R
@@ -69,7 +71,6 @@ private enum class DialogType { CROP, TASK }
 @Composable
 fun GardenApp() {
     val context = LocalContext.current
-    val activity = context as? Activity
     val store = remember { GardenStore(GardenRepository(context.applicationContext)) }
     val cloud = remember {
         GardenCloudSync(
@@ -108,6 +109,8 @@ fun GardenApp() {
     var mapDetailZone by rememberSaveable { mutableStateOf("") }
     var showCloudPanel by remember { mutableStateOf(false) }
     var showLogoutConfirm by remember { mutableStateOf(false) }
+    var loginEmail by rememberSaveable { mutableStateOf("") }
+    var loginPassword by rememberSaveable { mutableStateOf("") }
 
     fun message(text: String) {
         scope.launch { snackbarHostState.showSnackbar(text) }
@@ -335,7 +338,22 @@ fun GardenApp() {
                         Text(cloudUi.displayName.ifBlank { "Account collegato" }, fontWeight = FontWeight.SemiBold)
                         Text(cloudUi.email)
                     } else {
-                        Text("Questa copia sta lavorando con i dati locali. Accedi con Google per usare lo stesso orto condiviso della PWA.")
+                        Text("Accedi con email e password per usare lo stesso orto condiviso della PWA.")
+                        OutlinedTextField(
+                            value = loginEmail,
+                            onValueChange = { loginEmail = it },
+                            label = { Text("Email") },
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth(),
+                        )
+                        OutlinedTextField(
+                            value = loginPassword,
+                            onValueChange = { loginPassword = it },
+                            label = { Text("Password") },
+                            singleLine = true,
+                            visualTransformation = PasswordVisualTransformation(),
+                            modifier = Modifier.fillMaxWidth(),
+                        )
                     }
                     Text(cloudUi.message)
                     if (cloudUi.lastSync.isNotBlank()) Text("Ultimo allineamento: ${cloudUi.lastSync}")
@@ -346,20 +364,20 @@ fun GardenApp() {
                     TextButton(onClick = { cloud.syncNow() }) { Text("Sincronizza ora") }
                 } else {
                     Button(
-                        enabled = activity != null,
-                        onClick = {
-                            if (activity != null) {
-                                scope.launch { cloud.signIn(activity) }
-                            }
-                        },
-                    ) { Text("Accedi con Google") }
+                        onClick = { cloud.signIn(loginEmail, loginPassword) },
+                    ) { Text("Accedi") }
                 }
             },
             dismissButton = {
                 if (signedIn) {
                     TextButton(onClick = { showLogoutConfirm = true }) { Text("Esci") }
                 } else {
-                    TextButton(onClick = { showCloudPanel = false }) { Text("Chiudi") }
+                    Row {
+                        TextButton(
+                            onClick = { cloud.createAccount(loginEmail, loginPassword) },
+                        ) { Text("Crea utenza") }
+                        TextButton(onClick = { showCloudPanel = false }) { Text("Chiudi") }
+                    }
                 }
             },
         )
