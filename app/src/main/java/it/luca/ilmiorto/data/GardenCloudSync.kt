@@ -12,7 +12,8 @@ import androidx.credentials.CredentialManager
 import androidx.credentials.CustomCredential
 import androidx.credentials.GetCredentialRequest
 import androidx.credentials.exceptions.GetCredentialException
-import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
+import androidx.credentials.exceptions.NoCredentialException
+import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -123,11 +124,22 @@ class GardenCloudSync(
     suspend fun signIn(activity: Activity) {
         uiState = uiState.copy(mode = Mode.SYNCING, message = "Accesso con Google…")
         try {
-            // Questo pulsante e' un'azione esplicita "Accedi con Google".
-            // Per questo flusso Android raccomanda GetSignInWithGoogleOption:
-            // mostra il selettore account anche al primo accesso, senza richiedere
-            // che l'account sia gia' stato autorizzato per questa app.
-            val credential = requestGoogleCredential(activity)
+            // Flusso raccomandato da Firebase per Credential Manager:
+            // 1) prova prima gli account già autorizzati;
+            // 2) se non ce ne sono, mostra tutti gli account Google disponibili.
+            val credential = try {
+                requestGoogleCredential(activity, authorizedOnly = true)
+            } catch (firstError: GetCredentialException) {
+                // Alcune versioni di Google Play services segnalano gli account che
+                // richiedono riautenticazione come "Account reauth failed" invece
+                // che come semplice NoCredentialException. In entrambi i casi il
+                // secondo tentativo deve mostrare tutti gli account disponibili.
+                val shouldRetryUnfiltered = firstError is NoCredentialException ||
+                    firstError.localizedMessage.orEmpty().contains("reauth", ignoreCase = true)
+                if (!shouldRetryUnfiltered) throw firstError
+                runCatching { credentialManager.clearCredentialState(ClearCredentialStateRequest()) }
+                requestGoogleCredential(activity, authorizedOnly = false)
+            }
 
             if (credential !is CustomCredential ||
                 credential.type != GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL
@@ -138,21 +150,26 @@ class GardenCloudSync(
             val googleCredential = GoogleIdTokenCredential.createFrom(credential.data)
             val firebaseCredential = GoogleAuthProvider.getCredential(googleCredential.idToken, null)
             auth.signInWithCredential(firebaseCredential)
+                .addOnSuccessListener { userCredential ->
+                    userCredential.user?.let {
+                        updateUser(it, Mode.SYNCING, "Collegamento all'orto condiviso…")
+                    }
+                }
                 .addOnFailureListener { error ->
                     uiState = uiState.copy(
                         mode = Mode.ERROR,
-                        message = "Accesso Google non riuscito: ${error.localizedMessage ?: "errore sconosciuto"}",
+                        message = "Accesso Firebase non riuscito: ${error.localizedMessage ?: "errore sconosciuto"}",
                     )
                 }
         } catch (error: GetCredentialException) {
             uiState = uiState.copy(
                 mode = Mode.ERROR,
-                message = "Accesso Google non completato: ${error.localizedMessage ?: error.type}",
+                message = "Accesso Google non completato [${error.type}]: ${error.localizedMessage ?: error.javaClass.simpleName}",
             )
         } catch (error: Exception) {
             uiState = uiState.copy(
                 mode = Mode.ERROR,
-                message = "Accesso Google non riuscito: ${error.localizedMessage ?: "errore sconosciuto"}",
+                message = "Accesso Google non riuscito (${error.javaClass.simpleName}): ${error.localizedMessage ?: "errore sconosciuto"}",
             )
         }
     }
@@ -164,17 +181,20 @@ class GardenCloudSync(
         uiState = UiState()
     }
 
-    private suspend fun requestGoogleCredential(activity: Activity) =
-        credentialManager.getCredential(
-            context = activity,
-            request = GetCredentialRequest.Builder()
-                .addCredentialOption(
-                    GetSignInWithGoogleOption.Builder(
-                        serverClientId = activity.getString(R.string.default_web_client_id),
-                    ).build()
-                )
-                .build(),
-        ).credential
+    private suspend fun requestGoogleCredential(
+        activity: Activity,
+        authorizedOnly: Boolean,
+    ) = credentialManager.getCredential(
+        context = activity,
+        request = GetCredentialRequest.Builder()
+            .addCredentialOption(
+                GetGoogleIdOption.Builder()
+                    .setServerClientId(activity.getString(R.string.default_web_client_id))
+                    .setFilterByAuthorizedAccounts(authorizedOnly)
+                    .build()
+            )
+            .build(),
+    ).credential
 
     private fun ensureGardenThenListen() {
         preserveLocalIfRemoteEmpty = false
