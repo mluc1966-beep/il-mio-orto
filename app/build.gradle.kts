@@ -15,8 +15,8 @@ android {
         applicationId = "it.luca.ilmiorto"
         minSdk = 26
         targetSdk = 36
-        versionCode = 16
-        versionName = "0.9.3"
+        versionCode = 17
+        versionName = "0.9.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -73,8 +73,8 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore")
 
     // Accesso Google tramite Credential Manager, come da documentazione Firebase.
-    implementation("androidx.credentials:credentials:1.3.0")
-    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("androidx.credentials:credentials:1.6.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.6.0")
     implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
