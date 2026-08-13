@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Il mio Orto — v0.10.6 · PREVIEW p0.2.9</title>
+<title>Il mio Orto — v0.10.6 · PREVIEW p0.2.10</title>
 <style>
 :root{--p:#2f6b3b;--pc:#b4f1b4;--bg:#f7fbf2;--card:#fff;--muted:#687268;--line:#dce4d8;--danger:#9b2c2c}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#152016}.app{max-width:520px;margin:auto;min-height:100vh;padding:72px 14px 92px}.top{position:fixed;z-index:10;top:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:18px 18px 12px;background:rgba(247,251,242,.96);backdrop-filter:blur(12px);font-weight:750;font-size:20px;border-bottom:1px solid var(--line)}.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}.tab{border:0;background:transparent;padding:5px 1px;font-size:9px;color:#566057}.tab b{display:block;font-size:19px}.tab.active{color:var(--p);font-weight:700}.fab{position:fixed;right:max(calc((100vw - 520px)/2 + 18px),18px);bottom:83px;width:56px;height:56px;border-radius:18px;border:0;background:var(--p);color:#fff;font-size:30px;box-shadow:0 8px 22px #1d3e2440}.title{font-size:24px;font-weight:750;margin:4px 0}.sub{color:var(--muted);margin:0 0 16px;line-height:1.4}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #1b3b1d0a}.map{background:#eef4e9;padding:11px;border-radius:20px}.maptop{display:grid;grid-template-columns:3fr 1.2fr;gap:9px}.beds{display:grid;gap:9px}.zone{border:1px solid #b9c7b5;background:#fff;border-radius:15px;padding:12px;text-align:left;min-height:66px}.zone.active{border:2px solid var(--p);background:var(--pc)}.zone small{display:block;color:#566057;margin-top:3px}.strip{min-height:292px}.lwrap{margin-top:10px}.lcaption{font-size:13px;font-weight:750;color:#566057;margin:2px 0 7px}.lshape{height:245px;position:relative}.lshape svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.lshape .lbase{z-index:1}.lshape .lborder{z-index:3}.lhot{position:absolute;border:0;background:transparent;text-align:left;padding:12px;color:#152016;z-index:2}.lhot b{display:block}.lhot small{display:block;color:#566057;margin-top:4px}.lhot.active{background:var(--pc)}.lhot-v{left:1px;top:1px;width:31.58%;height:calc(100% - 2px);display:flex;flex-direction:column;justify-content:center}.lhot-h{left:31.58%;right:1px;top:1px;height:28.57%;display:flex;flex-direction:column;justify-content:center}.lshape-note{font-size:12px;color:#687268;margin-top:7px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#d8f0d2;border-radius:15px;padding:12px}.stat strong{font-size:19px;display:block}.row{display:flex;gap:10px;align-items:flex-start}.grow{flex:1}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:13px;background:var(--p);color:#fff;padding:12px 15px;font-weight:700}.btn.out{background:#fff;color:var(--p);border:1px solid var(--p)}.btn.danger{color:var(--danger);border-color:#d9a8a8}.full{width:100%}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.done{text-decoration:line-through;color:#718071}.empty{text-align:center;color:var(--muted);padding:28px 12px}.modal{position:fixed;z-index:30;inset:0;background:#10201480;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(520px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px 24px 0 0;padding:20px}.sheet h2{margin-top:0}label{display:block;font-size:13px;font-weight:650;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #bbc6b7;border-radius:12px;font:inherit;background:#fff}textarea{min-height:76px}.actions{display:flex;gap:9px;margin-top:18px}.actions>*{flex:1}.hide{display:none!important}
 
@@ -14,7 +14,7 @@
 
 .catalog-note{margin-top:10px;padding:10px 12px;border-radius:12px;background:#eef5e9;font-size:12px;color:#35533a}.warning-box{margin:10px 0;padding:11px 12px;border-radius:13px;background:#fff3cd;border:1px solid #e6c96a;color:#594800;font-size:13px;line-height:1.45}.warning-box.ok{background:#e7f5e4;border-color:#a9d4a2;color:#24562d}.warning-box.danger{background:#fde8e7;border-color:#e5a6a3;color:#7b201e}.warning-list{margin:7px 0 0;padding-left:18px}.plant-token.too-close .plant-icon{outline:3px solid #ffb020}.plant-token.overlap .plant-icon{outline:4px solid #d93025}.plant-icon{background:var(--plant-color,#edf8e8)}.catalog-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.recommendation{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.recommendation span{padding:4px 8px;border-radius:99px;background:#eef5e9;color:#315738;font-size:11px;font-weight:750}.btn.warn{background:#8b6508;color:#fff}.auto-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.status-ok{color:#2d6a39;font-weight:800}.status-warn{color:#8b6508;font-weight:800}.status-danger{color:#a12a24;font-weight:800}.crop-color-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle;border:1px solid #0002}
 
-.companion-filter{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0}.companion-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0}.companion-title{display:flex;gap:10px;align-items:center}.companion-title .emoji{font-size:30px}.evidence{display:inline-block;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:800}.evidence.medium{background:#fff1b8;color:#604b00}.evidence.limited{background:#f1e7d8;color:#6b4c23}.evidence.good{background:#dff2d9;color:#24592d}.relation{display:inline-block;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:800;margin-right:5px}.relation.fav{background:#dff2d9;color:#24592d}.relation.conditional{background:#fff1b8;color:#604b00}.relation.uncertain{background:#eee;color:#555}.source-list{margin:10px 0 0;padding:0;list-style:none}.source-list li{margin:7px 0}.source-link{display:inline-block;color:#285d34;font-weight:750;text-decoration:underline}.constraint-panel{background:#eef5e9;border:1px solid #c8ddc2;border-radius:16px;padding:13px;margin:12px 0}.constraint-row{display:flex;gap:9px;align-items:flex-start;margin:8px 0}.constraint-status{width:22px;flex:0 0 22px;text-align:center}.planner-result{padding:12px;border-radius:14px;margin:10px 0;background:#eef5e9;border:1px solid #c8ddc2}.planner-result.fail{background:#fff0df;border-color:#e2b87a}.planner-suggestion{background:#fff;border:1px solid #ead1a8;border-radius:12px;padding:10px;margin-top:8px}.info-callout{background:#eef5e9;border-left:4px solid var(--p);padding:12px;border-radius:10px;margin:12px 0;font-size:13px;line-height:1.45}.pair-layout{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mini-tag{display:inline-block;padding:3px 7px;border-radius:99px;background:#eef5e9;font-size:11px;font-weight:700;margin:2px}.btn.secondary{background:#54745a}.source-note{font-size:12px;color:var(--muted);line-height:1.45}.constraint-bad{color:#982b24}.constraint-good{color:#2d6a39}
+.companion-filter{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0}.companion-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0}.companion-title{display:flex;gap:10px;align-items:center}.companion-title .emoji{font-size:30px}.evidence{display:inline-block;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:800}.evidence.medium{background:#fff1b8;color:#604b00}.evidence.limited{background:#f1e7d8;color:#6b4c23}.evidence.good{background:#dff2d9;color:#24592d}.relation{display:inline-block;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:800;margin-right:5px}.relation.fav{background:#dff2d9;color:#24592d}.relation.conditional{background:#fff1b8;color:#604b00}.relation.uncertain{background:#eee;color:#555}.source-list{margin:10px 0 0;padding:0;list-style:none}.source-list li{margin:7px 0}.source-link{display:inline-block;color:#285d34;font-weight:750;text-decoration:underline}.constraint-panel{background:#eef5e9;border:1px solid #c8ddc2;border-radius:16px;padding:13px;margin:12px 0}.constraint-row{display:flex;gap:9px;align-items:flex-start;margin:8px 0}.constraint-status{width:22px;flex:0 0 22px;text-align:center}.planner-result{padding:12px;border-radius:14px;margin:10px 0;background:#eef5e9;border:1px solid #c8ddc2}.planner-result.fail{background:#fff0df;border-color:#e2b87a}.planner-suggestion{background:#fff;border:1px solid #ead1a8;border-radius:12px;padding:10px;margin-top:8px}.planner-move-row{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap}.planner-move-row .planner-move-text{flex:1;min-width:180px}.planner-move-row .btn{flex:0 0 auto}.info-callout{background:#eef5e9;border-left:4px solid var(--p);padding:12px;border-radius:10px;margin:12px 0;font-size:13px;line-height:1.45}.pair-layout{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mini-tag{display:inline-block;padding:3px 7px;border-radius:99px;background:#eef5e9;font-size:11px;font-weight:700;margin:2px}.btn.secondary{background:#54745a}.source-note{font-size:12px;color:var(--muted);line-height:1.45}.constraint-bad{color:#982b24}.constraint-good{color:#2d6a39}
 
 
 .crop-hub-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:12px 0}.crop-hub-tab{border:1px solid var(--line);background:#fff;color:#38543d;border-radius:13px;padding:10px 5px;font-weight:750}.crop-hub-tab.active{background:var(--p);color:#fff;border-color:var(--p)}.guide-source{padding:11px 12px;border-radius:13px;background:#eef4e9;border:1px solid #cad9c5;font-size:12px;line-height:1.45;margin:10px 0}.guide-source b{display:block;margin-bottom:3px}.guide-select{margin:10px 0 14px}.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.data-cell{padding:10px;border-radius:13px;background:#eef5e9}.data-cell strong{display:block;font-size:17px}.chips{display:flex;flex-wrap:wrap;gap:6px}.chip{display:inline-block;padding:5px 8px;border-radius:99px;background:#e7f1e2;color:#315738;font-size:12px;font-weight:700}.chip.bad{background:#fde8e7;color:#7b201e}.chip.good{background:#dff2d9;color:#24592d}.chip.neutral{background:#f1eee7;color:#5c554a}.rotation-result{padding:12px;border-radius:14px;margin:10px 0;line-height:1.45}.rotation-result.good{background:#e7f5e4;border:1px solid #a9d4a2}.rotation-result.warn{background:#fff3cd;border:1px solid #e6c96a}.rotation-result.bad{background:#fde8e7;border:1px solid #e5a6a3}.history-row{display:flex;gap:9px;align-items:center;padding:9px 0;border-bottom:1px solid var(--line)}.history-year{font-weight:850;min-width:42px}.care-block{padding:12px;border-radius:14px;background:#f5f8f1;border:1px solid var(--line);margin:10px 0}.care-block h3{margin:0 0 7px}.care-list{margin:0;padding-left:18px;line-height:1.55}.source-relation{font-size:11px;color:var(--muted);margin-top:6px}.source-direct{background:#dff2d9;color:#24592d}.source-reverse{background:#fff1b8;color:#604b00}.relation-card{padding:12px;border:1px solid var(--line);border-radius:15px;background:#fff;margin:9px 0}.relation-card h3{margin:0}.capacity{font-size:26px;font-weight:850;color:var(--p)}.section-search{display:grid;grid-template-columns:1fr auto;gap:7px;align-items:end}.link-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
@@ -50,7 +50,7 @@
 .suggestion-meta{font-size:11px;color:var(--muted);margin-top:2px}
 .suggestion-note{font-size:12px;line-height:1.35;margin:6px 0 0;color:#3e5241}
 .suggestion-card .btn{margin-top:8px;padding:8px 10px;font-size:12px}
-/* ===== PREVIEW p0.2.9 su base v0.10.6 ===== */
+/* ===== PREVIEW p0.2.10 su base v0.10.6 ===== */
 .suggestion-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
 .suggestion-actions .btn{margin:0;padding:8px 7px;font-size:11px}
 .task-icon,.harvest-icon{font-size:20px;line-height:1;flex:0 0 auto}
@@ -176,7 +176,7 @@
 .auth-help{font-size:10px;line-height:1.35;color:var(--muted);margin-top:7px}
 
 
-/* ===== PREVIEW p0.2.9 — progettista proda evoluto ===== */
+/* ===== PREVIEW p0.2.10 — progettista proda evoluto ===== */
 .planner-preview-banner{margin:10px 0;padding:12px;border:2px solid #d6a72a;background:#fff7d8;border-radius:14px;color:#5d4900;font-size:12px;line-height:1.4}
 .planner-preview-banner b{display:block;font-size:13px;margin-bottom:3px}.planner-preview-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
 .plant-board.previewing{box-shadow:inset 0 0 0 2px #d6a72a,0 0 0 3px #fff3b7}
@@ -190,7 +190,7 @@
 .btn.undo{background:#fff;color:#5d4a00;border:1px solid #d6a72a}
 
 
-/* ===== PREVIEW p0.2.9 — flusso guidato Progetta la proda ===== */
+/* ===== PREVIEW p0.2.10 — flusso guidato Progetta la proda ===== */
 .planner-guide{margin:10px 0 12px;padding:14px;border:2px solid #9fc69f;background:#f4fbf1;border-radius:16px}
 .planner-guide h3{margin:0 0 5px;font-size:16px;color:#24562d}.planner-guide p{margin:4px 0 10px;font-size:12px;line-height:1.42;color:#4d5e50}
 .planner-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:9px 0 11px}.planner-step{background:#fff;border:1px solid #cfe0cb;border-radius:10px;padding:7px 4px;text-align:center;font-size:9px;line-height:1.15;color:#435446}.planner-step b{display:block;font-size:15px;color:#2f6b3b;margin-bottom:2px}
@@ -212,10 +212,10 @@
 <div class="cover-screen" id="coverScreen" onclick="dismissCover()" role="button" tabindex="0" aria-label="Entra nell'app Il mio Orto">
   <div class="cover-frame">
     <button class="cover-enter" type="button" onclick="event.stopPropagation();dismissCover()">Entra nell’orto</button>
-    <span class="cover-version">PREVIEW p0.2.9</span>
+    <span class="cover-version">PREVIEW p0.2.10</span>
   </div>
 </div>
-<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="app-version-badge">PREVIEW p0.2.9</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
+<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="app-version-badge">PREVIEW p0.2.10</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
 <main class="app" id="content"><div class="card" id="bootCard"><b>Caricamento della mappa…</b><p class="muted">Sto recuperando i dati salvati.</p></div></main>
 <button class="fab" id="fab" aria-label="Aggiungi">+</button>
 <nav class="bottom" id="nav"></nav>
@@ -1587,6 +1587,69 @@ function hidePlannerBusy(){plannerBusy=false;document.getElementById('plannerBus
 function plannerPaint(){return new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)))}
 function toggleWarningDetails(zoneId){if(expandedWarningZones.has(zoneId))expandedWarningZones.delete(zoneId);else expandedWarningZones.add(zoneId);render()}
 
+function plannerMoveSnapshot(){
+ return state.crops.map(c=>({
+   cropId:c.id,
+   zone:c.zone,
+   plants:(c.plants||[]).map(p=>({id:p.id,x:p.x,y:p.y,locked:!!p.locked}))
+ }));
+}
+function restorePlannerMoveSnapshot(snapshot=[]){
+ snapshot.forEach(row=>{
+   const c=state.crops.find(x=>x.id===row.cropId);if(!c)return;
+   c.zone=row.zone;
+   const byId=new Map((row.plants||[]).map(p=>[p.id,p]));
+   (c.plants||[]).forEach(p=>{const old=byId.get(p.id);if(old){p.x=old.x;p.y=old.y;p.locked=!!old.locked}});
+ });
+}
+function movePlannerSuggestionDialog(sourceZoneId,idsCsv){
+ const ids=String(idsCsv||'').split(',').filter(Boolean),crops=ids.map(id=>state.crops.find(c=>c.id===id)).filter(Boolean);
+ if(!crops.length)return;
+ const labels=crops.map(c=>`${emojiFor(c.name)} ${c.count} ${esc(c.name)}${c.variety?` · ${esc(c.variety)}`:''}`).join('<br>');
+ const options=zones.filter(z=>z[0]!==sourceZoneId).map(z=>{
+   const existing=zonePlants(z[0]).length;
+   return `<option value="${z[0]}">${esc(z[1])} · ${esc(z[2])}${existing?` · ${existing} piante presenti`:' · vuota'}</option>`;
+ }).join('');
+ openSheet(`<h2>Sposta in un’altra proda</h2><p>Il progettista ha individuato questa possibile soluzione:</p><div class="planner-result"><b>${labels}</b></div><label>Proda di destinazione</label><select id="plannerMoveTarget">${options}</select><div class="info-callout"><b>Cosa succede:</b> l’app sposta la coltura scelta e riprogetta automaticamente sia la proda di partenza sia quella di arrivo. Se una delle due non è realizzabile, <b>annulla tutto</b> e lascia i dati invariati.<br><br>Le eventuali posizioni 📌 bloccate delle piante spostate vengono sbloccate, perché cambiano proda.</div><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="executePlannerSuggestionMove('${sourceZoneId}','${ids.join(',')}')">Sposta e riprogetta</button></div>`);
+}
+async function executePlannerSuggestionMove(sourceZoneId,idsCsv){
+ const targetZoneId=document.getElementById('plannerMoveTarget')?.value;
+ const ids=String(idsCsv||'').split(',').filter(Boolean),moving=ids.map(id=>state.crops.find(c=>c.id===id)).filter(Boolean);
+ if(!targetZoneId||!moving.length)return;
+ if(plannerPreview)restorePlannerPreview(false);
+ const snapshot=plannerMoveSnapshot();
+ const movedLabel=moving.map(c=>c.name).join(' + ');
+ showPlannerBusy(`Sposto ${movedLabel} e controllo la proda di arrivo…`);
+ await plannerPaint();
+ try{
+   moving.forEach(c=>{c.zone=targetZoneId;(c.plants||[]).forEach(p=>p.locked=false)});
+   setPlannerBusyMessage(`Riprogetto ${zoneName(targetZoneId)}…`);
+   await plannerPaint();
+   const targetResult=arrangeZonePlants(targetZoneId);
+   if(!targetResult.success){
+     restorePlannerMoveSnapshot(snapshot);hidePlannerBusy();render();
+     alert(`Lo spostamento in ${zoneName(targetZoneId)} non è possibile mantenendo le distanze e le file ordinate. Non è stato modificato nulla.`);
+     return;
+   }
+   setPlannerBusyMessage(`Riorganizzo anche ${zoneName(sourceZoneId)}…`);
+   await plannerPaint();
+   const sourceResult=arrangeZonePlants(sourceZoneId);
+   if(!sourceResult.success){
+     restorePlannerMoveSnapshot(snapshot);hidePlannerBusy();render();
+     alert(`Dopo lo spostamento non riesco a riprogettare correttamente ${zoneName(sourceZoneId)}. Non è stato modificato nulla.`);
+     return;
+   }
+   lastPlannerUndo=null;
+   plannerPreview=null;
+   selected=targetZoneId;mapScreen='detail';selectedPlantId=zonePlants(targetZoneId)[0]?.plant.id||'';
+   hidePlannerBusy();closeSheet();save();
+   setTimeout(()=>alert(`${movedLabel} spostato in ${zoneName(targetZoneId)}. Entrambe le prode sono state riprogettate.`),30);
+ }catch(error){
+   console.error('Errore spostamento tra prode',error);
+   restorePlannerMoveSnapshot(snapshot);hidePlannerBusy();render();
+   alert('Lo spostamento non è riuscito per un errore interno. Non è stato modificato nulla.');
+ }
+}
 function plannerFailureSheet(zoneId,result){
  const failed=result.plan?.failed,sg=result.suggestions||[],diag=plannerFootprintEstimate(zoneId),reason=result.plan?.reason;
  const lockedPair=result.plan?.lockedPair;
@@ -1595,7 +1658,7 @@ function plannerFailureSheet(zoneId,result){
  openSheet(`<h2>La combinazione non entra in modo ordinato</h2>
  <p>Con le quantità attuali non riesco a mantenere contemporaneamente <b>file longitudinali ordinate</b>, distanze minime, piante bloccate e preferenze agronomiche${failed?`, a partire da <b>${emojiFor(failed.crop.name)} ${esc(failed.crop.name)}</b>`:''}.</p>
  ${lockedMsg}<div class="planner-result fail">${deficit}${diag.locked?`<div class="planner-suggestion">Piante bloccate nella proda: <b>${diag.locked}</b>.</div>`:''}</div>
- ${sg.length?`<div class="planner-result fail"><b>Soluzioni concrete trovate:</b>${sg.map(s=>`<div class="planner-suggestion">Sposta in un’altra proda: <b>${s.labels.map(esc).join(' + ')}</b>. Il progetto rimanente diventa realizzabile.</div>`).join('')}</div>`:`<div class="planner-result fail">Prova a ridurre il numero di piante, sbloccare una posizione vincolante oppure spostare una coltura in un’altra proda.</div>`}
+ ${sg.length?`<div class="planner-result fail"><b>Soluzioni concrete trovate:</b>${sg.map(s=>`<div class="planner-suggestion planner-move-row"><div class="planner-move-text">Spostando <b>${s.labels.map(esc).join(' + ')}</b> il progetto rimanente diventa realizzabile.</div><button class="btn small" onclick="movePlannerSuggestionDialog('${zoneId}','${s.ids.join(',')}')">Sposta in un’altra proda</button></div>`).join('')}</div>`:`<div class="planner-result fail">Prova a ridurre il numero di piante, sbloccare una posizione vincolante oppure spostare una coltura in un’altra proda.</div>`}
  <div class="actions"><button class="btn" onclick="closeSheet()">Chiudi</button></div>`);
 }
 async function autoArrangeZone(zoneId,ignoreRelations=false){
