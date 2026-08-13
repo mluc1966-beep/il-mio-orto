@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Il mio Orto — ANTEPRIMA p0.2.6.2</title>
+<title>Il mio Orto — v0.10.6 · PREVIEW p0.2.8</title>
 <style>
 :root{--p:#2f6b3b;--pc:#b4f1b4;--bg:#f7fbf2;--card:#fff;--muted:#687268;--line:#dce4d8;--danger:#9b2c2c}*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#152016}.app{max-width:520px;margin:auto;min-height:100vh;padding:72px 14px 92px}.top{position:fixed;z-index:10;top:0;left:50%;transform:translateX(-50%);width:min(520px,100%);padding:18px 18px 12px;background:rgba(247,251,242,.96);backdrop-filter:blur(12px);font-weight:750;font-size:20px;border-bottom:1px solid var(--line)}.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(520px,100%);display:grid;grid-template-columns:repeat(6,1fr);background:#fff;border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom))}.tab{border:0;background:transparent;padding:5px 1px;font-size:9px;color:#566057}.tab b{display:block;font-size:19px}.tab.active{color:var(--p);font-weight:700}.fab{position:fixed;right:max(calc((100vw - 520px)/2 + 18px),18px);bottom:83px;width:56px;height:56px;border-radius:18px;border:0;background:var(--p);color:#fff;font-size:30px;box-shadow:0 8px 22px #1d3e2440}.title{font-size:24px;font-weight:750;margin:4px 0}.sub{color:var(--muted);margin:0 0 16px;line-height:1.4}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin:12px 0;box-shadow:0 2px 8px #1b3b1d0a}.map{background:#eef4e9;padding:11px;border-radius:20px}.maptop{display:grid;grid-template-columns:3fr 1.2fr;gap:9px}.beds{display:grid;gap:9px}.zone{border:1px solid #b9c7b5;background:#fff;border-radius:15px;padding:12px;text-align:left;min-height:66px}.zone.active{border:2px solid var(--p);background:var(--pc)}.zone small{display:block;color:#566057;margin-top:3px}.strip{min-height:292px}.lwrap{margin-top:10px}.lcaption{font-size:13px;font-weight:750;color:#566057;margin:2px 0 7px}.lshape{height:245px;position:relative}.lshape svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.lshape .lbase{z-index:1}.lshape .lborder{z-index:3}.lhot{position:absolute;border:0;background:transparent;text-align:left;padding:12px;color:#152016;z-index:2}.lhot b{display:block}.lhot small{display:block;color:#566057;margin-top:4px}.lhot.active{background:var(--pc)}.lhot-v{left:1px;top:1px;width:31.58%;height:calc(100% - 2px);display:flex;flex-direction:column;justify-content:center}.lhot-h{left:31.58%;right:1px;top:1px;height:28.57%;display:flex;flex-direction:column;justify-content:center}.lshape-note{font-size:12px;color:#687268;margin-top:7px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#d8f0d2;border-radius:15px;padding:12px}.stat strong{font-size:19px;display:block}.row{display:flex;gap:10px;align-items:flex-start}.grow{flex:1}.muted{color:var(--muted);font-size:13px}.btn{border:0;border-radius:13px;background:var(--p);color:#fff;padding:12px 15px;font-weight:700}.btn.out{background:#fff;color:var(--p);border:1px solid var(--p)}.btn.danger{color:var(--danger);border-color:#d9a8a8}.full{width:100%}.item{padding:11px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.done{text-decoration:line-through;color:#718071}.empty{text-align:center;color:var(--muted);padding:28px 12px}.modal{position:fixed;z-index:30;inset:0;background:#10201480;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(520px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:24px 24px 0 0;padding:20px}.sheet h2{margin-top:0}label{display:block;font-size:13px;font-weight:650;margin:12px 0 5px}input,select,textarea{width:100%;padding:12px;border:1px solid #bbc6b7;border-radius:12px;font:inherit;background:#fff}textarea{min-height:76px}.actions{display:flex;gap:9px;margin-top:18px}.actions>*{flex:1}.hide{display:none!important}
 
@@ -39,7 +39,7 @@
 @media (prefers-reduced-motion:reduce){.cover-screen{transition:none}}
 
 
-.preview-badge{display:inline-block;margin-left:5px;padding:2px 6px;border-radius:99px;background:#fff1b8;color:#604b00;font-size:9px;font-weight:900;vertical-align:2px}
+.app-version-badge{display:inline-block;margin-left:5px;padding:2px 6px;border-radius:99px;background:#fff1b8;color:#604b00;font-size:9px;font-weight:900;vertical-align:2px}
 .guide-source.practical-source{font-size:12px;line-height:1.35}
 .guide-source.practical-source em{display:block;color:#637064;font-size:11px;margin-top:2px}
 .guide-source.source-compact,.source-detail{font-size:10px!important;line-height:1.35!important;font-style:italic;color:#748076}
@@ -50,11 +50,7 @@
 .suggestion-meta{font-size:11px;color:var(--muted);margin-top:2px}
 .suggestion-note{font-size:12px;line-height:1.35;margin:6px 0 0;color:#3e5241}
 .suggestion-card .btn{margin-top:8px;padding:8px 10px;font-size:12px}
-.preview-tools{background:#fff8d9;border-color:#e6d48a}
-.preview-tools b{display:block;margin-bottom:4px}
-
-
-/* ===== ANTEPRIMA p0.2.6.2 ===== */
+/* ===== PREVIEW p0.2.8 su base v0.10.6 ===== */
 .suggestion-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
 .suggestion-actions .btn{margin:0;padding:8px 7px;font-size:11px}
 .task-icon,.harvest-icon{font-size:20px;line-height:1;flex:0 0 auto}
@@ -179,6 +175,20 @@
 .auth-divider:before,.auth-divider:after{content:"";height:1px;background:var(--line);flex:1}
 .auth-help{font-size:10px;line-height:1.35;color:var(--muted);margin-top:7px}
 
+
+/* ===== PREVIEW p0.2.8 — progettista proda evoluto ===== */
+.planner-preview-banner{margin:10px 0;padding:12px;border:2px solid #d6a72a;background:#fff7d8;border-radius:14px;color:#5d4900;font-size:12px;line-height:1.4}
+.planner-preview-banner b{display:block;font-size:13px;margin-bottom:3px}.planner-preview-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:9px}
+.plant-board.previewing{box-shadow:inset 0 0 0 2px #d6a72a,0 0 0 3px #fff3b7}
+.plant-token.group-selected .plant-icon{box-shadow:0 0 0 4px #ffffff,0 0 0 7px #5b8f65,0 3px 10px #0004}
+.plant-token.selected .plant-icon{outline:3px solid #ffe45c;box-shadow:0 0 0 4px #ffffff,0 0 0 8px #2f6b3b,0 3px 12px #0005}
+.plant-token.locked .plant-icon{border-color:#5c4630}.plant-lock{position:absolute;right:-7px;top:-8px;font-size:13px;filter:drop-shadow(0 1px 1px #fff);pointer-events:none}
+.legend-chip.clickable{cursor:pointer}.legend-chip.clickable:active{transform:scale(.98)}
+.planner-settings{margin-top:10px;padding:10px;border-radius:12px;background:#fff;border:1px solid #c8ddc2}.planner-settings label{margin-top:0}.planner-settings select{padding:9px;font-size:12px}
+.planner-policy{font-size:11px;color:#5d685f;line-height:1.4;margin-top:6px}.planner-orientation{display:inline-block;padding:4px 8px;border-radius:99px;background:#e7f1e2;color:#315738;font-size:10px;font-weight:800;margin-top:5px}
+.locked-note{display:inline-block;margin-left:6px;padding:2px 6px;border-radius:99px;background:#f4e6cf;color:#664a27;font-size:10px;font-weight:800}
+.btn.undo{background:#fff;color:#5d4a00;border:1px solid #d6a72a}
+
 </style>
 
 <meta name="theme-color" content="#2f6b3b">
@@ -191,10 +201,10 @@
 <div class="cover-screen" id="coverScreen" onclick="dismissCover()" role="button" tabindex="0" aria-label="Entra nell'app Il mio Orto">
   <div class="cover-frame">
     <button class="cover-enter" type="button" onclick="event.stopPropagation();dismissCover()">Entra nell’orto</button>
-    <span class="cover-version">ANTEPRIMA p0.2.6.2</span>
+    <span class="cover-version">PREVIEW p0.2.8</span>
   </div>
 </div>
-<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="preview-badge">ANTEPRIMA p0.2.6.2</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
+<div class="top"><div class="top-title">🌱 Il mio Orto · <span id="year"></span> <small class="app-version-badge">PREVIEW p0.2.8</small></div><button class="cloud-pill local" id="cloudBtn" type="button" onclick="openCloudPanel()" aria-label="Sincronizzazione">☁️ Locale</button></div>
 <main class="app" id="content"><div class="card" id="bootCard"><b>Caricamento della mappa…</b><p class="muted">Sto recuperando i dati salvati.</p></div></main>
 <button class="fab" id="fab" aria-label="Aggiungi">+</button>
 <nav class="bottom" id="nav"></nav>
@@ -205,10 +215,10 @@
   function showBootProblem(message){
     var host=document.getElementById('content');
     if(!host || window.__ortoReady)return;
-    host.innerHTML='<div class="card"><h1 class="title">Avvio non completato</h1><p class="sub">'+String(message||'Il browser ha bloccato una parte della preview.')+'</p><button class="btn full" onclick="location.reload()">Riprova</button></div>';
+    host.innerHTML='<div class="card"><h1 class="title">Avvio non completato</h1><p class="sub">'+String(message||'Il browser ha bloccato una parte dell’app.')+'</p><button class="btn full" onclick="location.reload()">Riprova</button></div>';
   }
   window.addEventListener('error',function(event){showBootProblem('Errore di avvio: '+(event.message||'dato salvato non compatibile'));});
-  window.setTimeout(function(){if(!window.__ortoReady)showBootProblem('La mappa non è stata caricata. Riapri il nuovo file v0.7.2.');},3000);
+  window.setTimeout(function(){if(!window.__ortoReady)showBootProblem('La mappa non è stata caricata. Riapri l’app.');},3000);
 })();
 </script>
 <script>
@@ -247,7 +257,7 @@ const cropCatalog=[
 ];
 function catalogItem(id){return cropCatalog.find(x=>x.id===id)||null}
 function inferCatalog(name){let n=String(name||'').trim().toLowerCase();return cropCatalog.find(x=>n===x.name.toLowerCase()||x.aliases.some(a=>n.includes(a)))||null}
-function catalogOptions(selectedId){return `<option value="custom">Personalizzata</option>`+cropCatalog.map(x=>`<option value="${x.id}" ${x.id===selectedId?'selected':''}>${x.emoji} ${x.name}</option>`).join('')}
+function catalogOptions(selectedId){return `<option value="custom">Personalizzata</option>`+cropCatalog.slice().sort((a,b)=>a.name.localeCompare(b.name,'it',{sensitivity:'base'})).map(x=>`<option value="${x.id}" ${x.id===selectedId?'selected':''}>${x.emoji} ${x.name}</option>`).join('')}
 function cropColor(crop){let cat=catalogItem(crop.catalogId)||inferCatalog(crop.name);return crop.iconColor||(cat?cat.color:'#c9e2bd')}
 function safeSpacing(value,fallback){let n=Number(value);return Number.isFinite(n)?Math.max(5,Math.min(300,n)):fallback}
 function sameCropIdentity(a,b){return cropTypeKey(a.name,a.variety)===cropTypeKey(b.name,b.variety)}
@@ -264,23 +274,15 @@ function guideForName(name){const n=normGuide(name);return cropGuideData.find(g=
 function guideForCrop(crop){return guideForName(crop&&crop.name)}
 function sourceTokenMatchesGuide(token,g){const n=normGuide(token);if(!n)return false;return normGuide(g.name)===n||(g.aliases||[]).some(a=>n===normGuide(a)||n.includes(normGuide(a))||normGuide(a).includes(n))}
 function guideEmoji(id){return guideItem(id)?.emoji||'🌱'}
-function guideSelectOptions(selectedId){return cropGuideData.map(g=>`<option value="${g.id}" ${g.id===selectedId?'selected':''}>${g.emoji} ${esc(g.name)}</option>`).join('')}
+function guideSelectOptions(selectedId){return cropGuideData.slice().sort((a,b)=>a.name.localeCompare(b.name,'it',{sensitivity:'base'})).map(g=>`<option value="${g.id}" ${g.id===selectedId?'selected':''}>${g.emoji} ${esc(g.name)}</option>`).join('')}
 function ensureGuideCatalog(){cropGuideData.forEach((g,index)=>{if(!catalogItem(g.id))cropCatalog.push({id:g.id,name:g.name,aliases:g.aliases||[],emoji:g.emoji,color:g.color,iconDiameterCm:Math.max(8,Math.min(32,g.plantCm*.8)),spacingCm:g.plantCm,rowSpacingCm:g.rowCm,varieties:[]})});Object.entries(guideCatalogMap).forEach(([gid,ids])=>{const g=guideItem(gid);(ids||[]).forEach(id=>{const c=catalogItem(id);if(c&&g){c.spacingCm=g.plantCm;c.rowSpacingCm=g.rowCm}})})}
 ensureGuideCatalog();
-const emptyState=()=>({year:new Date().getFullYear(),crops:[],tasks:[],harvests:[],history:[],activityLog:[],ignoredSuggestions:[]});
-const PREVIEW_STORAGE_KEY='ortoPreviewLab';
-const STABLE_STORAGE_KEY='ortoPreview';
+const emptyState=()=>({year:new Date().getFullYear(),crops:[],tasks:[],harvests:[],history:[],activityLog:[],ignoredSuggestions:[],plannerSettings:{mixedSpacingMode:'balanced'}});
+const MAIN_STORAGE_KEY='ortoPreview';
 function loadState(){
   try{
     if(!window.localStorage)return emptyState();
-    let raw=window.localStorage.getItem(PREVIEW_STORAGE_KEY);
-    if(!raw){
-      const stableRaw=window.localStorage.getItem(STABLE_STORAGE_KEY);
-      if(stableRaw){
-        raw=stableRaw;
-        window.localStorage.setItem(PREVIEW_STORAGE_KEY,stableRaw);
-      }
-    }
+    const raw=window.localStorage.getItem(MAIN_STORAGE_KEY);
     if(!raw)return emptyState();
     const parsed=JSON.parse(raw);
     return parsed && typeof parsed==='object' ? parsed : emptyState();
@@ -290,36 +292,33 @@ function loadState(){
   }
 }
 function persistState(){
-  try{if(window.localStorage)window.localStorage.setItem(PREVIEW_STORAGE_KEY,JSON.stringify(state));return true}
+  try{if(window.localStorage)window.localStorage.setItem(MAIN_STORAGE_KEY,JSON.stringify(state));return true}
   catch(error){console.warn('Impossibile salvare nel browser:',error);return false}
 }
-function copyStableDataToPreview(){
-  try{
-    const raw=window.localStorage?.getItem(STABLE_STORAGE_KEY);
-    if(!raw){alert('Su questo browser non trovo dati locali della versione stabile.');return}
-    if(!confirm('Ricaricare nella preview una copia dei dati locali della versione stabile? I dati della preview attuale verranno sostituiti.'))return;
-    const parsed=JSON.parse(raw);
-    if(!parsed||typeof parsed!=='object')throw new Error('Dati non validi');
-    state=parsed;
-    migratePlants();
-    persistState();
-    queueCloudSync();
-    render();
-    alert('Copia aggiornata. La versione stabile non è stata modificata.');
-  }catch(error){
-    alert('Impossibile copiare i dati stabili: '+error.message);
-  }
-}
 let state=emptyState();let tab='map',selected='proda_1',selectedPlantId='',mapScreen='overview';let harvestSessionDate=new Date().toISOString().slice(0,10),harvestRecognition=null;
+let plannerPreview=null,lastPlannerUndo=null;
 const cloudUi={ready:false,user:null,status:'local',message:'Dati salvati solo su questo dispositivo',lastSync:'',cloudUpdatedAtMs:0,fromCache:false,pending:false,error:''};
-const DRIVE_ENDPOINT_KEY='ortoDriveBackupEndpointPreview';
-const DRIVE_LAST_OK_KEY='ortoDriveBackupLastOkPreview';
-const DRIVE_LAST_CHECK_KEY='ortoDriveBackupLastCheckPreview';
-const DRIVE_CHANNEL='preview';
+const DRIVE_ENDPOINT_KEY='ortoDriveBackupEndpointMain';
+const DRIVE_LAST_OK_KEY='ortoDriveBackupLastOkMain';
+const DRIVE_LAST_CHECK_KEY='ortoDriveBackupLastCheckMain';
+const DRIVE_CHANNEL='main';
+function initialDriveEndpoint(){
+  try{
+    const main=localStorage.getItem(DRIVE_ENDPOINT_KEY)||'';
+    if(main)return main;
+    // Riusa automaticamente l'URL Apps Script già configurato nella preview.
+    const fromPreview=localStorage.getItem('ortoDriveBackupEndpointPreview')||'';
+    if(fromPreview){
+      localStorage.setItem(DRIVE_ENDPOINT_KEY,fromPreview);
+      return fromPreview;
+    }
+  }catch(_){}
+  return '';
+}
 const driveUi={
   status:'idle',message:'',lastOk:'',
   lastCheck:(()=>{try{return localStorage.getItem(DRIVE_LAST_CHECK_KEY)||''}catch(_){return ''}})(),
-  endpoint:(()=>{try{return localStorage.getItem(DRIVE_ENDPOINT_KEY)||''}catch(_){return ''}})(),
+  endpoint:initialDriveEndpoint(),
   dirty:false,newer:false,remoteMeta:null,error:''
 };
 let driveBackupTimer=null,driveCheckTimer=null,driveAutoRetryCount=0;
@@ -408,7 +407,7 @@ function saveDriveEndpoint(){
   if(url)setTimeout(()=>driveCheckAlignment(true),100);
 }
 function clearDriveEndpoint(){
-  if(!confirm('Scollegare il backup Google Drive da questa anteprima? I file già presenti su Drive non verranno cancellati.'))return;
+  if(!confirm('Scollegare il backup Google Drive da questa app? I file già presenti su Drive non verranno cancellati.'))return;
   driveUi.endpoint='';driveUi.status='idle';driveUi.message='';driveUi.error='';driveUi.remoteMeta=null;driveUi.newer=false;
   try{localStorage.removeItem(DRIVE_ENDPOINT_KEY)}catch(_){}
   render();
@@ -441,7 +440,7 @@ function driveEnvelope(){
   const safe=cloudSafeState(state);
   return {
     format:'il-mio-orto-drive-backup',
-    version:'p0.2.6.2',
+    version:'v0.10.6',
     channel:DRIVE_CHANNEL,
     exportedAt:new Date().toISOString(),
     firestoreUpdatedAtMs:Number(cloudUi.cloudUpdatedAtMs)||0,
@@ -588,7 +587,7 @@ async function driveCheckAlignment(force=false){
 }
 async function restoreFromDrive(){
   if(!driveUi.endpoint)return;
-  if(!confirm('Ripristinare l’ultimo backup Google Drive? I dati attuali dell’anteprima verranno sostituiti e poi sincronizzati su Firestore.'))return;
+  if(!confirm('Ripristinare l’ultimo backup Google Drive? I dati attuali dell’orto verranno sostituiti e poi sincronizzati su Firestore.'))return;
   driveSetStatus({status:'checking',error:''});
   try{
     const result=await driveBackend('read');
@@ -629,7 +628,7 @@ function cloudShortName(){const u=cloudUi.user;if(!u)return '';const raw=String(
 function cloudLabel(){if(cloudUi.error)return '⚠️ Sync';if(!cloudUi.user)return '☁️ Locale';if(cloudUi.pending||cloudUi.status==='syncing')return '↻ Sincronizzazione';if(cloudUi.fromCache||!navigator.onLine)return '📴 Offline';return '☁️ Sincronizzato'}
 function refreshCloudBadge(){const b=document.getElementById('cloudBtn');if(!b)return;b.textContent=cloudLabel();const offline=cloudUi.user&&(cloudUi.fromCache||!navigator.onLine);b.className='cloud-pill '+(cloudUi.error?'error':!cloudUi.user?'local':cloudUi.pending||cloudUi.status==='syncing'?'syncing':offline?'auth':'synced');b.title=cloudUi.user?(offline?'Modalità offline: le modifiche verranno sincronizzate quando torna la connessione':'Orto condiviso collegato a '+(cloudUi.user.email||'')):'Dati locali'}
 function cloudStatusUpdate(patch){Object.assign(cloudUi,patch||{});refreshCloudBadge()}
-function cloudSafeState(value){const s=value&&typeof value==='object'?value:emptyState();return {year:Number(s.year)||new Date().getFullYear(),crops:Array.isArray(s.crops)?s.crops:[],tasks:Array.isArray(s.tasks)?s.tasks:[],harvests:Array.isArray(s.harvests)?s.harvests:[],history:Array.isArray(s.history)?s.history:[],activityLog:Array.isArray(s.activityLog)?s.activityLog:[],ignoredSuggestions:Array.isArray(s.ignoredSuggestions)?s.ignoredSuggestions:[]}}
+function cloudSafeState(value){const s=value&&typeof value==='object'?value:emptyState();const mode=['strict','balanced','compact'].includes(s?.plannerSettings?.mixedSpacingMode)?s.plannerSettings.mixedSpacingMode:'balanced';return {year:Number(s.year)||new Date().getFullYear(),crops:Array.isArray(s.crops)?s.crops:[],tasks:Array.isArray(s.tasks)?s.tasks:[],harvests:Array.isArray(s.harvests)?s.harvests:[],history:Array.isArray(s.history)?s.history:[],activityLog:Array.isArray(s.activityLog)?s.activityLog:[],ignoredSuggestions:Array.isArray(s.ignoredSuggestions)?s.ignoredSuggestions:[],plannerSettings:{mixedSpacingMode:mode}}}
 function applyCloudState(remote,meta={}){try{state=cloudSafeState(remote);migratePlants();persistState();cloudStatusUpdate({status:'synced',fromCache:!!meta.fromCache,pending:!!meta.pending,error:'',lastSync:new Date().toISOString()});render();driveCloudStateReady()}catch(error){console.error('Dati cloud non applicati',error);cloudStatusUpdate({error:'Dati cloud non compatibili'})}}
 function queueCloudSync(){if(window.ortoCloud&&typeof window.ortoCloud.queueSync==='function')window.ortoCloud.queueSync(cloudSafeState(state))}
 function cloudUserChanged(user){driveAutoRetryCount=0;cloudStatusUpdate({user:user||null,ready:true,status:user?'syncing':'local',message:user?'Connessione al database condiviso…':'Dati salvati solo su questo dispositivo',error:'',fromCache:false,pending:false});if(user&&modal.classList.contains('show'))closeSheet();render()}
@@ -661,7 +660,7 @@ function startGoogleLogin(){
   }
   window.ortoCloud.login();
 }
-function openCloudPanel(){const u=cloudUi.user;if(!u){openSheet(`<h2>🧪 Anteprima condivisa</h2>
+function openCloudPanel(){const u=cloudUi.user;if(!u){openSheet(`<h2>☁️ Orto condiviso</h2>
   <p>Collegati all’orto condiviso con la tua utenza Firebase.</p>
   <div class="cloud-warning">Luca e Daniela possono usare le rispettive email e password. L’accesso Google resta disponibile come alternativa.</div>
   ${cloudUi.error?`<div class="warning-box danger" style="margin:12px 0"><b>Problema di accesso</b><br>${esc(cloudUi.error)}</div>`:''}
@@ -679,10 +678,10 @@ function openCloudPanel(){const u=cloudUi.user;if(!u){openSheet(`<h2>🧪 Antepr
  const avatar=u.photoURL?`<img src="${esc(u.photoURL)}" alt="">`:esc(cloudInitials(u));
  const online=!cloudUi.fromCache&&navigator.onLine;
  const last=cloudUi.lastSync?new Date(cloudUi.lastSync).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'}):'—';
- openSheet(`<h2>🧪 Anteprima condivisa</h2><div class="cloud-user"><div class="cloud-avatar">${avatar}</div><div><div class="cloud-user-name">${esc(u.displayName||'Utente')}</div><div class="muted">${esc(u.email||'')}</div></div></div><div class="cloud-status-row"><span class="cloud-status-chip"><span class="cloud-dot ${online?'':'offline'}"></span>${online?'Online':'Offline / cache'}</span><span class="cloud-status-chip">${cloudUi.pending?'Modifiche in attesa':'Tutto sincronizzato'}</span></div><div class="cloud-last-sync">Ultimo allineamento: ${last}</div>${cloudUi.error?`<div class="warning-box danger">${esc(cloudUi.error)}</div>`:''}<p class="cloud-note">Questa anteprima usa un archivio separato. Offline salva localmente e riallinea i dati quando torna la connessione.</p><div class="cloud-actions"><button class="btn out" onclick="window.ortoCloud&&window.ortoCloud.syncNow()">Sincronizza ora</button><button class="btn out" onclick="if(confirm('Vuoi uscire dall’orto condiviso su questo dispositivo?'))window.ortoCloud&&window.ortoCloud.logout()">Esci</button><button class="btn danger full-row" onclick="forceLocalToCloud()">Sostituisci cloud con questi dati locali</button></div>`)}
+ openSheet(`<h2>☁️ Orto condiviso</h2><div class="cloud-user"><div class="cloud-avatar">${avatar}</div><div><div class="cloud-user-name">${esc(u.displayName||'Utente')}</div><div class="muted">${esc(u.email||'')}</div></div></div><div class="cloud-status-row"><span class="cloud-status-chip"><span class="cloud-dot ${online?'':'offline'}"></span>${online?'Online':'Offline / cache'}</span><span class="cloud-status-chip">${cloudUi.pending?'Modifiche in attesa':'Tutto sincronizzato'}</span></div><div class="cloud-last-sync">Ultimo allineamento: ${last}</div>${cloudUi.error?`<div class="warning-box danger">${esc(cloudUi.error)}</div>`:''}<p class="cloud-note">Offline l’app salva localmente e riallinea i dati quando torna la connessione.</p><div class="cloud-actions"><button class="btn out" onclick="window.ortoCloud&&window.ortoCloud.syncNow()">Sincronizza ora</button><button class="btn out" onclick="if(confirm('Vuoi uscire dall’orto condiviso su questo dispositivo?'))window.ortoCloud&&window.ortoCloud.logout()">Esci</button><button class="btn danger full-row" onclick="forceLocalToCloud()">Sostituisci cloud con questi dati locali</button></div>`)}
 function forceLocalToCloud(){if(!cloudUi.user)return;if(!confirm('Vuoi davvero sostituire i dati condivisi con quelli presenti su questo dispositivo? Questa operazione può eliminare modifiche fatte dall’altro telefono.'))return;window.ortoCloud?.forceSync?.(cloudSafeState(state));closeSheet()}
 window.__ortoCloudBridge={getState:()=>cloudSafeState(state),applyCloudState,cloudUserChanged,cloudStatusUpdate,driveCloudSynced,showCloudPanel:openCloudPanel,closeCloudPanel:closeSheet};
-const save=()=>{try{migratePlants();persistState();driveMarkDirty();queueCloudSync();render()}catch(error){showFatalError(error)}};
+const save=(reason='normal')=>{try{if(plannerPreview&&reason!=='planner-apply')restorePlannerPreview(false);migratePlants();persistState();driveMarkDirty();queueCloudSync();render()}catch(error){showFatalError(error)}};
 function uid(){
   try{if(window.crypto&&typeof window.crypto.randomUUID==='function')return window.crypto.randomUUID()}catch(error){console.warn('randomUUID non disponibile:',error)}
   return 'id-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2)+'-'+Math.floor(Math.random()*1000000).toString(36)
@@ -699,6 +698,8 @@ function radiusFractions(crop){const d=zoneDims(crop.zone),r=safeDiameter(crop.i
 function migratePlants(){
   if(!state||typeof state!=='object')state=emptyState();
   state.year=Number(state.year)||new Date().getFullYear();
+  if(!state.plannerSettings||typeof state.plannerSettings!=='object')state.plannerSettings={mixedSpacingMode:'balanced'};
+  if(!['strict','balanced','compact'].includes(state.plannerSettings.mixedSpacingMode))state.plannerSettings.mixedSpacingMode='balanced';
   const rawCrops=Array.isArray(state.crops)?state.crops:[];
   state.tasks=Array.isArray(state.tasks)?state.tasks.filter(t=>t&&typeof t==='object'):[];
   state.harvests=Array.isArray(state.harvests)?state.harvests.filter(h=>h&&typeof h==='object'):[];
@@ -739,6 +740,7 @@ function migratePlants(){
       const limits=radiusFractions(c);
       c.plants.forEach(p=>{
         p.id=String(p.id||uid());
+        p.locked=!!p.locked;
         let x=Number(p.x),y=Number(p.y);
         if(!Number.isFinite(x))x=.5;
         if(!Number.isFinite(y))y=.5;
@@ -758,17 +760,6 @@ function cm(m){const value=Math.round(Number(m)*1000)/10;return new Intl.NumberF
 
 function compactPositions(count){return initialPlants(count)}
 const AUTO_CLEARANCE_CM=3;
-function autoLayoutPlants(crop,count){
-  count=Math.max(0,Math.min(100,Number(count)||0));
-  return initialPlants(count);
-}
-function axisCandidates(min,max,step){
-  if(max<min)return [(min+max)/2];
-  const values=[];
-  for(let value=min;value<=max+0.001;value+=step)values.push(Math.min(max,value));
-  if(!values.length||Math.abs(values[values.length-1]-max)>.25)values.push(max);
-  return values;
-}
 function placementItems(zoneId){
   return zonePlants(zoneId).map((entry,order)=>({
     ...entry,
@@ -777,49 +768,6 @@ function placementItems(zoneId){
     spacing:safeSpacing(entry.crop.spacingCm,30),
   }));
 }
-function tryPlaceItems(zoneId,safetyCm,stepCm){
-  const d=zoneDims(zoneId),W=d.w*100,L=d.l*100;
-  const items=placementItems(zoneId).sort((a,b)=>b.radius-a.radius||b.spacing-a.spacing||a.order-b.order);
-  const placed=[];
-  for(const item of items){
-    const xs=axisCandidates(item.radius,W-item.radius,stepCm);
-    const ys=axisCandidates(item.radius,L-item.radius,stepCm);
-    let best=null;
-    for(const y of ys)for(const x of xs){
-      let blocked=false,samePenalty=0,minClearance=Infinity;
-      for(const other of placed){
-        const distance=Math.hypot(x-other.x,y-other.y);
-        const minimum=item.radius+other.item.radius+safetyCm;
-        if(distance+0.01<minimum){blocked=true;break}
-        minClearance=Math.min(minClearance,distance-(item.radius+other.item.radius));
-        if(sameCropIdentity(item.crop,other.item.crop)){
-          const recommended=Math.max(item.spacing,other.item.spacing);
-          const shortage=Math.max(0,recommended-distance);
-          samePenalty+=shortage*shortage;
-        }
-      }
-      if(blocked)continue;
-      const edgeSpace=Math.min(x-item.radius,W-item.radius-x,y-item.radius,L-item.radius-y);
-      const spread=Number.isFinite(minClearance)?minClearance:0;
-      const score=samePenalty*1000-spread*4-edgeSpace*.2+y*.02+x*.001;
-      if(!best||score<best.score)best={x,y,score};
-    }
-    if(!best)return null;
-    placed.push({item,x:best.x,y:best.y});
-  }
-  return {placed,W,L};
-}
-function arrangeZonePlants(zoneId){
-  const all=placementItems(zoneId);
-  if(!all.length)return {success:true,remaining:0};
-  let result=tryPlaceItems(zoneId,AUTO_CLEARANCE_CM,4)||tryPlaceItems(zoneId,1,2)||tryPlaceItems(zoneId,0,1);
-  if(!result)return {success:false,remaining:all.length};
-  result.placed.forEach(({item,x,y})=>{
-    item.plant.x=x/result.W;
-    item.plant.y=y/result.L;
-  });
-  return {success:true,remaining:spacingWarnings(zoneId).filter(x=>x.type==='overlap').length};
-}
 function spacingWarnings(zoneId){
   const all=zonePlants(zoneId),out=[],d=zoneDims(zoneId);
   for(let i=0;i<all.length;i++)for(let j=i+1;j<all.length;j++){
@@ -827,68 +775,83 @@ function spacingWarnings(zoneId){
     const dist=Math.hypot((a.plant.x-b.plant.x)*d.w*100,(a.plant.y-b.plant.y)*d.l*100);
     const radiusSum=(safeDiameter(a.crop.iconDiameterCm)+safeDiameter(b.crop.iconDiameterCm))/2;
     const clearance=dist-radiusSum;
-    if(clearance<AUTO_CLEARANCE_CM-0.05){
-      out.push({type:'overlap',a,b,dist,required:radiusSum+AUTO_CLEARANCE_CM,clearance});
-    }else if(sameCropIdentity(a.crop,b.crop)){
-      const required=Math.max(safeSpacing(a.crop.spacingCm,30),safeSpacing(b.crop.spacingCm,30));
-      if(dist+0.1<required)out.push({type:'close',a,b,dist,required,clearance});
+    const physical=radiusSum+AUTO_CLEARANCE_CM;
+    const required=strictRequiredDistance(a,b);
+    if(dist+0.05<physical){
+      out.push({type:'overlap',a,b,dist,required:physical,clearance});
+    }else if(dist+0.1<required){
+      out.push({type:'close',a,b,dist,required,clearance,mixed:!sameCropIdentity(a.crop,b.crop)});
     }
   }
   return out;
 }
 function warningClassFor(plantId,warnings){const matches=warnings.filter(w=>w.a.plant.id===plantId||w.b.plant.id===plantId);return matches.some(w=>w.type==='overlap')?'overlap':matches.length?'too-close':''}
 function plantWarningLabel(item){return `${emojiFor(item.crop.name)} ${esc(item.crop.name)} ${item.index}`}
-function warningSummary(zoneId){
-  const w=spacingWarnings(zoneId),over=w.filter(x=>x.type==='overlap'),close=w.filter(x=>x.type==='close');
-  if(!w.length)return `<div class="warning-box ok">✓ Nessuna sovrapposizione tra le piante e nessuna distanza sotto il valore consigliato.</div>`;
-  const items=w.slice(0,8).map(x=>`<li>${x.type==='overlap'?'Sovrapposizione o contatto':'Distanza ridotta'}: ${plantWarningLabel(x.a)} e ${plantWarningLabel(x.b)} — ${Math.round(x.dist)} cm${x.type==='close'?` su ${Math.round(x.required)} cm consigliati`:''}</li>`).join('');
-  return `<div class="warning-box ${over.length?'danger':''}"><b>⚠ ${over.length} sovrapposizion${over.length===1?'e':'i'} · ${close.length} distanz${close.length===1?'a':'e'} sotto consiglio</b><ul class="warning-list">${items}</ul>${w.length>8?`<div>…e altri ${w.length-8} avvisi.</div>`:''}</div>`;
-}
-function autoArrangeZone(zoneId){
-  const count=zonePlants(zoneId).length;
-  if(!count)return;
-  if(!confirm(`Disporre automaticamente tutte le ${count} piante della zona? Verranno considerate insieme anche specie diverse.`))return;
-  const result=arrangeZonePlants(zoneId);
-  selectedPlantId=zonePlants(zoneId)[0]?.plant.id||'';
-  save();
-  if(!result.success||result.remaining)alert('Lo spazio non è sufficiente per evitare tutti i contatti con le dimensioni attuali. Riduci il diametro delle icone o il numero di piante.');
-}
-function autoArrangeCrop(cropId){const c=state.crops.find(x=>x.id===cropId);if(c)autoArrangeZone(c.zone)}
 function duplicateCropDialog(cropId){let c=state.crops.find(x=>x.id===cropId);if(!c)return;openSheet(`<h2>Duplica disposizione</h2><p>Copierò <b>${emojiFor(c.name)} ${esc(c.name)}${c.variety?` · ${esc(c.variety)}`:''}</b> e le posizioni relative delle ${c.count} piante.</p><label>Zona di destinazione</label><select id="dupzone">${zones.filter(z=>z[0]!==c.zone).map(z=>`<option value="${z[0]}">${z[1]} · ${z[2]}</option>`).join('')}</select><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="duplicateCrop('${cropId}')">Duplica</button></div>`)}
 function duplicateCrop(cropId){let c=state.crops.find(x=>x.id===cropId),target=document.getElementById('dupzone')?.value;if(!c||!target)return;let copy={...c,id:uid(),zone:target,plants:c.plants.map(p=>({...p,id:uid()}))};state.crops.push(copy);migratePlants();selected=target;mapScreen='detail';closeSheet();save()}
 function applyCatalogSelection(prefix){let catId=document.getElementById(prefix+'cat')?.value,cat=catalogItem(catId);if(!cat)return;let n=document.getElementById(prefix+'n'),d=document.getElementById(prefix+'d'),sp=document.getElementById(prefix+'sp'),rs=document.getElementById(prefix+'rs'),list=document.getElementById(prefix+'variants');if(n)n.value=cat.name;if(d)d.value=cat.iconDiameterCm;if(sp)sp.value=cat.spacingCm;if(rs)rs.value=cat.rowSpacingCm;if(list)list.innerHTML=cat.varieties.map(v=>`<option value="${esc(v)}"></option>`).join('')}
 function syncKnownSettings(prefix){let n=document.getElementById(prefix+'n')?.value||'',v=document.getElementById(prefix+'v')?.value||'',known=matchingSettings(n,v,prefix==='e'?document.getElementById('ecid')?.value:'');if(!known)return;let d=document.getElementById(prefix+'d'),sp=document.getElementById(prefix+'sp'),rs=document.getElementById(prefix+'rs');if(d)d.value=safeDiameter(known.iconDiameterCm);if(sp)sp.value=safeSpacing(known.spacingCm,30);if(rs)rs.value=safeSpacing(known.rowSpacingCm,40)}
 
-function switchTab(nextTab){tab=nextTab;if(tab==='map')mapScreen='overview';render();window.scrollTo(0,0)}
-function openZone(zoneId){selected=zoneId;selectedPlantId='';mapScreen='detail';render();window.scrollTo(0,0)}
-function backToMap(){mapScreen='overview';selectedPlantId='';render();window.scrollTo(0,0)}
+function switchTab(nextTab){if(plannerPreview)restorePlannerPreview(false);tab=nextTab;if(tab==='map')mapScreen='overview';render();window.scrollTo(0,0)}
+function openZone(zoneId){if(plannerPreview)restorePlannerPreview(false);selected=zoneId;selectedPlantId='';mapScreen='detail';render();window.scrollTo(0,0)}
+function backToMap(){if(plannerPreview)restorePlannerPreview(false);mapScreen='overview';selectedPlantId='';render();window.scrollTo(0,0)}
 function renderNav(){nav.innerHTML=tabs.map(t=>`<button class="tab ${tab===t[0]?'active':''}" onclick="switchTab('${t[0]}')"><b>${t[1]}</b>${t[2]}</button>`).join('')}
-function render(){
-  window.__ortoReady=true;
-  yearLabel.textContent=state.year;
-  renderNav();
-  const isMapOverview=tab==='map'&&mapScreen==='overview';
-  fab.classList.toggle('hide',tab==='archive'||isMapOverview);
-  const view=tab==='map'?(mapScreen==='detail'?zoneDetailView:mapView):({calendar:calendarView,tasks:tasksView,harvest:harvestView,archive:archiveView}[tab]);
-  content.innerHTML=view();
-}
 function zoneButton(z,cls='',label=''){let n=state.crops.filter(c=>c.zone===z[0]).length,p=zonePlants(z[0]).length;return `<button class="zone ${cls}" onclick="openZone('${z[0]}')"><b>${label||z[1]}</b><small>${z[2]} · ${n?n+' colture':'vuota'}</small>${p?`<span class="zone-plant-count">${p} piant${p===1?'a':'e'} sulla mappa</span>`:''}</button>`}
 function lShapeButton(z,cls,label){let n=state.crops.filter(c=>c.zone===z[0]).length,p=zonePlants(z[0]).length;return `<button class="lhot ${cls}" onclick="openZone('${z[0]}')"><b>${label}</b><small>${z[2]} · ${n?n+' colture':'vuota'}</small>${p?`<span class="zone-plant-count">${p} piant${p===1?'a':'e'}</span>`:''}</button>`}
 function mapView(){return `<h1 class="title">Mappa dell’orto</h1><p class="sub">Tocca una proda o un terreno: si aprirà una schermata dedicata, senza scorrere la pagina.</p><div class="map"><div class="maptop"><div class="beds">${zones.slice(0,4).map(z=>zoneButton(z)).join('')}</div>${zoneButton(zones[4],'strip')}</div><div class="lwrap"><div class="lcaption">Area a L — sagoma unica</div><div class="lshape"><svg class="lbase" viewBox="0 0 380 280" preserveAspectRatio="none" aria-hidden="true"><path d="M 2 2 H 378 V 82 H 120 V 278 H 2 Z" fill="#ffffff"/></svg>${lShapeButton(zones[5],'lhot-v','Braccio verticale')}${lShapeButton(zones[6],'lhot-h','Braccio corto in alto')}<svg class="lborder" viewBox="0 0 380 280" preserveAspectRatio="none" aria-hidden="true"><path d="M 2 2 H 378 V 82 H 120 V 278 H 2 Z" fill="none" stroke="#8fa08b" stroke-width="2" vector-effect="non-scaling-stroke"/></svg></div><div class="lshape-note">La L è orientata con il braccio corto in alto e il braccio lungo verso il basso a sinistra.</div></div></div><div class="card"><b>Superficie censita: circa 24,4 m²</b><p class="muted">Ogni zona ha una propria videata con disposizione delle piante, misure e colture.</p></div>`}
-function zoneDetailView(){
-  const z=zones.find(x=>x[0]===selected)||zones[0];
-  const sc=state.crops.filter(c=>c.zone===selected);
-  const plants=zonePlants(selected).length;
-  return `<div class="zone-head"><button class="back-btn" onclick="backToMap()" aria-label="Torna alla mappa">‹</button><div class="zone-head-text"><h1 class="title">${esc(z[1])}</h1><div class="muted">${esc(z[2])}</div></div></div><div class="zone-summary"><span>${sc.length} coltur${sc.length===1?'a':'e'}</span><span>${plants} piant${plants===1?'a':'e'}</span></div>${plantingPlan(selected)}<div class="card"><h2>Colture presenti</h2>${sc.length?sc.map(c=>`<div class="item"><div class="row"><div class="grow"><b><span class="crop-color-dot" style="background:${cropColor(c)}"></span>${emojiFor(c.name)} ${esc(c.name)}</b><div class="muted">${esc(c.variety)}${c.count?' · '+c.count+' piante':''} · icona ${safeDiameter(c.iconDiameterCm)} cm</div><div class="recommendation"><span>tra piante ${safeSpacing(c.spacingCm,30)} cm</span><span>tra file ${safeSpacing(c.rowSpacingCm,40)} cm</span></div></div></div><div class="auto-actions"><button class="btn out small" onclick="editCropDialog('${c.id}')">Modifica</button><button class="btn warn small" onclick="autoArrangeCrop('${c.id}')">Progetta la proda</button><button class="btn out small" onclick="duplicateCropDialog('${c.id}')">Duplica</button><button class="btn out danger small" onclick="removeCrop('${c.id}')">Elimina</button></div></div>`).join(''):'<div class="empty">Nessuna coltura assegnata.</div>'}<button class="btn full" onclick="cropDialog('${selected}')">Aggiungi una coltura</button></div>`
-}
 function gridLabels(d){let labels='';for(let c=50;c<d.w*100;c+=50)labels+=`<span class="grid-label x" style="left:${c/(d.w*100)*100}%">${c}</span>`;for(let c=50;c<d.l*100;c+=50)labels+=`<span class="grid-label y" style="top:${c/(d.l*100)*100}%">${c}</span>`;return labels+`<span class="grid-badge">griglia 10 cm · numeri in cm</span>`}
-function plantingPlan(zoneId){let all=zonePlants(zoneId),d=zoneDims(zoneId),scale=Math.min(300/d.w,420/d.l),pw=Math.max(130,Math.round(d.w*scale)),ph=Math.max(150,Math.round(d.l*scale)),gridPx=Math.max(7,scale*.1),majorPx=gridPx*5;if(!all.length)return `<div class="plant-plan"><div class="plant-plan-head"><div><h3>Disposizione delle piante</h3><div class="muted">${d.w.toFixed(2).replace('.',',')} × ${d.l.toFixed(2).replace('.',',')} m</div></div></div><div class="empty">Scegli una coltura dal catalogo e il numero di piante: l’app proporrà una disposizione automatica secondo le distanze consigliate.</div></div>`;let selectedInfo=plantMeasureInfo(zoneId,all),bg=`background-image:linear-gradient(#fff6 1.4px,transparent 1.4px),linear-gradient(90deg,#fff6 1.4px,transparent 1.4px),linear-gradient(#ffffff20 1px,transparent 1px),linear-gradient(90deg,#ffffff20 1px,transparent 1px);background-size:${majorPx}px ${majorPx}px,${majorPx}px ${majorPx}px,${gridPx}px ${gridPx}px,${gridPx}px ${gridPx}px`,pxPerCm=Math.min(pw/(d.w*100),ph/(d.l*100)),warnings=spacingWarnings(zoneId);return `<div class="plant-plan"><div class="plant-plan-head"><div><h3>Disposizione delle piante <span class="live-badge">misure dal vivo</span></h3><div class="muted">Trascina le icone oppure usa “Progetta la proda”: il progettista raggruppa le colture e applica i vincoli agronomici.</div><div class="auto-actions"><button class="btn warn small" onclick="autoArrangeZone('${zoneId}')">Progetta la proda</button></div></div><b>${d.w.toFixed(2).replace('.',',')} × ${d.l.toFixed(2).replace('.',',')} m</b></div><div id="warningSummaryHost">${warningSummary(zoneId)}</div><div class="plan-stage"><div class="plant-board" id="plantBoard" style="width:${pw}px;height:${ph}px;${bg}"><div class="plant-board-label">alto</div>${gridLabels(d)}<div class="measure-overlay-host" id="measureOverlayHost">${measureOverlay(zoneId,all)}</div>${all.map(x=>{const iconPx=Math.max(8,Math.min(92,safeDiameter(x.crop.iconDiameterCm)*pxPerCm)),wc=warningClassFor(x.plant.id,warnings);return `<button class="plant-token ${selectedPlantId===x.plant.id?'selected':''} ${wc}" data-plant-id="${x.plant.id}" style="left:${x.plant.x*100}%;top:${x.plant.y*100}%;--icon-px:${iconPx}px;--plant-color:${cropColor(x.crop)}" title="${esc(x.crop.name)} ${x.index} · icona ${safeDiameter(x.crop.iconDiameterCm)} cm" onpointerdown="startPlantDrag(event,'${x.crop.id}','${x.plant.id}')"><span class="plant-icon"><span>${emojiFor(x.crop.name)}</span></span></button>`}).join('')}</div></div><div id="measureInfoHost">${selectedInfo}</div><div class="plant-legend">${state.crops.filter(c=>c.zone===zoneId).map(c=>`<span class="legend-chip"><span class="crop-color-dot" style="background:${cropColor(c)}"></span>${emojiFor(c.name)} ${esc(c.name)} · ${c.count} · Ø ${safeDiameter(c.iconDiameterCm)} cm · ${safeSpacing(c.spacingCm,30)}/${safeSpacing(c.rowSpacingCm,40)} cm</span>`).join('')}</div></div>`}
+function selectedGroupKey(zoneId,all){
+ const selected=all.find(v=>v.plant.id===selectedPlantId);
+ return selected?cropTypeKey(selected.crop.name,selected.crop.variety):'';
+}
+function selectCropGroup(cropId){
+ const c=state.crops.find(x=>x.id===cropId);if(!c)return;
+ const first=(c.plants||[])[0];if(!first)return;
+ selectedPlantId=first.id;render();
+}
+function plantingPlan(zoneId){
+ let all=zonePlants(zoneId),d=zoneDims(zoneId),scale=Math.min(300/d.w,420/d.l),pw=Math.max(130,Math.round(d.w*scale)),ph=Math.max(150,Math.round(d.l*scale)),gridPx=Math.max(7,scale*.1),majorPx=gridPx*5;
+ if(!all.length)return `<div class="plant-plan"><div class="plant-plan-head"><div><h3>Disposizione delle piante</h3><div class="muted">${d.w.toFixed(2).replace('.',',')} × ${d.l.toFixed(2).replace('.',',')} m</div></div></div><div class="empty">Scegli una coltura dal catalogo e il numero di piante: l’app proporrà una disposizione automatica secondo le distanze consigliate.</div></div>`;
+ const previewActive=!!plannerPreview&&plannerPreview.zoneId===zoneId;
+ let selectedInfo=plantMeasureInfo(zoneId,all),groupKey=selectedGroupKey(zoneId,all),bg=`background-image:linear-gradient(#fff6 1.4px,transparent 1.4px),linear-gradient(90deg,#fff6 1.4px,transparent 1.4px),linear-gradient(#ffffff20 1px,transparent 1px),linear-gradient(90deg,#ffffff20 1px,transparent 1px);background-size:${majorPx}px ${majorPx}px,${majorPx}px ${majorPx}px,${gridPx}px ${gridPx}px,${gridPx}px ${gridPx}px`,pxPerCm=Math.min(pw/(d.w*100),ph/(d.l*100)),warnings=spacingWarnings(zoneId);
+ const undoAvailable=lastPlannerUndo&&lastPlannerUndo.zoneId===zoneId;
+ const plannerButtons=previewActive
+   ? `<div class="planner-preview-banner"><b>ANTEPRIMA — non ancora salvata</b>Controlla file, gruppi, distanze e consociazioni. Se esci da questa schermata la proposta viene annullata.<div class="planner-preview-actions"><button class="btn" onclick="applyPlannerPreview()">✓ Applica</button><button class="btn out" onclick="restorePlannerPreview(true)">↩ Mantieni attuale</button></div></div>`
+   : `<div class="auto-actions"><button class="btn warn small" onclick="autoArrangeZone('${zoneId}')">Progetta la proda</button>${undoAvailable?`<button class="btn undo small" onclick="undoLastPlanner()">↶ Annulla ultima progettazione</button>`:''}</div>`;
+ return `<div class="plant-plan"><div class="plant-plan-head"><div><h3>Disposizione delle piante <span class="live-badge">misure dal vivo</span></h3><div class="muted">Il progettista crea file longitudinali regolari, mantiene unite le colture e usa consociazioni e distanze come criteri di progetto.</div><span class="planner-orientation">↕ file lungo la lunghezza della proda</span>${plannerButtons}</div><b>${d.w.toFixed(2).replace('.',',')} × ${d.l.toFixed(2).replace('.',',')} m</b></div><div id="warningSummaryHost">${warningSummary(zoneId)}</div><div class="plan-stage"><div class="plant-board ${previewActive?'previewing':''}" id="plantBoard" style="width:${pw}px;height:${ph}px;${bg}"><div class="plant-board-label">alto</div>${gridLabels(d)}<div class="measure-overlay-host" id="measureOverlayHost">${measureOverlay(zoneId,all)}</div>${all.map(x=>{const iconPx=Math.max(8,Math.min(92,safeDiameter(x.crop.iconDiameterCm)*pxPerCm)),wc=warningClassFor(x.plant.id,warnings),sameGroup=groupKey&&cropTypeKey(x.crop.name,x.crop.variety)===groupKey;return `<button class="plant-token ${selectedPlantId===x.plant.id?'selected':''} ${sameGroup?'group-selected':''} ${x.plant.locked?'locked':''} ${wc}" data-plant-id="${x.plant.id}" style="left:${x.plant.x*100}%;top:${x.plant.y*100}%;--icon-px:${iconPx}px;--plant-color:${cropColor(x.crop)}" title="${esc(x.crop.name)} ${x.index} · icona ${safeDiameter(x.crop.iconDiameterCm)} cm${x.plant.locked?' · posizione bloccata':''}" onpointerdown="startPlantDrag(event,'${x.crop.id}','${x.plant.id}')"><span class="plant-icon"><span>${emojiFor(x.crop.name)}</span>${x.plant.locked?'<span class="plant-lock">📌</span>':''}</span></button>`}).join('')}</div></div><div id="measureInfoHost">${selectedInfo}</div><div class="plant-legend">${state.crops.filter(c=>c.zone===zoneId).map(c=>`<span class="legend-chip clickable" onclick="selectCropGroup('${c.id}')" title="Evidenzia questa coltura"><span class="crop-color-dot" style="background:${cropColor(c)}"></span>${emojiFor(c.name)} ${esc(c.name)} · ${c.count} · Ø ${safeDiameter(c.iconDiameterCm)} cm · ${safeSpacing(c.spacingCm,30)}/${safeSpacing(c.rowSpacingCm,40)} cm</span>`).join('')}</div></div>`;
+}
 function selectedPlantData(zoneId,all){let x=all.find(v=>v.plant.id===selectedPlantId);return x||all[0]}
 function nearestPlantInfo(zoneId,s,all){let d=zoneDims(zoneId);return all.filter(q=>q.plant.id!==s.plant.id).map(q=>({q,dist:Math.hypot((q.plant.x-s.plant.x)*d.w,(q.plant.y-s.plant.y)*d.l)})).sort((a,b)=>a.dist-b.dist)[0]}
-function plantMeasureInfo(zoneId,all){let s=selectedPlantData(zoneId,all);if(!s)return '';selectedPlantId=s.plant.id;let d=zoneDims(zoneId),left=s.plant.x*d.w,right=d.w-left,top=s.plant.y*d.l,bottom=d.l-top,near=nearestPlantInfo(zoneId,s,all),clearance=near?(near.dist*100-(safeDiameter(s.crop.iconDiameterCm)+safeDiameter(near.q.crop.iconDiameterCm))/2):null,same=near&&sameCropIdentity(s.crop,near.q.crop),required=same?safeSpacing(s.crop.spacingCm,30):null,status='';if(near){let distCm=near.dist*100;if(clearance<AUTO_CLEARANCE_CM)status=`<span class="status-danger">sovrapposte o troppo vicine</span>`;else if(required&&distCm<required)status=`<span class="status-warn">sotto i ${required} cm consigliati</span>`;else status=`<span class="status-ok">distanza regolare</span>`}return `<div class="measure-card"><b>${emojiFor(s.crop.name)} ${esc(s.crop.name)}${s.crop.variety?` · ${esc(s.crop.variety)}`:''} · pianta ${s.index}</b><div class="coord-note">Diametro icona: <b>${safeDiameter(s.crop.iconDiameterCm)} cm</b>. Distanza consigliata fra piante uguali: <b>${safeSpacing(s.crop.spacingCm,30)} cm</b>; fra file: <b>${safeSpacing(s.crop.rowSpacingCm,40)} cm</b>.</div><div class="measure-grid four"><div class="measure-pill">Bordo sinistro<br><b>${cm(left)}</b></div><div class="measure-pill">Bordo destro<br><b>${cm(right)}</b></div><div class="measure-pill">Bordo superiore<br><b>${cm(top)}</b></div><div class="measure-pill">Bordo inferiore<br><b>${cm(bottom)}</b></div></div><div style="margin-top:8px">${near?`Pianta più vicina: <b>${emojiFor(near.q.crop.name)} ${esc(near.q.crop.name)} ${near.q.index}</b> a <b>${cm(near.dist)}</b> centro-centro. Spazio libero: <b>${new Intl.NumberFormat('it-IT',{maximumFractionDigits:1}).format(clearance)} cm</b> · ${status}.`:'Non ci sono altre piante nella zona.'}</div><div class="coord-note">Coordinate: ${cm(left)} da sinistra · ${cm(top)} dall’alto.</div><div class="measure-actions"><button class="btn out small" onclick="plantPositionDialog('${s.crop.id}','${s.plant.id}')">Posizione precisa</button><button class="btn out small" onclick="iconSizeDialog('${s.crop.id}')">Dimensione icona</button><button class="btn out danger small" onclick="removePlant('${s.crop.id}','${s.plant.id}')">Rimuovi pianta</button></div></div>`}
+function plantMeasureInfo(zoneId,all){
+ let s=selectedPlantData(zoneId,all);if(!s)return '';selectedPlantId=s.plant.id;
+ let d=zoneDims(zoneId),left=s.plant.x*d.w,right=d.w-left,top=s.plant.y*d.l,bottom=d.l-top,near=nearestPlantInfo(zoneId,s,all),clearance=near?(near.dist*100-(safeDiameter(s.crop.iconDiameterCm)+safeDiameter(near.q.crop.iconDiameterCm))/2):null,required=near?strictRequiredDistance(s,near.q):null,status='';
+ if(near){let distCm=near.dist*100,physical=physicalRequiredDistance(s,near.q);if(distCm+0.05<physical)status=`<span class="status-danger">sovrapposte o troppo vicine</span>`;else if(required&&distCm+0.1<required)status=`<span class="status-warn">sotto i ${Math.round(required)} cm minimi</span>`;else status=`<span class="status-ok">distanza regolare</span>`}
+ const policy=near?distancePolicyInfo(s,near.q):null;
+ const mixedDetail=near&&!sameCropIdentity(s.crop,near.q.crop)?`<div class="planner-policy">Tra specie diverse: ingombro fisico <b>${Math.round(policy.physical)} cm</b> · distanza agronomica di riferimento <b>${Math.round(policy.recommended)} cm</b> · minimo accettato <b>${Math.round(policy.accepted)} cm</b> (${esc(policy.label)}).</div>`:'';
+ const previewActive=!!plannerPreview&&plannerPreview.zoneId===zoneId;
+ return `<div class="measure-card"><b>${emojiFor(s.crop.name)} ${esc(s.crop.name)}${s.crop.variety?` · ${esc(s.crop.variety)}`:''} · pianta ${s.index}</b>${s.plant.locked?'<span class="locked-note">📌 posizione bloccata</span>':''}<div class="coord-note">Diametro icona: <b>${safeDiameter(s.crop.iconDiameterCm)} cm</b>. Distanza consigliata fra piante uguali: <b>${safeSpacing(s.crop.spacingCm,30)} cm</b>; fra file: <b>${safeSpacing(s.crop.rowSpacingCm,40)} cm</b>.</div><div class="measure-grid four"><div class="measure-pill">Bordo sinistro<br><b>${cm(left)}</b></div><div class="measure-pill">Bordo destro<br><b>${cm(right)}</b></div><div class="measure-pill">Bordo superiore<br><b>${cm(top)}</b></div><div class="measure-pill">Bordo inferiore<br><b>${cm(bottom)}</b></div></div><div style="margin-top:8px">${near?`Pianta più vicina: <b>${emojiFor(near.q.crop.name)} ${esc(near.q.crop.name)} ${near.q.index}</b> a <b>${cm(near.dist)}</b> centro-centro. Minimo calcolato: <b>${Math.round(required)} cm</b>. Spazio libero: <b>${new Intl.NumberFormat('it-IT',{maximumFractionDigits:1}).format(clearance)} cm</b> · ${status}.`:'Non ci sono altre piante nella zona.'}</div>${mixedDetail}<div class="coord-note">Coordinate: ${cm(left)} da sinistra · ${cm(top)} dall’alto.</div>${previewActive?'<div class="planner-policy"><b>Anteprima attiva:</b> seleziona le piante per controllarle; per spostarle o modificarle devi prima applicare o annullare la proposta.</div>':`<div class="measure-actions"><button class="btn out small" onclick="plantPositionDialog('${s.crop.id}','${s.plant.id}')">Posizione precisa</button><button class="btn out small" onclick="iconSizeDialog('${s.crop.id}')">Dimensione icona</button><button class="btn out small" onclick="togglePlantLock('${s.crop.id}','${s.plant.id}')">${s.plant.locked?'🔓 Sblocca':'📌 Blocca posizione'}</button><button class="btn out danger small" onclick="removePlant('${s.crop.id}','${s.plant.id}')">Rimuovi pianta</button></div>`}</div>`;
+}
 function measureOverlay(zoneId,all){let s=selectedPlantData(zoneId,all);if(!s)return '';let d=zoneDims(zoneId),x=s.plant.x*100,y=s.plant.y*100,px=s.plant.x*d.w,py=s.plant.y*d.l,hx=px<=d.w/2?0:100,hy=py<=d.l/2?0:100,hd=Math.min(px,d.w-px),vd=Math.min(py,d.l-py),near=nearestPlantInfo(zoneId,s,all);let nline=near?`<line class="near" x1="${x}" y1="${y}" x2="${near.q.plant.x*100}" y2="${near.q.plant.y*100}"/><text x="${(x+near.q.plant.x*100)/2}" y="${(y+near.q.plant.y*100)/2-2}" text-anchor="middle">${cm(near.dist)}</text>`:'';return `<svg class="measure-layer" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="${x}" y1="${y}" x2="${hx}" y2="${y}"/><text x="${(x+hx)/2}" y="${y-2}" text-anchor="middle">${cm(hd)}</text><line x1="${x}" y1="${y}" x2="${x}" y2="${hy}"/><text x="${x+3}" y="${(y+hy)/2}" text-anchor="start">${cm(vd)}</text>${nline}</svg>`}
-function refreshPlantMeasurements(){let all=zonePlants(selected),overlay=document.getElementById('measureOverlayHost'),info=document.getElementById('measureInfoHost'),warningHost=document.getElementById('warningSummaryHost'),warnings=spacingWarnings(selected);if(overlay)overlay.innerHTML=measureOverlay(selected,all);if(info)info.innerHTML=plantMeasureInfo(selected,all);if(warningHost)warningHost.innerHTML=warningSummary(selected);document.querySelectorAll('.plant-token').forEach(t=>{t.classList.toggle('selected',t.dataset.plantId===selectedPlantId);t.classList.remove('too-close','overlap');let wc=warningClassFor(t.dataset.plantId,warnings);if(wc)t.classList.add(wc)})}
-function startPlantDrag(e,cropId,plantId){e.preventDefault();e.stopPropagation();selectedPlantId=plantId;let el=e.currentTarget,board=document.getElementById('plantBoard'),rect=board.getBoundingClientRect(),c=state.crops.find(c=>c.id===cropId),p=c?.plants.find(p=>p.id===plantId);if(!p)return;const limits=radiusFractions(c);refreshPlantMeasurements();el.setPointerCapture?.(e.pointerId);const move=ev=>{let x=Math.max(limits.x,Math.min(1-limits.x,(ev.clientX-rect.left)/rect.width)),y=Math.max(limits.y,Math.min(1-limits.y,(ev.clientY-rect.top)/rect.height));p.x=x;p.y=y;el.style.left=(x*100)+'%';el.style.top=(y*100)+'%';refreshPlantMeasurements()};const end=()=>{el.removeEventListener('pointermove',move);el.removeEventListener('pointerup',end);el.removeEventListener('pointercancel',end);persistState();render()};el.addEventListener('pointermove',move);el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end)}
+function refreshPlantMeasurements(){
+ let all=zonePlants(selected),overlay=document.getElementById('measureOverlayHost'),info=document.getElementById('measureInfoHost'),warningHost=document.getElementById('warningSummaryHost'),warnings=spacingWarnings(selected),groupKey=selectedGroupKey(selected,all);
+ if(overlay)overlay.innerHTML=measureOverlay(selected,all);if(info)info.innerHTML=plantMeasureInfo(selected,all);if(warningHost)warningHost.innerHTML=warningSummary(selected);
+ document.querySelectorAll('.plant-token').forEach(t=>{const entry=all.find(x=>x.plant.id===t.dataset.plantId);t.classList.toggle('selected',t.dataset.plantId===selectedPlantId);t.classList.toggle('group-selected',!!entry&&!!groupKey&&cropTypeKey(entry.crop.name,entry.crop.variety)===groupKey);t.classList.remove('too-close','overlap');let wc=warningClassFor(t.dataset.plantId,warnings);if(wc)t.classList.add(wc)});
+}
+function togglePlantLock(cropId,plantId){
+ if(plannerPreview)return;
+ const c=state.crops.find(x=>x.id===cropId),p=c?.plants.find(x=>x.id===plantId);if(!p)return;
+ p.locked=!p.locked;lastPlannerUndo=null;selectedPlantId=plantId;save();
+}
+function startPlantDrag(e,cropId,plantId){
+ e.preventDefault();e.stopPropagation();selectedPlantId=plantId;
+ let c=state.crops.find(c=>c.id===cropId),p=c?.plants.find(p=>p.id===plantId);if(!p)return;
+ if(plannerPreview){refreshPlantMeasurements();return}
+ if(p.locked){refreshPlantMeasurements();setTimeout(()=>alert('Questa pianta è bloccata. Usa “Sblocca” prima di spostarla.'),10);return}
+ lastPlannerUndo=null;
+ let el=e.currentTarget,board=document.getElementById('plantBoard'),rect=board.getBoundingClientRect();const limits=radiusFractions(c);refreshPlantMeasurements();el.setPointerCapture?.(e.pointerId);
+ const move=ev=>{let x=Math.max(limits.x,Math.min(1-limits.x,(ev.clientX-rect.left)/rect.width)),y=Math.max(limits.y,Math.min(1-limits.y,(ev.clientY-rect.top)/rect.height));p.x=x;p.y=y;el.style.left=(x*100)+'%';el.style.top=(y*100)+'%';refreshPlantMeasurements()};
+ const end=()=>{el.removeEventListener('pointermove',move);el.removeEventListener('pointerup',end);el.removeEventListener('pointercancel',end);persistState();driveMarkDirty();queueCloudSync();render()};el.addEventListener('pointermove',move);el.addEventListener('pointerup',end);el.addEventListener('pointercancel',end)
+}
 function plantPositionDialog(cropId,plantId){let c=state.crops.find(c=>c.id===cropId),p=c?.plants.find(p=>p.id===plantId);if(!c||!p)return;let d=zoneDims(c.zone),limits=radiusFractions(c),minLeft=Math.round(limits.x*d.w*1000)/10,maxLeft=Math.round((1-limits.x)*d.w*1000)/10,minTop=Math.round(limits.y*d.l*1000)/10,maxTop=Math.round((1-limits.y)*d.l*1000)/10,left=Math.round(p.x*d.w*1000)/10,top=Math.round(p.y*d.l*1000)/10;openSheet(`<h2>Posizione precisa</h2><p><b>${emojiFor(c.name)} ${esc(c.name)}</b>${c.variety?` · ${esc(c.variety)}`:''} · Ø ${safeDiameter(c.iconDiameterCm)} cm</p><div class="field-row"><div><label>Distanza da sinistra (cm)</label><input id="pxcm" type="number" min="${minLeft}" max="${maxLeft}" step="0.5" value="${left}"></div><div><label>Distanza dall’alto (cm)</label><input id="pycm" type="number" min="${minTop}" max="${maxTop}" step="0.5" value="${top}"></div></div><p class="muted">Il centro non può avvicinarsi al bordo più del raggio dell’icona. Intervalli: ${minLeft}–${maxLeft} cm da sinistra e ${minTop}–${maxTop} cm dall’alto.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="savePlantPosition('${cropId}','${plantId}')">Salva posizione</button></div>`)}
 function savePlantPosition(cropId,plantId){let c=state.crops.find(c=>c.id===cropId),p=c?.plants.find(p=>p.id===plantId);if(!c||!p)return;let d=zoneDims(c.zone),limits=radiusFractions(c),left=Number(document.getElementById('pxcm').value),top=Number(document.getElementById('pycm').value);if(!Number.isFinite(left)||!Number.isFinite(top))return;p.x=Math.max(limits.x,Math.min(1-limits.x,left/(d.w*100)));p.y=Math.max(limits.y,Math.min(1-limits.y,top/(d.l*100)));selectedPlantId=plantId;closeSheet();save()}
 function iconSizeDialog(cropId){let c=state.crops.find(c=>c.id===cropId);if(!c)return;const matches=state.crops.filter(x=>cropTypeKey(x.name,x.variety)===cropTypeKey(c.name,c.variety)).length;openSheet(`<h2>Dimensione icona</h2><p><b>${emojiFor(c.name)} ${esc(c.name)}</b>${c.variety?` · ${esc(c.variety)}`:''}</p><label>Diametro grafico (cm)</label><input id="icond" type="number" min="5" max="100" step="1" value="${safeDiameter(c.iconDiameterCm)}"><p class="muted">La misura verrà applicata a tutte le piante uguali, anche in altre prode. Colture interessate: ${matches}.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="saveIconSize('${cropId}')">Applica a tutte</button></div>`)}
@@ -1081,7 +1044,7 @@ function speechCtor(){return window.SpeechRecognition||window.webkitSpeechRecogn
 function harvestVoiceAvailability(){
   const Ctor=speechCtor();
   const localDownload=location.protocol==='content:'||new URLSearchParams(location.search).has('simulateContent');
-  if(localDownload)return{available:false,reason:'Questa preview è aperta dai Download con indirizzo content://: Chrome non consente al file locale di usare il microfono.'};
+  if(localDownload)return{available:false,reason:'Questa app è aperta da un file locale con indirizzo content://: Chrome non consente al file locale di usare il microfono.'};
   if(!window.isSecureContext)return{available:false,reason:'Il riconoscimento vocale del browser richiede una pagina HTTPS o localhost.'};
   if(!Ctor)return{available:false,reason:'Questo browser non espone il riconoscimento vocale alla pagina.'};
   return{available:true,reason:''};
@@ -1141,35 +1104,33 @@ function archiveView(){
          <div class="drive-config-row"><div><label>URL Web App Apps Script</label><input id="driveEndpointInput" placeholder="https://script.google.com/macros/s/.../exec"></div><button class="btn" onclick="saveDriveEndpoint()">Salva</button></div>`}
   </div>`;
   return `<h1 class="title">Archivio</h1><p class="sub">Stagione ${state.year}, backup e sincronizzazione.</p>
-    <div class="card preview-tools"><b>🧪 Laboratorio anteprima</b><div class="muted">Dati separati dalla versione stabile.</div><button class="btn out full" style="margin-top:9px" onclick="restoreStableCopy()">Ricarica una copia dei dati stabili</button></div>
     <div class="card"><div class="row"><div class="grow"><h2 style="margin:0">Stato dati</h2><div class="sync-explain">${esc(sync)}${cloudUi.lastSync?` · ultimo allineamento ${new Date(cloudUi.lastSync).toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'})}`:''}</div></div><span class="backup-badge">${navigator.onLine?'Online':'Offline'}</span></div><div class="stats"><div class="stat"><strong>${state.crops.length}</strong>colture</div><div class="stat"><strong>${state.tasks.length}</strong>attività</div><div class="stat"><strong>${state.harvests.length}</strong>raccolti</div></div><p><b>Peso raccolto:</b> ${fmt(total)}</p><p><b>Interventi storicizzati:</b> ${(state.activityLog||[]).length}</p></div>
     ${driveCard}
-    <div class="card"><h2>Backup JSON manuale</h2><div class="backup-meta">Uscita di emergenza indipendente da Firestore e Google Drive.<br>Ultimo export: ${esc(lastBackupText())}</div><div class="backup-actions"><button class="btn full full-row" onclick="exportData()">Scarica backup JSON</button><label class="btn out" style="display:block;text-align:center">Importa backup<input type="file" accept="application/json" class="hide" onchange="importData(this.files[0])"></label><button class="btn out" onclick="restoreStableCopy()">Copia dati stabili</button></div></div>
-    <div class="card"><button class="btn out danger full" onclick="resetData()">Cancella i dati della preview</button></div>`;
+    <div class="card"><h2>Backup JSON manuale</h2><div class="backup-meta">Uscita di emergenza indipendente da Firestore e Google Drive.<br>Ultimo export: ${esc(lastBackupText())}</div><div class="backup-actions"><button class="btn full full-row" onclick="exportData()">Scarica backup JSON</button><label class="btn out" style="display:block;text-align:center">Importa backup<input type="file" accept="application/json" class="hide" onchange="importData(this.files[0])"></label></div></div>
+    <div class="card"><button class="btn out danger full" onclick="resetData()">Cancella tutti i dati dell’orto</button></div>`;
 }
 function openSheet(html){sheet.innerHTML=html;modal.classList.add('show')}function closeSheet(){modal.classList.remove('show')}
 modal.onclick=e=>{if(e.target===modal)closeSheet()};
-fab.onclick=()=>({map:()=>cropDialog(selected),calendar:taskDialog,tasks:taskDialog,harvest:harvestDialog}[tab]||(()=>{}))();
+fab.onclick=()=>{if(plannerPreview)return alert('Applica o annulla prima l’anteprima della proda.');({map:()=>cropDialog(selected),calendar:taskDialog,tasks:taskDialog,harvest:harvestDialog}[tab]||(()=>{}))()};
 function cropDialog(zone){openSheet(`<h2>Nuova coltura</h2><label>Zona</label><select id="z">${zones.map(x=>`<option value="${x[0]}" ${x[0]===zone?'selected':''}>${x[1]}</option>`).join('')}</select><label>Catalogo colture</label><select id="cat" onchange="applyCatalogSelection('')">${catalogOptions('custom')}</select><label>Coltura *</label><input id="n" placeholder="es. Pomodoro" oninput="syncKnownSettings('')"><label>Varietà</label><input id="v" list="variants" placeholder="es. Mondesse" oninput="syncKnownSettings('')"><datalist id="variants"></datalist><label>Numero piante</label><input id="c" type="number" min="0" max="100" value="3"><div class="catalog-row"><div><label>Diametro icona (cm)</label><input id="d" type="number" min="5" max="100" step="1" value="20"></div><div><label>Distanza tra piante (cm)</label><input id="sp" type="number" min="5" max="300" step="1" value="30"></div></div><label>Distanza tra file (cm)</label><input id="rs" type="number" min="5" max="300" step="1" value="40"><label>Disposizione iniziale</label><select id="layout"><option value="auto">Automatica secondo le distanze</option><option value="compact">Griglia compatta</option></select><div class="catalog-note">Le distanze sono suggerimenti modificabili. Dimensione e distanze rimangono comuni alle piante con lo stesso nome e la stessa varietà.</div><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="addCrop()">Salva</button></div>`)}
 function addCrop(){const z=document.getElementById('z'),n=document.getElementById('n'),v=document.getElementById('v'),c=document.getElementById('c'),d=document.getElementById('d'),sp=document.getElementById('sp'),rs=document.getElementById('rs'),cat=document.getElementById('cat'),layout=document.getElementById('layout');if(!n.value.trim())return;let count=Math.max(0,Math.min(100,Number(c.value)||0)),known=matchingSettings(n.value.trim(),v.value.trim()),catalog=catalogItem(cat.value)||inferCatalog(n.value),diameter=known?safeDiameter(known.iconDiameterCm):safeDiameter(d.value),spacing=known?safeSpacing(known.spacingCm,30):safeSpacing(sp.value,catalog?catalog.spacingCm:30),rowSpacing=known?safeSpacing(known.rowSpacingCm,40):safeSpacing(rs.value,catalog?catalog.rowSpacingCm:40),crop={id:uid(),zone:z.value,name:n.value.trim(),variety:v.value.trim(),count,iconDiameterCm:diameter,spacingCm:spacing,rowSpacingCm:rowSpacing,catalogId:catalog?catalog.id:'custom',iconColor:catalog?catalog.color:'#c9e2bd',plants:[]};crop.plants=compactPositions(count);state.crops.push(crop);applySharedSettings(crop.name,crop.variety,diameter,spacing,rowSpacing);if(layout.value==='auto')arrangeZonePlants(crop.zone);selectedPlantId=crop.plants[0]?.id||'';closeSheet();save()}
-function taskDialog(){const cropOpts=state.crops.map(c=>`<option value="${c.id}">${emojiFor(c.name)} ${esc(c.name)} · ${esc(zoneName(c.zone))}</option>`).join('');openSheet(`<h2>Nuova attività</h2><label>Attività *</label><input id="tn"><label>Data</label><input id="td" type="date" value="${localToday()}"><label>Categoria</label><select id="tc">${TASK_CATEGORIES.filter(x=>x!=='Tutte').map(x=>`<option>${x}</option>`)}</select><label>Coltura (facoltativa)</label><select id="tcr" onchange="taskCropSelectionChanged()"><option value="">Nessuna coltura specifica</option>${cropOpts}</select><label>Zona</label><select id="tz"><option value="">Nessuna</option>${zones.map(x=>`<option value="${x[0]}">${x[1]}</option>`)}</select><label>Note</label><textarea id="tno"></textarea><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="addTask()">Salva</button></div>`)}
+function taskDialog(){const cropOpts=state.crops.slice().sort((a,b)=>String(a.name||'').localeCompare(String(b.name||''),'it',{sensitivity:'base'})||String(a.variety||'').localeCompare(String(b.variety||''),'it',{sensitivity:'base'})||String(zoneName(a.zone)||'').localeCompare(String(zoneName(b.zone)||''),'it',{sensitivity:'base'})).map(c=>`<option value="${c.id}">${emojiFor(c.name)} ${esc(c.name)} · ${esc(zoneName(c.zone))}</option>`).join('');openSheet(`<h2>Nuova attività</h2><label>Attività *</label><input id="tn"><label>Data</label><input id="td" type="date" value="${localToday()}"><label>Categoria</label><select id="tc">${TASK_CATEGORIES.filter(x=>x!=='Tutte').map(x=>`<option>${x}</option>`)}</select><label>Coltura (facoltativa)</label><select id="tcr" onchange="taskCropSelectionChanged()"><option value="">Nessuna coltura specifica</option>${cropOpts}</select><label>Zona</label><select id="tz"><option value="">Nessuna</option>${zones.map(x=>`<option value="${x[0]}">${x[1]}</option>`)}</select><label>Note</label><textarea id="tno"></textarea><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="addTask()">Salva</button></div>`)}
 function taskCropSelectionChanged(){const id=document.getElementById('tcr')?.value,c=cropById(id),z=document.getElementById('tz');if(c&&z)z.value=c.zone}
 function addTask(){const tn=document.getElementById('tn'),td=document.getElementById('td'),tc=document.getElementById('tc'),tz=document.getElementById('tz'),tno=document.getElementById('tno'),tcr=document.getElementById('tcr');if(!tn.value.trim())return;const c=cropById(tcr?.value);state.tasks.push({id:uid(),title:tn.value.trim(),date:td.value,category:tc.value,zone:c?.zone||tz.value,notes:tno.value.trim(),done:false,cropId:c?.id||'',cropName:c?.name||''});closeSheet();save()}
 function harvestDialog(){openSheet(`<h2>Registra raccolto</h2><p class="muted">Data: <b>${formatDateIt(harvestSessionDate)}</b></p><label>Prodotto *</label><input id="hn" placeholder="es. Pomodori"><label>Peso in grammi *</label><input id="hw" type="number" min="1" inputmode="numeric" placeholder="es. 850"><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn" onclick="addHarvest()">Salva</button></div>`)}
 function addHarvest(){const hn=document.getElementById('hn'),hw=document.getElementById('hw');if(!hn.value.trim()||Number(hw.value)<=0)return;state.harvests.push({id:uid(),name:hn.value.trim(),date:harvestSessionDate,weight:Math.round(Number(hw.value))});closeSheet();save()}
 function removeCrop(id){state.crops=state.crops.filter(x=>x.id!==id);selectedPlantId='';save()}function toggleTask(id){let x=state.tasks.find(x=>x.id===id);if(!x)return;x.done=!x.done;if(x.done){if(!state.activityLog.some(l=>l.taskId===x.id))logActivity({date:localToday(),title:x.title,category:x.category,zone:x.zone,cropId:x.cropId||'',cropName:x.cropName||taskCropName(x),taskId:x.id,suggestionKey:x.suggestionKey||''})}else{state.activityLog=state.activityLog.filter(l=>l.taskId!==x.id)}save()}function removeTask(id){state.tasks=state.tasks.filter(x=>x.id!==id);save()}function removeHarvest(id){state.harvests=state.harvests.filter(x=>x.id!==id);save()}
-const BACKUP_META_KEY='ortoPreviewLastBackup';
-function backupEnvelope(){return {app:'Il mio Orto',kind:'preview-backup',version:'p0.2.4',exportedAt:new Date().toISOString(),state:cloudSafeState(state)}}
+const BACKUP_META_KEY='ortoMainLastBackup';
+function backupEnvelope(){return {app:'Il mio Orto',kind:'main-backup',version:'v0.10.6',exportedAt:new Date().toISOString(),state:cloudSafeState(state)}}
 function exportData(){const payload=backupEnvelope(),a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'}));a.href=url;a.download=`il_mio_orto_backup_${localToday()}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);try{localStorage.setItem(BACKUP_META_KEY,payload.exportedAt)}catch(_){ }render()}
-function importData(file){if(!file)return;let r=new FileReader;r.onload=()=>{try{const parsed=JSON.parse(r.result),incoming=parsed?.state&&typeof parsed.state==='object'?parsed.state:parsed;if(!incoming||typeof incoming!=='object')throw new Error('Formato non riconosciuto');if(!confirm('Importare questo backup nella preview? I dati attuali verranno sostituiti.'))return;state=incoming;migratePlants();save();alert('Backup importato correttamente.')}catch(e){alert('File non valido: '+e.message)}};r.readAsText(file)}
-function restoreStableCopy(){copyStableDataToPreview()}
-function resetData(){if(confirm('Cancellare tutti i dati della preview? La versione stabile non verrà toccata.')){state=emptyState();save()}}
+function importData(file){if(!file)return;let r=new FileReader;r.onload=()=>{try{const parsed=JSON.parse(r.result),incoming=parsed?.state&&typeof parsed.state==='object'?parsed.state:parsed;if(!incoming||typeof incoming!=='object')throw new Error('Formato non riconosciuto');if(!confirm('Importare questo backup nell’orto? I dati attuali verranno sostituiti.'))return;state=incoming;migratePlants();save();alert('Backup importato correttamente.')}catch(e){alert('File non valido: '+e.message)}};r.readAsText(file)}
+function resetData(){if(confirm('Cancellare TUTTI i dati dell’orto? Se sei collegato, la cancellazione verrà sincronizzata anche su Firestore.')){state=emptyState();save()}}
 function lastBackupText(){try{const v=localStorage.getItem(BACKUP_META_KEY);return v?new Date(v).toLocaleString('it-IT'):'Mai esportato su questo dispositivo'}catch(_){return 'Non disponibile'}}
 function showFatalError(error){
   window.__ortoReady=true;
   console.error(error);
   const message=error && error.message ? error.message : String(error||'Errore sconosciuto');
-  content.innerHTML=`<div class="card"><h1 class="title">La preview non è riuscita ad avviarsi</h1><p class="sub">Errore: ${esc(message)}</p><button class="btn full" onclick="repairAndRestart()">Ripara i dati e riapri</button><p></p><button class="btn out danger full" onclick="clearAndRestart()">Riparti con dati vuoti</button></div>`;
+  content.innerHTML=`<div class="card"><h1 class="title">L’app non è riuscita ad avviarsi</h1><p class="sub">Errore: ${esc(message)}</p><button class="btn full" onclick="repairAndRestart()">Ripara i dati e riapri</button><p></p><button class="btn out danger full" onclick="clearAndRestart()">Riparti con dati vuoti</button></div>`;
 }
 function repairAndRestart(){try{migratePlants();persistState();location.reload()}catch(error){clearAndRestart()}}
 function clearAndRestart(){state=emptyState();persistState();location.reload()}
@@ -1210,16 +1171,45 @@ const companionRules=[
 let companionCropId='pomodoro';
 const rolePriority={edge:0,stake:1,companion:2,compact:3,row:3,free:4};
 function cropCatalogId(crop){return (catalogItem(crop.catalogId)||inferCatalog(crop.name)||{}).id||'custom'}
-function cropRole(crop){const id=cropCatalogId(crop);if(['zucchino','trombetta','hokkaido'].includes(id))return'edge';if(['pomodoro','fagiolino','cetriolo'].includes(id))return'stake';if(['basilico','tagete'].includes(id))return'companion';if(['lattuga','rucola','cipolla','porro','barbabietola','finocchio'].includes(id))return'compact';return'row'}
+function cropRole(crop){const id=cropCatalogId(crop);if(['zucchino','trombetta','hokkaido'].includes(id))return'edge';if(['pomodoro','fagiolino','cetriolo'].includes(id))return'stake';if(['basilico','tagete'].includes(id))return'companion';if(['lattuga','rucola','cipolla','porro','barbabietola','finocchio','prezzemolo'].includes(id))return'compact';return'row'}
 function roleText(role){return({edge:'lungo un bordo',stake:'in file/tutori',companion:'vicino alla coltura associata',compact:'in file compatte',row:'in file regolari',free:'posizione libera'})[role]||role}
 function pairRule(a,b){const ai=cropCatalogId(a),bi=cropCatalogId(b);return companionRules.find(r=>(r.a===ai&&r.b===bi)||(r.a===bi&&r.b===ai))||null}
 function centerDistanceCm(a,b,d){return Math.hypot((a.plant.x-b.plant.x)*d.w*100,(a.plant.y-b.plant.y)*d.l*100)}
-function strictRequiredDistance(a,b){
- const radii=(safeDiameter(a.crop.iconDiameterCm)+safeDiameter(b.crop.iconDiameterCm))/2+AUTO_CLEARANCE_CM;
- if(sameCropIdentity(a.crop,b.crop))return Math.max(radii,safeSpacing(a.crop.spacingCm,30),safeSpacing(b.crop.spacingCm,30));
- const rule=pairRule(a.crop,b.crop);return Math.max(radii,rule&&rule.minCm?rule.minCm:0);
+function physicalRequiredDistance(a,b){
+ return (safeDiameter(a.crop.iconDiameterCm)+safeDiameter(b.crop.iconDiameterCm))/2+AUTO_CLEARANCE_CM;
 }
-function preferredColumns(item,W){const r=item.radius,rowGap=safeSpacing(item.crop.rowSpacingCm,40);let cols=Math.max(1,Math.floor((W-2*r)/rowGap)+1);cols=Math.min(3,cols);if(cols===1)return[W/2];return Array.from({length:cols},(_,i)=>r+(W-2*r)*i/(cols-1))}
+const MIXED_SPACING_MODES={
+ strict:{factor:1,label:'Prudente 100%'},
+ balanced:{factor:.85,label:'Bilanciata 85%'},
+ compact:{factor:.75,label:'Compatta 75%'}
+};
+function mixedSpacingMode(){const m=state?.plannerSettings?.mixedSpacingMode;return MIXED_SPACING_MODES[m]?m:'balanced'}
+function mixedSpacingFactor(){return MIXED_SPACING_MODES[mixedSpacingMode()].factor}
+function mixedSpacingLabel(){return MIXED_SPACING_MODES[mixedSpacingMode()].label}
+function setMixedSpacingMode(mode){if(!MIXED_SPACING_MODES[mode])return;state.plannerSettings=state.plannerSettings||{};state.plannerSettings.mixedSpacingMode=mode;lastPlannerUndo=null;save()}
+function distancePolicyInfo(a,b){
+ const physical=physicalRequiredDistance(a,b),spacingA=safeSpacing(a.crop.spacingCm,30),spacingB=safeSpacing(b.crop.spacingCm,30);
+ if(sameCropIdentity(a.crop,b.crop))return{physical,recommended:Math.max(spacingA,spacingB),accepted:Math.max(physical,spacingA,spacingB),label:'stessa coltura'};
+ const recommended=Math.min(spacingA,spacingB),rule=pairRule(a.crop,b.crop),ruleMin=rule&&rule.minCm?Number(rule.minCm):0;
+ const accepted=Math.max(physical,recommended*mixedSpacingFactor(),ruleMin);
+ return{physical,recommended,accepted,ruleMin,label:mixedSpacingLabel()};
+}
+function strictRequiredDistance(a,b){return distancePolicyInfo(a,b).accepted}
+function preferredColumns(item,W){
+ const r=item.radius;
+ let gap=Math.max(10,safeSpacing(item.crop.rowSpacingCm,40));
+ let cols=Math.max(1,Math.floor((W-2*r)/gap)+1);
+ cols=Math.min(3,cols);
+ if(cols===1)return[W/2];
+
+ let span=(cols-1)*gap;
+ if(span>W-2*r){
+   span=W-2*r;
+   gap=span/(cols-1);
+ }
+ const start=(W-span)/2;
+ return Array.from({length:cols},(_,i)=>start+i*gap);
+}
 function roleScore(item,x,y,placed,W,L){
  const role=cropRole(item.crop),same=placed.filter(p=>sameCropIdentity(p.item.crop,item.crop));
  const nearestSame=same.length?Math.min(...same.map(p=>Math.hypot(x-p.x,y-p.y))):0;
@@ -1239,43 +1229,352 @@ function roleScore(item,x,y,placed,W,L){
  }
  return y*.08+x*.01+nearestSame*.06;
 }
-function candidateValues(min,max,step){const out=[];for(let v=min;v<=max+.01;v+=step)out.push(Math.min(max,v));if(!out.length||Math.abs(out[out.length-1]-max)>.5)out.push(max);return out}
-function createAgronomicPlan(zoneId,excludedCropIds=[]){
- const d=zoneDims(zoneId),W=d.w*100,L=d.l*100,excluded=new Set(excludedCropIds);
- const items=placementItems(zoneId).filter(x=>!excluded.has(x.crop.id)).sort((a,b)=>{
-   const rp=(rolePriority[cropRole(a.crop)]??9)-(rolePriority[cropRole(b.crop)]??9);if(rp)return rp;
-   const ck=cropTypeKey(a.crop.name,a.crop.variety).localeCompare(cropTypeKey(b.crop.name,b.crop.variety));if(ck)return ck;
-   return a.index-b.index;
+
+function agrUniqueNumbers(values){
+ const out=[];
+ values.forEach(v=>{
+   const n=Number(v);
+   if(!Number.isFinite(n))return;
+   if(!out.some(x=>Math.abs(x-n)<.1))out.push(n);
  });
- const placed=[];
- for(const item of items){
-   const role=cropRole(item.crop);
-   const xs=role==='stake'?preferredColumns(item,W):candidateValues(item.radius,W-item.radius,5);
-   const ys=role==='stake'?candidateValues(item.radius,L-item.radius,safeSpacing(item.crop.spacingCm,30)):candidateValues(item.radius,L-item.radius,5);
-   let best=null;
-   for(const y of ys)for(const x of xs){let blocked=false;
-     for(const other of placed){if(Math.hypot(x-other.x,y-other.y)+.1<strictRequiredDistance(item,other.item)){blocked=true;break}}
-     if(blocked)continue;
-     const score=roleScore(item,x,y,placed,W,L);
-     if(!best||score<best.score)best={x,y,score};
-   }
-   if(!best)return{success:false,placed,failed:item,W,L,total:items.length};
-   placed.push({item,x:best.x,y:best.y});
- }
- return{success:true,placed,W,L,total:items.length};
+ return out.sort((a,b)=>a-b);
 }
-function applyAgronomicPlan(plan){plan.placed.forEach(p=>{p.item.plant.x=p.x/plan.W;p.item.plant.y=p.y/plan.L})}
+function agrAxisValues(max,step=10){
+ if(max<=.05)return[0];
+ const vals=[0,max/2,max];
+ for(let v=0;v<=max+.05;v+=step)vals.push(Math.min(max,v));
+ return agrUniqueNumbers(vals);
+}
+function agrGroupItems(zoneId,excludedCropIds=[]){
+ const excluded=new Set(excludedCropIds),map=new Map();
+ placementItems(zoneId).forEach(item=>{
+   if(excluded.has(item.crop.id)||item.plant.locked)return;
+   const key=cropTypeKey(item.crop.name,item.crop.variety);
+   if(!map.has(key))map.set(key,{key,crop:item.crop,items:[],role:cropRole(item.crop)});
+   map.get(key).items.push(item);
+ });
+ return [...map.values()];
+}
+function agrFixedPlacements(zoneId,excludedCropIds=[],W,L){
+ const excluded=new Set(excludedCropIds);
+ return placementItems(zoneId).filter(item=>item.plant.locked&&!excluded.has(item.crop.id)).map(item=>{
+   const x=item.plant.x*W,y=item.plant.y*L,r=item.radius;
+   return{fixed:true,group:{crop:item.crop,items:[item],role:'fixed'},pattern:{role:'fixed',group:{crop:item.crop,items:[item]},w:r*2,h:r*2,cols:1},x:x-r,y:y-r,points:[{item,x,y}]};
+ });
+}
+function agrPattern(group,cols,dx,dy,W,edgeMode=false,edgeGap=null,edgePhase=0){
+ const {items,crop,role}=group;
+ const n=items.length,r=items[0]?.radius||safeDiameter(crop.iconDiameterCm)/2;
+ const points=[];
+
+ if(edgeMode){
+   const gap=Math.max(edgeGap||safeSpacing(crop.spacingCm,30),r*2+AUTO_CLEARANCE_CM);
+   for(let i=0;i<n;i++){
+     const side=i%2,row=Math.floor(i/2);
+     points.push({item:items[i],x:side?W-r:r,y:r+row*gap+(side?edgePhase*gap:0)});
+   }
+ }else{
+   // File longitudinali vere: ogni colonna mantiene la stessa X e cresce lungo Y.
+   // Le quantità sono ripartite 3+2, 4+3, ecc., senza centrare l'ultima pianta tra due file.
+   const base=Math.floor(n/cols),extra=n%cols;
+   let index=0;
+   for(let col=0;col<cols;col++){
+     const count=base+(col<extra?1:0);
+     for(let row=0;row<count;row++){
+       points.push({item:items[index++],x:r+col*dx,y:r+row*dy});
+     }
+   }
+ }
+
+ const minX=Math.min(...points.map(p=>p.x-p.item.radius));
+ const maxX=Math.max(...points.map(p=>p.x+p.item.radius));
+ const minY=Math.min(...points.map(p=>p.y-p.item.radius));
+ const maxY=Math.max(...points.map(p=>p.y+p.item.radius));
+ const norm=points.map(p=>({...p,x:p.x-minX,y:p.y-minY}));
+ return{group,points:norm,w:maxX-minX,h:maxY-minY,cols,role,edge:edgeMode};
+}
+function agrPatternsForGroup(group,W,L){
+ const {items,crop,role}=group;
+ if(!items.length)return[];
+ const n=items.length,r=items[0].radius;
+ const physical=r*2+AUTO_CLEARANCE_CM;
+ const spacing=Math.max(physical,safeSpacing(crop.spacingCm,30));
+ const rowGap=Math.max(physical,safeSpacing(crop.rowSpacingCm,40));
+ const patterns=[];
+
+ if(role==='edge'){
+   const gaps=agrUniqueNumbers([spacing,spacing*1.15,spacing*1.30,spacing*1.45]);
+   gaps.forEach(gap=>{
+     [0,.5].forEach(phase=>{
+       const p=agrPattern(group,2,0,0,W,true,gap,phase);
+       if(p.h<=L+.05)patterns.push(p);
+     });
+   });
+   // Se le piante sono poche, prova anche una sola fila laterale.
+   if(n<=4){
+     for(const side of ['left','right']){
+       const pts=items.map((item,i)=>({
+         item,
+         x:side==='left'?r:W-r,
+         y:r+i*spacing
+       }));
+       const minX=Math.min(...pts.map(p=>p.x-p.item.radius));
+       const maxX=Math.max(...pts.map(p=>p.x+p.item.radius));
+       const minY=Math.min(...pts.map(p=>p.y-p.item.radius));
+       const maxY=Math.max(...pts.map(p=>p.y+p.item.radius));
+       if(maxY-minY<=L+.05){
+         patterns.push({
+           group,
+           points:pts.map(p=>({...p,x:p.x-minX,y:p.y-minY})),
+           w:maxX-minX,h:maxY-minY,
+           cols:1,role,edge:true,side
+         });
+       }
+     }
+   }
+   return patterns;
+ }
+
+ const widthCols=Math.max(1,Math.floor((W-2*r)/spacing)+1);
+ const maxCols=Math.min(
+   n,
+   role==='compact'||role==='row'?widthCols:
+   role==='companion'?4:
+   3
+ );
+ for(let cols=1;cols<=maxCols;cols++){
+   const p=agrPattern(group,cols,rowGap,spacing,W,false);
+   if(p.w<=W+.05&&p.h<=L+.05)patterns.push(p);
+ }
+ return patterns;
+}
+function agrCandidateScore(candidate,W,L){
+ const {pattern,x,y}=candidate;
+ const role=pattern.role;
+ const cx=x+pattern.w/2,cy=y+pattern.h/2;
+ const n=pattern.group.items.length;
+ let score=0;
+
+ if(role==='edge'){
+   score+=Math.abs(cy-L*.45)*.012;
+   score+=pattern.cols===2?0:2;
+ }else if(role==='stake'){
+   score+=Math.abs(cx-W/2)*.32;
+   score+=Math.abs(cy-L*.62)*.012;
+   const preferred=n>=7?3:(n>=4?2:1);
+   score+=Math.abs(pattern.cols-preferred)*1.4;
+ }else if(role==='compact'||role==='row'){
+   score+=y*.032;                         // tendenzialmente verso la testa della proda
+   score+=Math.abs(cx-W/2)*.035;
+   const r0=pattern.group.items[0]?.radius||0;
+   const spacing0=Math.max(r0*2+AUTO_CLEARANCE_CM,safeSpacing(pattern.group.crop.spacingCm,30));
+   const widthCols=Math.max(1,Math.floor((W-2*r0)/spacing0)+1);
+   const preferred=Math.min(n,widthCols);
+   score+=Math.abs(pattern.cols-preferred)*.8;
+ }else if(role==='companion'){
+   score+=y*.018+Math.abs(cx-W/2)*.02;
+ }
+ return score;
+}
+function agrCandidatesForGroup(group,W,L,maxCandidates=900){
+ const out=[];
+ agrPatternsForGroup(group,W,L).forEach(pattern=>{
+   const maxX=Math.max(0,W-pattern.w);
+   const maxY=Math.max(0,L-pattern.h);
+
+   if(pattern.edge&&pattern.w>=W-.1){
+     agrAxisValues(maxY,10).forEach(y=>{
+       out.push({
+         group,pattern,x:0,y,
+         points:pattern.points.map(p=>({...p,x:p.x,y:p.y+y}))
+       });
+     });
+   }else{
+     const xs=agrAxisValues(maxX,10);
+     const ys=agrAxisValues(maxY,10);
+     xs.forEach(x=>ys.forEach(y=>{
+       out.push({
+         group,pattern,x,y,
+         points:pattern.points.map(p=>({...p,x:p.x+x,y:p.y+y}))
+       });
+     }));
+   }
+ });
+ out.forEach(c=>c.score=agrCandidateScore(c,W,L));
+ out.sort((a,b)=>a.score-b.score||a.y-b.y||a.x-b.x);
+ return out.slice(0,maxCandidates);
+}
+function agrRectanglesConflict(a,b,gap=5){
+ const ra=a.pattern.role,rb=b.pattern.role;
+ // Colture da bordo possono condividere la stessa fascia longitudinale.
+ // Le companion possono stare nello spazio di una coltura associata.
+ if(a.fixed||b.fixed||ra==='edge'||rb==='edge'||ra==='companion'||rb==='companion')return false;
+
+ const ax1=a.x,ay1=a.y,ax2=a.x+a.pattern.w,ay2=a.y+a.pattern.h;
+ const bx1=b.x,by1=b.y,bx2=b.x+b.pattern.w,by2=b.y+b.pattern.h;
+ return !(ax2+gap<=bx1||bx2+gap<=ax1||ay2+gap<=by1||by2+gap<=ay1);
+}
+function agrCandidatesCompatible(candidate,placements){
+ for(const other of placements){
+   if(agrRectanglesConflict(candidate,other))return false;
+   for(const a of candidate.points){
+     for(const b of other.points){
+       const dist=Math.hypot(a.x-b.x,a.y-b.y);
+       if(dist+.05<strictRequiredDistance(a.item,b.item))return false;
+     }
+   }
+ }
+ return true;
+}
+function candidateMinDistance(a,b){
+ let best=Infinity;for(const pa of a.points)for(const pb of b.points)best=Math.min(best,Math.hypot(pa.x-pb.x,pa.y-pb.y));return best;
+}
+function agrAdjacencyPenalty(candidate,placements){
+ let penalty=0;
+ for(const other of placements){
+   const d=candidateMinDistance(candidate,other);
+   const practical=pairRule(candidate.group.crop,other.group.crop);
+   if(practical&&practical.relation!=='uncertain'){
+     const ideal=practical.maxCm?((practical.minCm||20)+practical.maxCm)/2:(practical.minCm||30);
+     penalty+=Math.abs(d-ideal)*.025;
+   }
+   const matrix=resolvedMatrixRelation(candidate.group.crop,other.group.crop);
+   if(!matrix||matrix.code==='M')continue;
+   if(matrix.code==='B'){
+     // B: preferenza, non obbligo. A parità di progetto avvicina i due gruppi.
+     penalty+=d*.018;
+   }else if(matrix.code==='C'){
+     // C: se l'utente decide comunque di tenerle nella stessa proda, prova a separarle.
+     const target=Math.max(100,Math.min(160,(safeSpacing(candidate.group.crop.spacingCm,30)+safeSpacing(other.group.crop.spacingCm,30))*1.35));
+     penalty+=Math.max(0,target-d)*.22;
+   }
+ }
+ return penalty;
+}
+function createAgronomicPlan(zoneId,excludedCropIds=[],maxAttempts=1){
+ const d=zoneDims(zoneId),W=d.w*100,L=d.l*100;
+ const fixed=agrFixedPlacements(zoneId,excludedCropIds,W,L);
+ // Due piante bloccate incompatibili sono un vincolo impossibile da correggere automaticamente.
+ for(let i=0;i<fixed.length;i++)for(let j=i+1;j<fixed.length;j++){
+   const a=fixed[i].points[0],b=fixed[j].points[0],dist=Math.hypot(a.x-b.x,a.y-b.y);
+   if(dist+.05<strictRequiredDistance(a.item,b.item))return{success:false,placed:[],failed:a.item,W,L,total:placementItems(zoneId).length,reason:'locked-conflict',lockedPair:[a.item,b.item]};
+ }
+ const groups=agrGroupItems(zoneId,excludedCropIds);
+ const excludedSet=new Set(excludedCropIds);
+ const total=placementItems(zoneId).filter(i=>!excludedSet.has(i.crop.id)).length;
+ if(!groups.length)return{success:true,placed:fixed.flatMap(c=>c.points.map(p=>({item:p.item,x:p.x,y:p.y}))),W,L,total,groups:[],fixedCount:fixed.length};
+
+ const prepared=groups.map(group=>({group,candidates:agrCandidatesForGroup(group,W,L,group.items.length>15?600:900)}));
+ prepared.sort((a,b)=>(rolePriority[a.group.role]??9)-(rolePriority[b.group.role]??9)||a.candidates.length-b.candidates.length||b.group.items.length-a.group.items.length);
+ if(prepared.some(x=>!x.candidates.length)){
+   const failed=prepared.find(x=>!x.candidates.length)?.group.items[0];
+   return{success:false,placed:[],failed,W,L,total,reason:'pattern',fixedCount:fixed.length};
+ }
+
+ const BEAM_WIDTH=220;
+ let beam=[{score:0,placements:[...fixed]}],failedGroup=null;
+ for(const entry of prepared){
+   const next=[];
+   for(const beamState of beam){
+     for(const candidate of entry.candidates){
+       if(!agrCandidatesCompatible(candidate,beamState.placements))continue;
+       const score=beamState.score+candidate.score+agrAdjacencyPenalty(candidate,beamState.placements);
+       next.push({score,placements:[...beamState.placements,candidate]});
+     }
+   }
+   if(!next.length){failedGroup=entry.group;beam=[];break}
+   next.sort((a,b)=>a.score-b.score);beam=next.slice(0,BEAM_WIDTH);
+ }
+ if(!beam.length)return{success:false,placed:[],failed:failedGroup?.items?.[0]||prepared[0]?.group?.items?.[0],W,L,total,reason:'no-layout',fixedCount:fixed.length};
+
+ const best=beam[0],placed=[];
+ best.placements.forEach(c=>c.points.forEach(p=>placed.push({item:p.item,x:p.x,y:p.y})));
+ return{success:true,placed,W,L,total,fixedCount:fixed.length,groups:best.placements.filter(c=>!c.fixed).map(c=>({cropId:c.group.crop.id,role:c.group.role,x:c.x,y:c.y,w:c.pattern.w,h:c.pattern.h,cols:c.pattern.cols}))};
+}
+function applyAgronomicPlan(plan){
+ plan.placed.forEach(p=>{
+   p.item.plant.x=p.x/plan.W;
+   p.item.plant.y=p.y/plan.L;
+ });
+}
+
 function cropGroups(zoneId){return state.crops.filter(c=>c.zone===zoneId&&c.count>0)}
 function findMoveSuggestions(zoneId){
  const groups=cropGroups(zoneId).slice().sort((a,b)=>a.count-b.count||safeDiameter(b.iconDiameterCm)-safeDiameter(a.iconDiameterCm));
  const suggestions=[];
- for(const crop of groups){const plan=createAgronomicPlan(zoneId,[crop.id]);if(plan.success)suggestions.push({ids:[crop.id],labels:[`${crop.count} ${crop.name}`],count:crop.count});}
- if(!suggestions.length&&groups.length<=8){for(let i=0;i<groups.length;i++)for(let j=i+1;j<groups.length;j++){const plan=createAgronomicPlan(zoneId,[groups[i].id,groups[j].id]);if(plan.success)suggestions.push({ids:[groups[i].id,groups[j].id],labels:[`${groups[i].count} ${groups[i].name}`,`${groups[j].count} ${groups[j].name}`],count:groups[i].count+groups[j].count})}}
+ for(const crop of groups){
+   const plan=createAgronomicPlan(zoneId,[crop.id],4);
+   if(plan.success)suggestions.push({ids:[crop.id],labels:[`${crop.count} ${crop.name}`],count:crop.count});
+ }
+ if(!suggestions.length&&groups.length<=8){
+   for(let i=0;i<groups.length;i++)for(let j=i+1;j<groups.length;j++){
+     const plan=createAgronomicPlan(zoneId,[groups[i].id,groups[j].id],3);
+     if(plan.success)suggestions.push({ids:[groups[i].id,groups[j].id],labels:[`${groups[i].count} ${groups[i].name}`,`${groups[j].count} ${groups[j].name}`],count:groups[i].count+groups[j].count});
+   }
+ }
  const sorted=suggestions.sort((a,b)=>a.count-b.count);if(!sorted.length)return[];const min=sorted[0].count;return sorted.filter(s=>s.count<=min+2).slice(0,3);
 }
-function arrangeZonePlants(zoneId){const plan=createAgronomicPlan(zoneId);if(plan.success){applyAgronomicPlan(plan);return{success:true,remaining:0,plan}}return{success:false,remaining:plan.total-plan.placed.length,plan,suggestions:findMoveSuggestions(zoneId)}}
-function plannerFailureSheet(zoneId,result){const failed=result.plan.failed,sg=result.suggestions||[];openSheet(`<h2>La combinazione non entra correttamente</h2><p>Il progettista ha fermato il calcolo prima di creare una disposizione casuale. Non riesce a collocare <b>${failed?emojiFor(failed.crop.name)+' '+esc(failed.crop.name):'tutte le piante'}</b> rispettando distanze, ingombri e preferenze di posizione.</p>${sg.length?`<div class="planner-result fail"><b>Soluzioni che rendono possibile il progetto:</b>${sg.map(s=>`<div class="planner-suggestion">Sposta in un’altra zona: <b>${s.labels.map(esc).join(' + ')}</b></div>`).join('')}</div>`:`<div class="planner-result fail">Riduci il numero di piante, le distanze impostate oppure il diametro grafico delle icone.</div>`}<div class="actions"><button class="btn" onclick="closeSheet()">Chiudi</button></div>`)}
-function autoArrangeZone(zoneId,ignoreRelations=false){const count=zonePlants(zoneId).length;if(!count)return;const conflicts=matrixPairWarnings(zoneId).filter(x=>x.relation.code==='C');if(conflicts.length&&!ignoreRelations){openSheet(`<h2>Consociazioni da verificare</h2><p>Il database segnala ${conflicts.length} combinazioni da evitare in questa zona:</p>${conflicts.map(x=>`<div class="matrix-warning C"><b>${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)} ${esc(x.b.name)}</b><br>${esc(x.relation.source)}</div>`).join('')}<p class="muted">La disposizione automatica non può risolvere un conflitto agronomico semplicemente spostando le icone. Puoi annullare o continuare consapevolmente.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn warn" onclick="closeSheet();autoArrangeZone('${zoneId}',true)">Continua comunque</button></div>`);return}const result=arrangeZonePlants(zoneId);if(result.success){selectedPlantId=zonePlants(zoneId)[0]?.plant.id||'';save();setTimeout(()=>alert('Progetto applicato: colture raggruppate, ingombri controllati e consociazioni verificate.'),20)}else plannerFailureSheet(zoneId,result)}
+function snapshotZonePositions(zoneId){return zonePlants(zoneId).map(x=>({cropId:x.crop.id,plantId:x.plant.id,x:x.plant.x,y:x.plant.y}))}
+function restorePositionSnapshot(snapshot=[]){snapshot.forEach(pos=>{const c=state.crops.find(x=>x.id===pos.cropId),p=c?.plants.find(x=>x.id===pos.plantId);if(p){p.x=pos.x;p.y=pos.y}})}
+function restorePlannerPreview(rerender=true){if(!plannerPreview)return;restorePositionSnapshot(plannerPreview.previous);const zoneId=plannerPreview.zoneId;plannerPreview=null;selected=zoneId;if(rerender)render()}
+function applyPlannerPreview(){if(!plannerPreview)return;const accepted=plannerPreview;lastPlannerUndo={zoneId:accepted.zoneId,positions:accepted.previous,at:new Date().toISOString()};plannerPreview=null;selected=accepted.zoneId;save('planner-apply');setTimeout(()=>alert('Progettazione applicata e salvata. Puoi ancora usare “Annulla ultima progettazione”.'),20)}
+function undoLastPlanner(){if(!lastPlannerUndo)return;if(plannerPreview)restorePlannerPreview(false);const undo=lastPlannerUndo;restorePositionSnapshot(undo.positions);lastPlannerUndo=null;selected=undo.zoneId;selectedPlantId=zonePlants(undo.zoneId)[0]?.plant.id||'';save('planner-undo')}
+function plannerFootprintEstimate(zoneId){
+ const d=zoneDims(zoneId),W=d.w*100,L=d.l*100,groups=agrGroupItems(zoneId),available=W*L;
+ let required=0;for(const g of groups){const patterns=agrPatternsForGroup(g,W,L);if(patterns.length){const best=patterns.slice().sort((a,b)=>(a.w*a.h)-(b.w*b.h))[0];required+=best.w*best.h}else{const r=g.items[0]?.radius||10,spacing=Math.max(r*2+AUTO_CLEARANCE_CM,safeSpacing(g.crop.spacingCm,30));required+=Math.max(r*2,W)*Math.max(r*2,Math.ceil(g.items.length/Math.max(1,Math.floor(W/spacing)))*spacing)}}
+ const extraArea=Math.max(0,required-available),extraLength=extraArea>0?Math.ceil(extraArea/Math.max(1,W)):0;
+ return{required,available,extraLength,locked:placementItems(zoneId).filter(x=>x.plant.locked).length};
+}
+function arrangeZonePlants(zoneId){
+ const plan=createAgronomicPlan(zoneId);
+ if(!plan.success){
+   return{
+     success:false,
+     remaining:plan.total||1,
+     plan,
+     suggestions:findMoveSuggestions(zoneId)
+   };
+ }
+
+ const previous=zonePlants(zoneId).map(x=>({plant:x.plant,x:x.plant.x,y:x.plant.y}));
+ applyAgronomicPlan(plan);
+ const residual=spacingWarnings(zoneId);
+
+ if(residual.length){
+   previous.forEach(p=>{p.plant.x=p.x;p.plant.y=p.y});
+   return{
+     success:false,
+     remaining:residual.length,
+     plan:{...plan,failed:residual[0]?.a||plan.failed},
+     suggestions:findMoveSuggestions(zoneId),
+     residual
+   };
+ }
+ return{success:true,remaining:0,plan,residual:[]};
+}
+
+function plannerFailureSheet(zoneId,result){
+ const failed=result.plan?.failed,sg=result.suggestions||[],diag=plannerFootprintEstimate(zoneId),reason=result.plan?.reason;
+ const lockedPair=result.plan?.lockedPair;
+ const deficit=diag.extraLength>0?`<div class="planner-suggestion"><b>Stima di ingombro:</b> servirebbero circa <b>${diag.extraLength} cm</b> aggiuntivi di lunghezza equivalente. È una stima, perché la forma dei blocchi e le consociazioni possono essere il vero limite.</div>`:`<div class="planner-suggestion"><b>Superficie totale non necessariamente insufficiente:</b> il limite è la combinazione di file, distanze e posizione dei gruppi.</div>`;
+ const lockedMsg=reason==='locked-conflict'&&lockedPair?`<div class="planner-result fail"><b>📌 Conflitto tra piante bloccate</b><br>${emojiFor(lockedPair[0].crop.name)} ${esc(lockedPair[0].crop.name)} e ${emojiFor(lockedPair[1].crop.name)} ${esc(lockedPair[1].crop.name)} sono troppo vicine e il progettista non può spostarle. Sblocca almeno una delle due.</div>`:'';
+ openSheet(`<h2>La combinazione non entra in modo ordinato</h2>
+ <p>Con le quantità attuali non riesco a mantenere contemporaneamente <b>file longitudinali ordinate</b>, distanze minime, piante bloccate e preferenze agronomiche${failed?`, a partire da <b>${emojiFor(failed.crop.name)} ${esc(failed.crop.name)}</b>`:''}.</p>
+ ${lockedMsg}<div class="planner-result fail">${deficit}${diag.locked?`<div class="planner-suggestion">Piante bloccate nella proda: <b>${diag.locked}</b>.</div>`:''}</div>
+ ${sg.length?`<div class="planner-result fail"><b>Soluzioni concrete trovate:</b>${sg.map(s=>`<div class="planner-suggestion">Sposta in un’altra proda: <b>${s.labels.map(esc).join(' + ')}</b>. Il progetto rimanente diventa realizzabile.</div>`).join('')}</div>`:`<div class="planner-result fail">Prova a ridurre il numero di piante, sbloccare una posizione vincolante oppure spostare una coltura in un’altra proda.</div>`}
+ <div class="actions"><button class="btn" onclick="closeSheet()">Chiudi</button></div>`);
+}
+function autoArrangeZone(zoneId,ignoreRelations=false){
+ const count=zonePlants(zoneId).length;if(!count)return;
+ if(plannerPreview)restorePlannerPreview(false);
+ const conflicts=matrixPairWarnings(zoneId).filter(x=>x.relation.code==='C');
+ if(conflicts.length&&!ignoreRelations){
+   openSheet(`<h2>Consociazioni da verificare</h2><p>Il database segnala ${conflicts.length} combinazioni da evitare in questa zona:</p>${conflicts.map(x=>`<div class="matrix-warning C"><b>${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)} ${esc(x.b.name)}</b><br>${esc(x.relation.source)}</div>`).join('')}<p class="muted">Se continui, il progettista proverà comunque a <b>tenerle più lontane possibile</b>. Le relazioni B vengono invece favorite nella vicinanza; le M restano solo informative.</p><div class="actions"><button class="btn out" onclick="closeSheet()">Annulla</button><button class="btn warn" onclick="closeSheet();autoArrangeZone('${zoneId}',true)">Continua comunque</button></div>`);return;
+ }
+ const previous=snapshotZonePositions(zoneId),result=arrangeZonePlants(zoneId);
+ if(result.success){plannerPreview={zoneId,previous,plan:result.plan,createdAt:new Date().toISOString()};selectedPlantId=zonePlants(zoneId)[0]?.plant.id||'';render()}
+ else plannerFailureSheet(zoneId,result);
+}
 function companionConstraintWarnings(zoneId){
  const all=zonePlants(zoneId),d=zoneDims(zoneId),out=[];
  for(const entry of all){const role=cropRole(entry.crop),x=entry.plant.x*d.w*100,y=entry.plant.y*d.l*100,r=safeDiameter(entry.crop.iconDiameterCm)/2;
@@ -1287,9 +1586,17 @@ function companionConstraintWarnings(zoneId){
  }
  return out;
 }
-function constraintPanel(zoneId){const crops=state.crops.filter(c=>c.zone===zoneId),roles=[...new Map(crops.map(c=>[cropCatalogId(c),c])).values()].map(c=>`${emojiFor(c.name)} ${esc(c.name)}: ${roleText(cropRole(c))}`),cw=companionConstraintWarnings(zoneId),mw=matrixPairWarnings(zoneId);return `<div class="constraint-panel"><b>Vincoli e preferenze attivi</b>${roles.length?roles.map(x=>`<div class="constraint-row"><span class="constraint-status">•</span><span>${x}</span></div>`).join(''):'<div class="muted">Aggiungi una coltura per attivare i vincoli.</div>'}${mw.map(x=>`<div class="matrix-warning ${x.relation.code}"><b>${x.relation.code==='C'?'Da evitare':'Fonti discordanti'}:</b> ${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)} ${esc(x.b.name)}<br><small>${esc(x.relation.scope==='gruppo/famiglia'?'Relazione ereditata da un gruppo botanico generale.':'Relazione specifica della matrice.')}</small></div>`).join('')}${cw.length?`<div class="constraint-bad"><b>Posizioni da correggere:</b>${cw.slice(0,5).map(w=>`<div class="constraint-row"><span class="constraint-status">⚠</span><span>${esc(w.text)}</span></div>`).join('')}</div>`:`${roles.length&&!mw.length?'<div class="constraint-good">✓ Nessun conflitto C/M e preferenze di posizione rispettate.</div>':''}`}</div>`}
+function matrixPairPreferences(zoneId){const crops=state.crops.filter(c=>c.zone===zoneId),out=[];for(let i=0;i<crops.length;i++)for(let j=i+1;j<crops.length;j++){const r=resolvedMatrixRelation(crops[i],crops[j]);if(r&&r.code==='B')out.push({a:crops[i],b:crops[j],relation:r})}return out}
+function constraintPanel(zoneId){
+ const crops=state.crops.filter(c=>c.zone===zoneId),roles=[...new Map(crops.map(c=>[cropCatalogId(c),c])).values()].map(c=>`${emojiFor(c.name)} ${esc(c.name)}: ${roleText(cropRole(c))}`),cw=companionConstraintWarnings(zoneId),mw=matrixPairWarnings(zoneId),good=matrixPairPreferences(zoneId);
+ const mode=mixedSpacingMode();
+ return `<div class="constraint-panel"><b>Vincoli e preferenze attivi</b>${roles.length?roles.map(x=>`<div class="constraint-row"><span class="constraint-status">•</span><span>${x}</span></div>`).join(''):'<div class="muted">Aggiungi una coltura per attivare i vincoli.</div>'}<div class="planner-settings"><label>Distanza minima tra specie diverse</label><select onchange="setMixedSpacingMode(this.value)"><option value="strict" ${mode==='strict'?'selected':''}>Prudente — 100% della distanza di riferimento</option><option value="balanced" ${mode==='balanced'?'selected':''}>Bilanciata — 85%</option><option value="compact" ${mode==='compact'?'selected':''}>Compatta — 75%</option></select><div class="planner-policy">Il progettista distingue sempre <b>ingombro fisico</b>, <b>distanza agronomica consigliata</b> e <b>minimo accettato</b>. Il valore scelto vale solo fra specie diverse; le piante uguali mantengono il 100% della distanza impostata.</div></div>${good.slice(0,5).map(x=>`<div class="matrix-warning" style="background:#e7f5e4;border:1px solid #a9d4a2;color:#24562d"><b>B · preferenza di vicinanza:</b> ${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)} ${esc(x.b.name)}</div>`).join('')}${mw.map(x=>`<div class="matrix-warning ${x.relation.code}"><b>${x.relation.code==='C'?'Da evitare e tenere più distanti':'Fonti discordanti — non influenza il progetto'}:</b> ${emojiFor(x.a.name)} ${esc(x.a.name)} + ${emojiFor(x.b.name)} ${esc(x.b.name)}<br><small>${esc(x.relation.scope==='gruppo/famiglia'?'Relazione ereditata da un gruppo botanico generale.':'Relazione specifica della matrice.')}</small></div>`).join('')}${cw.length?`<div class="constraint-bad"><b>Posizioni da correggere:</b>${cw.slice(0,5).map(w=>`<div class="constraint-row"><span class="constraint-status">⚠</span><span>${esc(w.text)}</span></div>`).join('')}</div>`:`${roles.length&&!mw.length?'<div class="constraint-good">✓ Nessun conflitto C/M e preferenze di posizione rispettate.</div>':''}`}</div>`;
+}
 function warningSummary(zoneId){const w=spacingWarnings(zoneId),over=w.filter(x=>x.type==='overlap'),close=w.filter(x=>x.type==='close'),ag=companionConstraintWarnings(zoneId),mw=matrixPairWarnings(zoneId);if(!w.length&&!ag.length&&!mw.length)return `<div class="warning-box ok">✓ Nessuna sovrapposizione, distanza ridotta o relazione C/M nella zona.</div>`;const items=w.slice(0,6).map(x=>`<li>${x.type==='overlap'?'Sovrapposizione o contatto':'Distanza ridotta'}: ${plantWarningLabel(x.a)} e ${plantWarningLabel(x.b)} — ${Math.round(x.dist)} cm${x.type==='close'?` su ${Math.round(x.required)} cm consigliati`:''}</li>`).join('')+ag.slice(0,4).map(x=>`<li>${esc(x.text)}</li>`).join('')+mw.slice(0,4).map(x=>`<li>${x.relation.code}: ${esc(x.a.name)} + ${esc(x.b.name)} — ${esc(x.relation.label)}</li>`).join('');return `<div class="warning-box ${over.length||mw.some(x=>x.relation.code==='C')?'danger':''}"><b>⚠ ${over.length} sovrapposizioni · ${close.length} distanze ridotte · ${ag.length} vincoli di posizione · ${mw.length} relazioni C/M</b><ul class="warning-list">${items}</ul></div>`}
-function zoneDetailView(){const z=zones.find(x=>x[0]===selected)||zones[0],sc=state.crops.filter(c=>c.zone===selected),plants=zonePlants(selected).length;return `<div class="zone-head"><button class="back-btn" onclick="backToMap()">‹</button><div class="zone-head-text"><h1 class="title">${esc(z[1])}</h1><div class="muted">${esc(z[2])}</div></div></div><div class="zone-summary"><span>${sc.length} coltur${sc.length===1?'a':'e'}</span><span>${plants} piant${plants===1?'a':'e'}</span></div>${constraintPanel(selected)}${plantingPlan(selected)}<div class="card"><h2>Colture presenti</h2>${sc.length?sc.map(c=>`<div class="item"><div class="row"><div class="grow"><b><span class="crop-color-dot" style="background:${cropColor(c)}"></span>${emojiFor(c.name)} ${esc(c.name)}</b><div class="muted">${esc(c.variety)}${c.count?' · '+c.count+' piante':''} · icona ${safeDiameter(c.iconDiameterCm)} cm</div><div class="recommendation"><span>${roleText(cropRole(c))}</span><span>tra piante ${safeSpacing(c.spacingCm,30)} cm</span><span>tra file ${safeSpacing(c.rowSpacingCm,40)} cm</span></div></div></div><div class="auto-actions"><button class="btn out small" onclick="editCropDialog('${c.id}')">Modifica</button><button class="btn warn small" onclick="autoArrangeZone('${selected}')">Progetta la proda</button><button class="btn out small" onclick="duplicateCropDialog('${c.id}')">Duplica</button><button class="btn out danger small" onclick="removeCrop('${c.id}')">Elimina</button></div></div>`).join(''):'<div class="empty">Nessuna coltura assegnata.</div>'}<button class="btn full" onclick="cropDialog('${selected}')">Aggiungi una coltura</button></div>`}
+function zoneDetailView(){
+ const z=zones.find(x=>x[0]===selected)||zones[0],sc=state.crops.filter(c=>c.zone===selected),plants=zonePlants(selected).length,previewActive=!!plannerPreview&&plannerPreview.zoneId===selected;
+ return `<div class="zone-head"><button class="back-btn" onclick="backToMap()">‹</button><div class="zone-head-text"><h1 class="title">${esc(z[1])}</h1><div class="muted">${esc(z[2])}</div></div></div><div class="zone-summary"><span>${sc.length} coltur${sc.length===1?'a':'e'}</span><span>${plants} piant${plants===1?'a':'e'}</span></div>${constraintPanel(selected)}${plantingPlan(selected)}<div class="card"><h2>Colture presenti</h2>${previewActive?'<div class="info-callout">Anteprima in corso: applicala o annullala prima di modificare colture e quantità.</div>':''}${sc.length?sc.map(c=>`<div class="item"><div class="row"><div class="grow"><b><span class="crop-color-dot" style="background:${cropColor(c)}"></span>${emojiFor(c.name)} ${esc(c.name)}</b><div class="muted">${esc(c.variety)}${c.count?' · '+c.count+' piante':''} · icona ${safeDiameter(c.iconDiameterCm)} cm</div><div class="recommendation"><span>${roleText(cropRole(c))}</span><span>tra piante ${safeSpacing(c.spacingCm,30)} cm</span><span>tra file ${safeSpacing(c.rowSpacingCm,40)} cm</span></div></div></div><div class="auto-actions"><button class="btn out small" ${previewActive?'disabled':''} onclick="editCropDialog('${c.id}')">Modifica</button><button class="btn warn small" ${previewActive?'disabled':''} onclick="autoArrangeZone('${selected}')">Progetta la proda</button><button class="btn out small" ${previewActive?'disabled':''} onclick="duplicateCropDialog('${c.id}')">Duplica</button><button class="btn out danger small" ${previewActive?'disabled':''} onclick="removeCrop('${c.id}')">Elimina</button></div></div>`).join(''):'<div class="empty">Nessuna coltura assegnata.</div>'}<button class="btn full" ${previewActive?'disabled':''} onclick="cropDialog('${selected}')">Aggiungi una coltura</button></div>`;
+}
 
 function practicalSource(){return `<div class="guide-source practical-source"><b>Fonte pratica: OrtoMio</b><em>Indicazioni pratiche, non prova scientifica.</em></div>`}
 function matrixSource(){return `<div class="guide-source source-compact"><b>Fonti consociazioni</b>GitHub/Wikipedia + OrtoMio · B favorevole · C da evitare · M discordante.</div>`}
@@ -1304,7 +1611,7 @@ function setCompanionFilter(code){
 function cropHubHeader(){return `<h1 class="title">Colture</h1><p class="sub">Consociazioni, rotazioni e cura.</p><div class="crop-hub-tabs"><button class="crop-hub-tab ${cropHubSection==='companions'?'active':''}" onclick="setCropHubSection('companions')">🌿 Consociazioni</button><button class="crop-hub-tab ${cropHubSection==='rotations'?'active':''}" onclick="setCropHubSection('rotations')">🔄 Rotazioni</button><button class="crop-hub-tab ${cropHubSection==='care'?'active':''}" onclick="setCropHubSection('care')">💧 Cura</button></div>`}
 function selectedGuide(){return guideItem(guideCropId)||guideItem('pomodoro')}
 function selectedMatrixEntity(){return matrixEntity(companionEntityId)||matrixEntity('tomatoes')}
-function matrixEntityOptions(selectedId){return matrixEntities.slice().sort((a,b)=>a.name.localeCompare(b.name,'it')).map(e=>`<option value="${e.id}" ${e.id===selectedId?'selected':''}>${matrixEntityEmoji(e.id)} ${esc(e.name)}${e.level==='Gruppo/famiglia'?' · gruppo':''}</option>`).join('')}
+function matrixEntityOptions(selectedId){return matrixEntities.slice().sort((a,b)=>a.name.localeCompare(b.name,'it',{sensitivity:'base'})).map(e=>`<option value="${e.id}" ${e.id===selectedId?'selected':''}>${matrixEntityEmoji(e.id)} ${esc(e.name)}${e.level==='Gruppo/famiglia'?' · gruppo':''}</option>`).join('')}
 function relationsForMatrixEntity(id){const order={B:0,C:1,M:2};return matrixRelations.filter(r=>r.a===id||r.b===id).map(r=>({...r,otherId:r.a===id?r.b:r.a,otherName:r.a===id?r.bName:r.aName})).sort((x,y)=>(order[x.code]-order[y.code])||x.otherName.localeCompare(y.otherName,'it'))}
 function relationExplanation(code){return code==='B'?'Favorevole nella matrice.':code==='C'?'Da evitare nella matrice.':'Fonti discordanti.'}
 function companionGuideView(){
@@ -1380,7 +1687,7 @@ function careGuideView(){const g=selectedGuide(),matches=state.crops.filter(c=>g
 function applyGuideDistances(id){const g=guideItem(id);if(!g)return;let n=0;state.crops.forEach(c=>{if(guideForCrop(c)?.id===id){c.spacingCm=g.plantCm;c.rowSpacingCm=g.rowCm;n++}});save();alert(`Distanze applicate a ${n} colture.`)}
 function addCareTask(id,category){const g=guideItem(id);if(!g)return;const matches=state.crops.filter(c=>guideForCrop(c)?.id===id),c=matches[0]||null;const notes=category==='Irrigazione'?shortIrrigationText(g):'Indicazione di concimazione da OrtoMio.';state.tasks.push({id:uid(),title:`${category}: ${g.name}`,date:localToday(),category,zone:c?.zone||'',notes,done:false,cropId:c?.id||'',cropName:c?.name||g.name});save();alert('Attività aggiunta al calendario.')}
 function cropHubView(){return cropHubSection==='rotations'?rotationsGuideView():cropHubSection==='care'?careGuideView():companionGuideView()}
-function render(){window.__ortoReady=true;yearLabel.textContent=state.year;refreshCloudBadge();renderNav();const isMapOverview=tab==='map'&&mapScreen==='overview';fab.classList.toggle('hide',tab==='archive'||tab==='crops'||isMapOverview);const view=tab==='map'?(mapScreen==='detail'?zoneDetailView:mapView):({calendar:calendarView,tasks:tasksView,harvest:harvestView,crops:cropHubView,archive:archiveView}[tab]);content.innerHTML=view()}
+function render(){window.__ortoReady=true;yearLabel.textContent=state.year;refreshCloudBadge();renderNav();const isMapOverview=tab==='map'&&mapScreen==='overview';fab.classList.toggle('hide',tab==='archive'||tab==='crops'||isMapOverview);fab.disabled=!!plannerPreview;const view=tab==='map'?(mapScreen==='detail'?zoneDetailView:mapView):({calendar:calendarView,tasks:tasksView,harvest:harvestView,crops:cropHubView,archive:archiveView}[tab]);content.innerHTML=view()}
 
 function boot(){
   try{
@@ -1413,19 +1720,19 @@ const app=initializeApp(firebaseConfig);
 const auth=getAuth(app);
 const provider=new GoogleAuthProvider();
 const db=initializeFirestore(app,{localCache:persistentLocalCache({tabManager:persistentMultipleTabManager()})});
-const gardenRef=doc(db,'gardens','preview');
+const gardenRef=doc(db,'gardens','main');
 const names=['crops','tasks','harvests','history','activityLog','ignoredSuggestions'];
 let currentUser=null,unsubs=[],remoteMaps=Object.fromEntries(names.map(n=>[n,new Map()])),meta={year:new Date().getFullYear()},listenerReady=new Set(),serverInitialized=false,syncTimer=null,syncing=false,lastQueuedState=null;
 const clean=v=>JSON.parse(JSON.stringify(v));
 const bridge=()=>window.__ortoCloudBridge;
 function setStatus(p){bridge()?.cloudStatusUpdate?.(p)}
 function clearListeners(){unsubs.forEach(fn=>{try{fn()}catch(_){}});unsubs=[];listenerReady=new Set()}
-function rebuilt(){return {year:Number(meta.year)||new Date().getFullYear(),...Object.fromEntries(names.map(n=>[n,[...remoteMaps[n].values()]]))}}
+function rebuilt(){return {year:Number(meta.year)||new Date().getFullYear(),plannerSettings:meta.plannerSettings||{mixedSpacingMode:'balanced'},...Object.fromEntries(names.map(n=>[n,[...remoteMaps[n].values()]]))}}
 function applyIfReady(snapshotMeta){if(listenerReady.size<names.length+1)return;bridge()?.applyCloudState?.(rebuilt(),snapshotMeta||{})}
-async function seedFromLocal(local){const s=clean(local||bridge()?.getState?.()||{}),batch=writeBatch(db);batch.set(gardenRef,{year:Number(s.year)||new Date().getFullYear(),updatedAt:serverTimestamp(),updatedBy:currentUser?.uid||'',updatedByEmail:currentUser?.email||''},{merge:true});for(const name of names){for(const item of (s[name]||[])){if(!item?.id)continue;batch.set(doc(collection(gardenRef,name),String(item.id)),clean(item))}}await batch.commit()}
+async function seedFromLocal(local){const s=clean(local||bridge()?.getState?.()||{}),batch=writeBatch(db);batch.set(gardenRef,{year:Number(s.year)||new Date().getFullYear(),plannerSettings:s.plannerSettings||{mixedSpacingMode:'balanced'},updatedAt:serverTimestamp(),updatedBy:currentUser?.uid||'',updatedByEmail:currentUser?.email||''},{merge:true});for(const name of names){for(const item of (s[name]||[])){if(!item?.id)continue;batch.set(doc(collection(gardenRef,name),String(item.id)),clean(item))}}await batch.commit()}
 async function ensureServerGarden(){try{const snap=await getDocFromServer(gardenRef);if(!snap.exists()){setStatus({status:'syncing',message:'Creo il primo orto condiviso…'});await seedFromLocal(bridge()?.getState?.());}serverInitialized=true;attachListeners()}catch(error){console.warn('Firestore server non raggiungibile:',error);serverInitialized=true;attachListeners();setStatus({fromCache:true,status:'synced',error:''})}}
 function attachListeners(){clearListeners();unsubs.push(onSnapshot(gardenRef,{includeMetadataChanges:true},snap=>{if(snap.exists())meta=snap.data()||meta;const cloudUpdatedAtMs=meta?.updatedAt?.toMillis?.()||0;listenerReady.add('meta');applyIfReady({fromCache:snap.metadata.fromCache,pending:snap.metadata.hasPendingWrites});setStatus({fromCache:snap.metadata.fromCache,pending:snap.metadata.hasPendingWrites,status:'synced',error:'',cloudUpdatedAtMs})},err=>setStatus({error:'Sincronizzazione meta: '+err.message,status:'error'})));for(const name of names){unsubs.push(onSnapshot(collection(gardenRef,name),{includeMetadataChanges:true},snap=>{const m=new Map();snap.forEach(d=>m.set(d.id,{id:d.id,...d.data()}));remoteMaps[name]=m;listenerReady.add(name);applyIfReady({fromCache:snap.metadata.fromCache,pending:snap.metadata.hasPendingWrites});setStatus({fromCache:snap.metadata.fromCache,pending:snap.metadata.hasPendingWrites,status:'synced',error:''})},err=>setStatus({error:'Sincronizzazione '+name+': '+err.message,status:'error'})))}}
-async function pushState(s,force=false){if(!currentUser||syncing)return;syncing=true;setStatus({status:'syncing',pending:true,error:''});try{const next=clean(s||bridge()?.getState?.()||{}),batch=writeBatch(db);batch.set(gardenRef,{year:Number(next.year)||new Date().getFullYear(),updatedAt:serverTimestamp(),updatedBy:currentUser.uid,updatedByEmail:currentUser.email||''},{merge:true});for(const name of names){const incoming=new Map((next[name]||[]).filter(x=>x&&x.id).map(x=>[String(x.id),x]));for(const [id,item] of incoming)batch.set(doc(collection(gardenRef,name),id),clean(item));for(const id of remoteMaps[name].keys())if(!incoming.has(id))batch.delete(doc(collection(gardenRef,name),id));}await batch.commit();
+async function pushState(s,force=false){if(!currentUser||syncing)return;syncing=true;setStatus({status:'syncing',pending:true,error:''});try{const next=clean(s||bridge()?.getState?.()||{}),batch=writeBatch(db);batch.set(gardenRef,{year:Number(next.year)||new Date().getFullYear(),plannerSettings:next.plannerSettings||{mixedSpacingMode:'balanced'},updatedAt:serverTimestamp(),updatedBy:currentUser.uid,updatedByEmail:currentUser.email||''},{merge:true});for(const name of names){const incoming=new Map((next[name]||[]).filter(x=>x&&x.id).map(x=>[String(x.id),x]));for(const [id,item] of incoming)batch.set(doc(collection(gardenRef,name),id),clean(item));for(const id of remoteMaps[name].keys())if(!incoming.has(id))batch.delete(doc(collection(gardenRef,name),id));}await batch.commit();
     let cloudUpdatedAtMs=0;
     try{
       const metaSnap=await getDocFromServer(gardenRef);
@@ -1478,6 +1785,14 @@ window.ortoCloud={login,loginEmail,logout,queueSync,syncNow:()=>pushState(bridge
 onAuthStateChanged(auth,user=>{currentUser=user||null;clearListeners();bridge()?.cloudUserChanged?.(user?{uid:user.uid,email:user.email||'',displayName:user.displayName||'',photoURL:user.photoURL||''}:null);if(user)ensureServerGarden()});
 </script>
 
-<script>console.info('Anteprima: service worker disattivato per evitare cache durante i test.');</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(reg => reg.update().catch(()=>{}))
+      .catch(err => console.warn('Service worker:', err));
+  });
+}
+</script>
 </body>
 </html>
